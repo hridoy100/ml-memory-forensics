@@ -1,7 +1,7 @@
 # Evidence inventory
 
-These are copied results from the completed controlled experiment. The original
-logs and paths are retained so the recorded addresses and versions can be audited.
+These files record training, capture, recovery, and validation. Logs retain the
+original paths, addresses, and versions.
 
 | Location | What it establishes |
 | --- | --- |
@@ -32,7 +32,7 @@ The optional [GDB core inspection log](logs/gdb-core-inspection.log) records a
 missing heap page. That attempt failed. Successful address and recovery results
 came from the original LiME image, not the incomplete core inspection.
 
-## Consolidated repository checks
+## Repository checks
 
 [The final repository check](logs/repository-check-final.log) passed all 10
 decoder tests and 5 replay tests, extracted the model using the external
@@ -42,11 +42,11 @@ replayed a fresh 128-image batch with identical logits. The earlier
 collision that was fixed by giving the external module its own name.
 
 [The GDB helper check](logs/repository-gdb-helper-check.log) confirms that the
-consolidated helper follows the Ubuntu build's object/type layout and reads the
+helper follows the Ubuntu build's object/type layout and reads the
 known first eight weight values. Its PID **3391** belongs to a new live test;
 the memory capture and recovery evidence still refer to PID **3183**.
 
-## October 20 submission supplement
+## October 20 reproduction
 
 [New reproduction evidence](submission-2026-10-20/summary.json) verifies export,
 Debug build, inference, recovery, validation, and full replay. Logs and small
@@ -54,4 +54,13 @@ reports are preserved in that directory. The final native sample is live PID
 3220; the original capture remains PID 3183. Initial wrapper/PLT attempts are
 retained with explicit filenames. [Release metadata](release-history/pytorch-release-check.json)
 and [training commit dates](release-history/training-commit.txt) support the
-historical version comparison. See the [supplement](../docs/SUBMISSION_EVIDENCE.md).
+historical version comparison. See the [evidence notes](../docs/evidence-notes.md).
+
+## Native-code recovery
+
+The [warm-capture experiment](native-recovery-2026-10-20/README.md) recovered
+584 bytes of the convolution implementation after the original image returned
+a page fault. The [trace-guided run](native-trace-2026-10-20/README.md) recorded
+40 entry hits across ten candidate functions and recovered all ten bodies:
+23,340 bytes, matching the reference library. These reports cover selected
+native functions, not exhaustive native execution.

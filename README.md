@@ -1,114 +1,73 @@
 # ML memory forensics
 
-This project recovers a custom CIFAR-10 model from a Linux memory image, then
-checks that the recovered implementation produces the same outputs as the
-original. It brings together the training code, C++ inference program, GDB
-inspection, Volatility recovery plugin, evidence, and reproduction instructions.
+Recovering a trained neural network from a Linux memory image: its weights,
+layer hierarchy, generated model code, and selected native functions.
 
-This branch adds a separate [native-code recovery experiment](docs/NATIVE_RECOVERY.md).
-Its first milestone recovers one complete native function from a new warm-up
-capture. The [trace-guided continuation](docs/NATIVE_TRACE.md) recovers ten
-selected bodies totaling 23,340 bytes, all independently matching the library.
-Exhaustive native coverage is not claimed.
+The target is a custom CIFAR-10 CNN trained on Argon, exported to TorchScript,
+and loaded by a C++ inference program. GDB identifies the live objects. LiME
+captures RAM, and two Volatility 3 plugins recover the model and native code.
+Separate checks compare the recovered artifacts with the original model.
 
-## Recorded results
+## Results
 
 | Check | Result |
 | --- | --- |
-| Dataset split | 48,000 training / 6,000 validation / 6,000 testing |
-| Training | 25 epochs; 87.0833% held-out accuracy |
-| Captured process | PID 3183, `cifar10_inferen`; 128 VMAs |
-| Recovered modules | 26, with matching names, types, and registration order |
-| Recovered tensors | 31 parameters/buffers; all byte-identical to the reference |
-| Recovered source | All 19 archived TorchScript `.py` files; byte-identical |
-| Recovered function graphs | 34 |
-| Recovered-code replay | 6,000/6,000 predictions agree with the original |
-| Largest output-logit difference | 0 |
+| Dataset split | 48,000 training / 6,000 validation / 6,000 test images |
+| Test accuracy after 25 epochs | 5,225/6,000 (87.0833%) |
+| Model recovery | 26 modules, 31 tensors, 19 generated source files, 34 function graphs |
+| State and source comparison | All recovered tensors and source files match byte for byte |
+| Recovered-model inference | 6,000/6,000 predictions agree; maximum logit difference 0 |
+| Native-code recovery | 10 selected function bodies, 23,340 bytes, all matching the reference library |
 
-Prediction agreement is not ground-truth accuracy. Both implementations made
-the same 5,225 correct predictions out of 6,000 images.
+Prediction agreement measures whether reconstruction preserved the model's
+behavior. It does not mean the classifier achieved 100% accuracy.
 
-## Start here
+## Documentation
 
-- [Step-by-step walkthrough](docs/WALKTHROUGH.md): assignment steps 1–8, commands,
-  explanations, existing screenshots, and measured results.
-- [Reproduce recovery and inference](docs/REPRODUCE.md): use the existing Ubuntu
-  setup or prepare the pinned experimental framework.
-- [Findings and scope](docs/FINDINGS.md): what the evidence establishes and the
-  limits of this implementation.
-- [Detailed project explanation](docs/WORK-COMPLETED.md): goal, methods, and results.
-- [Current status](docs/STATUS.md): completed evidence and remaining submission checks.
-- [Forensics background](docs/FORENSICS_BACKGROUND.md): chapter-based concepts tied to the experiment.
-- [Evidence inventory](evidence/README.md): which reports to inspect.
-- [Artifacts kept outside Git](manifests/artifacts.json): hashes, sizes, and known
-  locations of captures, kernel files, and model/data binaries.
+- [Project walkthrough](docs/project-walkthrough.md) — the experiment, step by step, with screenshots.
+- [Running instructions](docs/running-instructions.md) — setup, extraction, validation, and inference.
+- [GDB instructions](docs/gdb-instructions.md) — inspect objects, tensor storage, and layer metadata.
+- [Native-code recovery](docs/native-code-recovery.md) — warm capture, entry tracing, and machine-code extraction.
+- [Findings](docs/findings.md) — results, interpretation, and limits.
+- [Argon instructions](docs/argon-instructions.md) — the training and Apptainer environment.
+- [Evidence notes](docs/evidence-notes.md) — versions, screenshots, and reproduction records.
+- [Background](docs/background.md) — the memory-forensics concepts used here.
+
+## Repository layout
 
 ```text
-cifar10_cnn/          Custom CNN, export, test-image preparation, C++ and GDB
-forensics/plugins/   Volatility model recovery plugin
-forensics/profiles/  Measured PyTorch C++ ABI profile
-forensics/           Layout exporter, validator, recovered-source replay
-patches/             Two ARM64 plugin requirement fixes
-tests/               Decoder and replay integrity tests
-evidence/            Recorded metrics, reports, logs, recovered source, predictions
-docs/images/         Original screenshots and their checksum index
-manifests/           Artifact locations and source/evidence provenance
+cifar10_cnn/          Training, export, test preparation, C++ inference, GDB helpers
+forensics/           Volatility plugins, ABI profile, validators, replay tools
+scripts/             Environment setup, evidence checks, native tracing
+tests/               Decoder, replay, and native-recovery tests
+evidence/            Metrics, logs, reports, recovered source, disassembly
+docs/images/         Screenshots and checksum index
+manifests/           Artifact hashes, locations, and source provenance
+patches/             ARM64 compatibility changes for the framework
 ```
 
-## Verify the tracked evidence
-
-This check needs only standard Python, not the memory image or PyTorch:
+Check the tracked evidence with standard Python:
 
 ```bash
 python3 scripts/verify_evidence.py
 ```
 
-To check selected excluded files at their original local locations:
+Model binaries, datasets, memory images, kernel symbols, and generated build
+files are excluded from Git. Their recorded locations and hashes are in
+[artifacts.json](manifests/artifacts.json). Restore them before running extraction.
 
-```bash
-python3 scripts/verify_artifacts.py --known-locations \
-  --only reference-torchscript test-images
-```
+## Scope
 
-For the full experiment, follow [REPRODUCE.md](docs/REPRODUCE.md). The original
-LiME image and generated tensor files stay in private local storage. Tracked
-reports are evidence snapshots; a fresh extraction writes to an ignored output
-directory.
+The model extractor starts from a known PID and Object address and uses a
+build-specific PyTorch ABI profile. The demonstrated tensors are contiguous CPU
+allocations. Replay uses recovered TorchScript source through a Python
+compatibility layer. Native recovery covers selected observed function bodies;
+it does not establish a complete native call graph or recover original C++ source.
 
-## Environment and provenance
+The final capture used Ubuntu ARM64, kernel `7.0.0-38-generic`, and PyTorch
+`2.14.1+cpu`. The experimental Volatility 3 ARM64 framework is pinned in the
+[running instructions](docs/running-instructions.md).
 
-Training ran on Argon with Python 3.10.8 and the recorded PyTorch
-`2.14.1+cu126` environment. The memory experiment used Ubuntu ARM64, kernel
-`7.0.0-38-generic`, and the recorded PyTorch `2.14.1+cpu` build. The framework
-is an experimental ARM64 Volatility **3** branch reporting framework version
-`2.10.0`, pinned to `5ee05ce7b440c0d6a0d45f7f9a343b702c7b38e4`.
-
-The earlier source repositories remain available:
-
-- [CNN/C++ project in the Volatility 2 fork](https://github.com/hridoy100/volatility/tree/800a2100d3e04dba7931512aeeb1746cd01cc582/cifar10_cnn)
-- [ARM64 framework fork](https://github.com/hridoy100/volatility3-arm64/tree/codex/arm64-process-inspection)
-- [Experimental ARM64 framework upstream](https://github.com/Abyss-W4tcher/volatility3/tree/aarch64-support)
-
-This repository is the combined project record. It loads the extractor as an
-external Volatility plugin and does not vendor the complete framework or the
-older repository's generated build trees.
-
-## Scope and remaining submission work
-
-Recovery is guided by a PID and root Object address recorded with GDB. It uses a
-build-specific ABI profile and supports the CPU, contiguous tensors in this
-experiment. Recovered source is TorchScript's generated model implementation;
-native C++ kernel source, GPU VRAM, and automatic discovery of unknown models
-are outside this implementation.
-
-The replay checks the evaluation path on this test set. It does not establish
-all-branch or native call coverage. See [FINDINGS.md](docs/FINDINGS.md).
-
-The [submission evidence supplement](docs/SUBMISSION_EVIDENCE.md) adds fresh
-export/build/recovery/replay reports and eight browser screenshots to the three
-original screenshots. [Version verification](docs/VERSION_VERIFICATION.md) checks
-the recorded PyTorch release against the dated training-artifact commit.
-[Code scope](docs/CODE_SCOPE.md) distinguishes recovered model implementation
-from the added native sample and the remaining instructor clarification.
-
-See [NOTICE.md](NOTICE.md) for third-party software and recovered-source notices.
+[Source provenance](manifests/source-repositories.json) records the original
+repositories and imported files. See [NOTICE.md](NOTICE.md) for software credits
+and licenses.

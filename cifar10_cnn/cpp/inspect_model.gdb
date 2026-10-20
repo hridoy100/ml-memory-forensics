@@ -1,5 +1,5 @@
 # Run from cifar10_cnn. The inferior stays stopped before forward.
-# See ../docs/WALKTHROUGH.md and the historical GDB_INSPECTION.md.
+# See ../docs/gdb-instructions.md for object and tensor inspection.
 set logging file outputs/gdb_inspection.log
 set logging overwrite off
 set logging enabled on

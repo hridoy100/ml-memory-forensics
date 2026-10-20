@@ -1,6 +1,6 @@
 # Trace-guided native recovery — October 20, 2026
 
-The user ran `scripts/collect_native_trace.sh` in Ubuntu ARM64 with GDB 17.1.
+`scripts/collect_native_trace.sh` ran in Ubuntu ARM64 with GDB 17.1.
 The small reports were transferred to the Mac and checked for plan/trace hashes,
 function metadata, counts and matching memory/reference hashes. The reference
 library, memory image and recovered binary bodies remain in Ubuntu; no new
@@ -30,7 +30,7 @@ prefixes had no matching dynamic symbol. See `candidates.json`.
 byte comparison. `validation/*.asm.txt` disassemble the recovered bodies.
 `summary.json` records measured counts and the private report archive hash.
 
-The [walkthrough](../../docs/NATIVE_TRACE.md) defines scope and commands.
+The [walkthrough](../../docs/native-code-recovery.md) defines scope and commands.
 These are complete selected function bodies, including bytes that may not have
 executed. This is not a complete native call graph, all-instruction coverage,
 original C++ source recovery or a reconstructed executable library. The earlier

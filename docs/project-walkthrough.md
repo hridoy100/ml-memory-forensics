@@ -1,9 +1,8 @@
 # Recovering a CIFAR-10 model from Linux memory
 
-I wanted to recover the state and implementation of a deployed model from RAM,
-then check whether the recovered artifacts could reproduce its behavior. I used
-a model I trained myself so that I could validate the forensic results against
-a known reference.
+The goal was to recover a deployed model from RAM and check whether its weights
+and code could reproduce the original inference results. Training a custom CNN
+provided a known reference for validating the recovered artifacts.
 
 The experiment moved through three environments: Argon for GPU training, an
 Apptainer environment for the earlier C++/GDB work, and an Ubuntu ARM64 VM for
@@ -22,8 +21,7 @@ batch normalization, ReLU activations, and three pooling stages. The classifier
 flattens the resulting 128×4×4 features, applies a 256-unit linear layer and
 dropout, and returns ten class logits. No pretrained network is used.
 
-To meet the requested split, I pooled CIFAR-10's original 50,000-image training
-set and 10,000-image test set, then made a disjoint stratified split with seed 42:
+I pooled CIFAR-10's original 50,000-image training set and 10,000-image test set, then made a disjoint stratified split with seed 42:
 
 | Partition | Images | Images per class |
 | --- | ---: | ---: |
@@ -45,9 +43,13 @@ python -u train.py --epochs 25 --output-dir outputs
 The run used Python 3.10.8, PyTorch 2.14.1+cu126, batch size 128, and learning
 rate 0.001. The best validation epoch was 25. Final accuracy was 5,225/6,000,
 or 87.0833%, as recorded in [metrics.json](../evidence/training/metrics.json).
-The installed versions are preserved; verifying the assignment's historical
-[release comparison](VERSION_VERIFICATION.md) checks the recorded version against
-the dated October 17 training-artifact commit.
+The [version record](evidence-notes.md#environments-and-versions) compares
+the installed package with releases available by the October 17 artifact commit.
+
+![Checkpoint and saved training metrics, checked October 20](images/05-training-record.jpg)
+
+This screenshot checks the saved training record; it is not a screenshot of the
+original training job.
 
 ## 2. Export the trained checkpoint
 
@@ -63,8 +65,10 @@ python export_model.py \
 The exporter loads weights on CPU, sets evaluation mode, uses `torch.jit.script`,
 saves the archive, and checks the reloaded model against the Python model.
 The archive contains generated model code, weights, and class labels for LibTorch.
-This follows the assignment's explicit
+This follows the
 [TorchScript C++ export workflow](https://docs.pytorch.org/tutorials/advanced/cpp_export.html).
+
+![TorchScript export check](images/06-export.jpg)
 
 The saved checkpoint, exported model, and recovered state dictionary all use
 `.pt`, but they are different artifacts. Hashes and storage locations are in the
@@ -98,9 +102,9 @@ full debugging information. GNU/Clang flags include `-g3`, `-O0`, and
 header-defined class types mattered because the prebuilt library did not provide
 all the debug types needed for inspection.
 
-Earlier Argon attempts encountered compiler/runtime and CUDA compatibility
-problems. The [historical Argon notes](../cifar10_cnn/ARGON.md) preserve the
-Apptainer route. The final Ubuntu forensic target was rebuilt natively for ARM64;
+![Debug build and C++ inference check](images/07-debug-build.jpg)
+
+The [Argon guide](argon-instructions.md) documents the earlier Apptainer route. The final Ubuntu forensic target was rebuilt natively for ARM64;
 an x86 executable is not interchangeable with an ARM64 executable.
 
 ## 4. Stop at the forward pass in GDB
@@ -167,7 +171,7 @@ make -C "$HOME/Downloads/LiME/src"
 mkdir -p "$HOME/Downloads/memory-evidence"
 
 sudo insmod "$HOME/Downloads/LiME/src/lime-$(uname -r).ko" \
-  "path=$HOME/Downloads/memory-evidence/new-capture.lime format=lime"
+  "path=$HOME/Downloads/memory-evidence/new-capture.lime" format=lime
 ```
 
 Do not overwrite the original image. The original acquisition reported an
@@ -191,9 +195,17 @@ of Git.
 The existing ARM64 translation support came from an experimental Volatility 3
 branch. Two plugin requirements were patched to allow AArch64 for PsList and
 Maps. See [the patch](../patches/arm64-process-plugins.patch) and the exact
-[reproduction commands](REPRODUCE.md).
+[reproduction commands](running-instructions.md).
 
 PsList found PID 3183 with parent PID 3174. Maps produced 128 VMAs:
+
+```bash
+framework_dir="$HOME/Downloads/volatility3-aarch64-experimental"
+"$framework_dir/.venv/bin/python" "$framework_dir/vol.py" -q \
+  -f "$HOME/Downloads/memory-evidence/ubuntu.lime" linux.pslist.PsList --pid 3183
+"$framework_dir/.venv/bin/python" "$framework_dir/vol.py" -q \
+  -f "$HOME/Downloads/memory-evidence/ubuntu.lime" linux.proc.Maps --pid 3183
+```
 
 ![Volatility identifies PID 3183](images/02-volatility-pid.png)
 
@@ -207,6 +219,14 @@ The wrapper pointers matched GDB. The input TensorImpl reported rank four,
 shape `[128, 3, 32, 32]`, and 393,216 elements.
 
 ![VMA listing and successful Volshell verification](images/03-vmas-and-volshell.png)
+
+From the project root, run the recorded address check:
+
+```bash
+"$framework_dir/.venv/bin/python" "$framework_dir/volshell.py" -q -l \
+  -f "$HOME/Downloads/memory-evidence/ubuntu.lime" \
+  --script "$PWD/forensics/verify_addresses.py"
+```
 
 The verification script is [verify_addresses.py](../forensics/verify_addresses.py).
 It reads real pages without padding missing data and ends with
@@ -225,6 +245,8 @@ It pairs ClassType descriptors with IValue slots, walks child modules, and
 extracts tensor allocations after checking shape, dtype, strides, storage offset,
 and allocation bounds. Parameters and batch-normalization buffers are retained.
 
+![Model extraction from the preserved capture](images/08-extraction.jpg)
+
 GraphFunction methods and the CompilationUnit lead to graphs and SourceRanges.
 Resident Source objects hold string-view pieces containing generated TorchScript
 code. The plugin joins those pieces and saves their actual bytes and provenance.
@@ -235,6 +257,8 @@ The separately run validator compares recovered artifacts with the reference.
 Its [report](../evidence/recovery/validation.json) confirms 31/31 tensors and
 19/19 archived `.py` files are byte-identical, with matching module names, types,
 and registration order. There are 26 module objects and 34 function graphs.
+
+![Recovered state and source comparison](images/09-validation.jpg)
 
 I then used [confirm_recovery.py](../forensics/confirm_recovery.py) to instantiate
 the captured hierarchy and assign its recovered settings and tensor values. The
@@ -253,6 +277,8 @@ Observed layer forward order matches recovered tree: True
 INFERENCE_COMPARISON_PASS
 ```
 
+![Full test-set comparison](images/10-replay.jpg)
+
 Matching predictions means agreement between implementations. Both were correct
 on 5,225 images, or 87.0833%. Thirty-one distinct recovered functions ran in the
 first evaluation batch; the remaining definitions were two `__len__` methods and
@@ -264,18 +290,31 @@ The [code map](../evidence/replay/code-coverage.json),
 The ten decoder tests and five replay tests cover bounds, missing pages, storage
 offsets, unsupported layouts, source integrity, and missing definitions.
 
-## Interpretation and remaining evidence
+## Native-code recovery
 
-The experiment established guided recovery of this model's weights, hierarchy,
-and archived TorchScript implementation, followed by identical evaluation outputs
-on the held-out dataset. The [findings](FINDINGS.md) explain the supported layout,
-CPU-only scope, and distinction between generated source and native C++ kernels.
+A live GDB sample followed the forward pass through the graph executor,
+interpreter, dispatcher, and native convolution implementation:
 
-The write-up preserves three original screenshots and adds eight new browser
-screenshots in the [submission supplement](SUBMISSION_EVIDENCE.md). The new log
-report views are labeled as October 20 reproduction evidence. They do not
-recreate historical terminal sessions. See the [version check](VERSION_VERIFICATION.md)
-and [code scope](CODE_SCOPE.md) for the remaining timestamp and coverage limits.
+![Native convolution backtrace and instructions](images/11-native-forward.jpg)
+
+The original capture could not read the selected native code range. A second
+LiME capture, taken after one completed batch, recovered the full 584-byte
+convolution function. A later entry trace observed ten of twelve candidate
+functions during one forward call. All ten bodies were extracted from the warm
+image and compared with the reference library: 23,340 bytes, all matching.
+
+The [native-code guide](native-code-recovery.md) gives the commands and reports.
+This extends recovery to selected native function bodies; internal callees,
+backend libraries, and all possible execution paths are not exhaustively covered.
+
+## What this shows
+
+The captured state and generated implementation were enough to reconstruct this
+model and reproduce its outputs on the held-out test set. The
+[findings](findings.md) describe the build-specific, guided recovery and replay
+limits. [Evidence notes](evidence-notes.md) distinguish original-session images
+from later browser views of reproduction logs and document the historical
+version check.
 
 The related [AI Psychiatry work](https://www.usenix.org/conference/usenixsecurity24/presentation/oygenblik)
 studies recovery and rehosting of deployed models from memory. The

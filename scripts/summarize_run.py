@@ -1,4 +1,4 @@
-"""Verify the reproduction logs and summarize a completed submission run."""
+"""Verify the reproduction logs and summarize a completed experiment."""
 
 import argparse
 import hashlib

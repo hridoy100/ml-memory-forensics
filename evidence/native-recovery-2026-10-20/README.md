@@ -1,7 +1,7 @@
 # Native recovery evidence
 
-This branch preserves both the negative result in the original image and the
-positive result in a separate capture after one completed inference batch.
+The original image had an unreadable code range. A separate capture after one
+completed inference batch allowed that function to be recovered.
 
 | File | Meaning |
 | --- | --- |
@@ -24,4 +24,4 @@ No zero padding or file-backed fallback supplies code bytes. Symbols and identit
 metadata come from the reference library; validation opens that library later.
 Only the selected function was recovered. Exhaustive native call/branch coverage
 and original native source are not established. See the
-[experiment guide](../../docs/NATIVE_RECOVERY.md).
+[experiment guide](../../docs/native-code-recovery.md).

@@ -1,7 +1,7 @@
 """Source inside GDB to trace selected native entries during one forward call.
 
-Run from the project root; see docs/NATIVE_TRACE.md. This starts and terminates
-its own inferior. Do not use it in an existing debugging session.
+Run from the project root; see docs/native-code-recovery.md. The script starts
+and terminates its own inferior. Do not use it in an existing debugging session.
 """
 
 import hashlib

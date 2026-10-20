@@ -26,7 +26,7 @@ def debug_type(name):
     if not complete:
         raise gdb.GdbError(
             f"Missing complete debug type {name}. Rebuild the executable with "
-            "the type-retention flags in GDB_INSPECTION.md, then restart GDB."
+            "the type-retention flags in ../docs/gdb-instructions.md, then restart GDB."
         )
     return result
 

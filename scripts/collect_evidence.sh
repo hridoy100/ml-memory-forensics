@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Reproduce submission evidence without overwriting the original capture/model.
+# Repeat export, inference, recovery, and validation in a new output directory.
 set -euo pipefail
 
 project_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -77,5 +77,5 @@ step native-forward env OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
     gdb -q -batch -x "$project_dir/scripts/inspect_native_forward.gdb" \
     --args "$run_dir/build/cifar10_inference" "$reference" "$images" \
     "$run_dir/gdb-predictions.csv"
-step summary "$python" "$project_dir/scripts/summarize_submission_run.py" "$run_dir"
+step summary "$python" "$project_dir/scripts/summarize_run.py" "$run_dir"
 printf '\nSUBMISSION_RUN_PASS\n%s\n' "$run_dir"

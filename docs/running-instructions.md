@@ -1,13 +1,54 @@
-# Reproduce the recovery and comparison
+# Running instructions
 
-These commands use Ubuntu. The completed experiment already has the required
-framework and CPU PyTorch environment. A clone of this repository holds project
-code and small evidence files; private binary artifacts remain separate.
+Use Linux for capture and analysis. The recorded target is Ubuntu ARM64 with
+PyTorch 2.14.1+cpu. Restore the private artifacts listed in
+[artifacts.json](../manifests/artifacts.json); a Git clone contains code and small
+reports, not the model, test binary, RAM images, or kernel symbols.
 
-## 1. Set paths
+## Train, export, and build
 
-After cloning this repository into `~/Downloads/ml-memory-forensics`, use one
-terminal for the following commands:
+Use Python 3.10 or newer with the pinned torch/torchvision versions in
+`cifar10_cnn/requirements.txt`, plus Pillow. A fresh CPU environment can be
+prepared from the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --index-url https://download.pytorch.org/whl/cpu \
+  -r cifar10_cnn/requirements.txt
+python -m pip install Pillow
+```
+
+For Argon GPU training, use the [Argon setup](argon-instructions.md). Then, from
+`cifar10_cnn`:
+
+```bash
+python -u train.py --epochs 25 --output-dir outputs
+python export_model.py --checkpoint outputs/best_model.pt \
+  --output outputs/cifar10_torchscript.pt
+python prepare_test_images.py --checkpoint outputs/best_model.pt
+
+cmake -S cpp -B cpp/build-ubuntu -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_PREFIX_PATH="$(python -c 'import torch; print(torch.utils.cmake_prefix_path)')"
+cmake --build cpp/build-ubuntu --parallel 1
+./cpp/build-ubuntu/cifar10_inference \
+  outputs/cifar10_torchscript.pt data/cifar10_test.bin outputs/cpp_predictions.csv
+```
+
+This needs CMake, a C++20 compiler, and GDB for inspection. The checkpoint,
+TorchScript archive, and test binary belong under `cifar10_cnn/outputs/` and
+`cifar10_cnn/data/` as shown. A `.pt` state dictionary is not an executable
+TorchScript archive.
+
+For live inspection and a new capture, follow the
+[GDB guide](gdb-instructions.md) and [walkthrough](project-walkthrough.md).
+The commands below analyze the preserved capture in the existing VM.
+
+## 1. Set analysis paths
+
+These paths match the existing VM, including the CPU environment and reference
+files in the earlier checkout. On a fresh setup, point `cifar_python` to the new
+venv and `reference`/`test_images` to the restored files:
 
 ```bash
 cd "$HOME/Downloads/ml-memory-forensics"
@@ -93,9 +134,7 @@ mkdir -p "$recovery_dir"
   --layout "$project_dir/forensics/profiles/torch-2.14.1-cpu-aarch64.json"
 ```
 
-The external plugin identifier is `mlmodel.PytorchModel`. The earlier
-framework-installed copy was named `linux.pytorch_model.PytorchModel`.
-The plugin should report 26 modules, 31 tensors, 19 sources, and zero errors.
+The external plugin identifier is `mlmodel.PytorchModel`. It should report 26 modules, 31 tensors, 19 sources, and zero errors.
 It imports no checkpoint or original training model.
 
 To review the original extraction instead, set:
@@ -157,20 +196,6 @@ arrays, and `predictions.csv`. Its output directory must not already exist.
 Use `--limit 128` for a shorter check. PyTorch's Python 3.14 TorchScript warning
 appeared in the measured environment; the recorded runs completed successfully.
 
-For a readable code map:
-
-```bash
-python3 - "$comparison_dir/code-coverage.json" <<'PY'
-import json
-import sys
-
-coverage = json.load(open(sys.argv[1]))
-print("Layer\tType\tRecovered source")
-for layer in coverage["layers"]:
-    print(layer["path"], layer["type"].rsplit(".", 1)[-1], layer["source"], sep="\t")
-PY
-```
-
 ## 7. Run focused tests
 
 From this project's root, point Python at the framework for the decoder tests:
@@ -186,8 +211,15 @@ PYTHONPATH="$framework_dir:$project_dir" \
 python3 scripts/verify_evidence.py
 ```
 
-The decoder suite has ten tests; the source replay suite has five. The latter
-skips when PyTorch is unavailable, so use the CIFAR Python to actually run it.
+The decoder suite has ten tests; the source replay suite has five. Replay
+checks skip when PyTorch is unavailable, so use the CIFAR Python for them.
+For native recovery and trace helpers, also run:
+
+```bash
+PYTHONPATH="$framework_dir:$project_dir" \
+  "$framework_dir/.venv/bin/python" -m unittest \
+  tests.test_native_recovery tests.test_native_capture_formats tests.test_native_trace -v
+```
 
 ## 8. Generate a profile for another build
 
@@ -206,15 +238,17 @@ This reads DWARF types and the matching installed header. It does not run
 inferior functions. A changed build may require updating decoder logic and field
 paths, not just generating a different JSON file.
 
-## 9. Reproduce the submission evidence
+## 9. Repeat the recorded checks
 
-The [October 20 supplement](SUBMISSION_EVIDENCE.md) documents a new Debug build,
-export, full recovery/replay, and bounded native inspection. From this project:
+With private artifacts and environments restored:
 
 ```bash
-bash scripts/collect_submission_evidence.sh
+bash scripts/collect_evidence.sh
 ```
 
-It writes a new directory under `~/Downloads/memory-evidence`. Restore private
-artifacts and the existing environments first. The checkpoint-record check does
-not rerun historical training. The native sample is a new live process.
+The script writes logs and results to a new timestamped directory under
+`~/Downloads/memory-evidence`. It checks the saved checkpoint rather than rerunning
+historical training. See [evidence notes](evidence-notes.md) for the recorded
+results and screenshot provenance. The separate
+[native-code pipeline](native-code-recovery.md) traces and recovers selected
+native function bodies.

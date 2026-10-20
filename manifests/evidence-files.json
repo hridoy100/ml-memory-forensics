@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "evidence/README.md",
-      "bytes": 3979,
-      "sha256": "b048615b55ba4f47c41aefe05480a6d2a9dbc0707718a249603b9b82f7b241ab"
+      "bytes": 4365,
+      "sha256": "18cf7d99c8dd51962ffb4e695cef86413022cea0b00d8d3727389f681849bcae"
     },
     {
       "path": "evidence/capture/analysis-summary.json",
@@ -108,8 +108,8 @@
     },
     {
       "path": "evidence/native-recovery-2026-10-20/README.md",
-      "bytes": 2101,
-      "sha256": "283a16204791ba0a1de76723aebe77d875ac06d88cf0fab807df23c32ff2db7c"
+      "bytes": 2097,
+      "sha256": "a1ac6355651dc737e43b9ef0caf08e801bf6570ebbeb26b4bab0aca747562382"
     },
     {
       "path": "evidence/native-recovery-2026-10-20/artifacts.json",
@@ -518,8 +518,8 @@
     },
     {
       "path": "evidence/native-trace-2026-10-20/README.md",
-      "bytes": 2270,
-      "sha256": "dcb822a6603f1523b7aa70fbf0ea5c1cd284d354afd345f82c89f02e91983e42"
+      "bytes": 2269,
+      "sha256": "57ea7b838b25676f0bad2bf7358e04893757ffb9c8364f2f028766b0fbf1b062"
     },
     {
       "path": "evidence/native-trace-2026-10-20/candidates.json",
