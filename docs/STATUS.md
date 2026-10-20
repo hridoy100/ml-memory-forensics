@@ -13,18 +13,6 @@
   128-image replay pass, and the updated GDB helper reads the expected weights.
   See the [verification logs](../evidence/README.md#consolidated-repository-checks).
 
-## Still needed for the final assignment submission
-
-- Add training/export/build and extraction/validation/replay screenshots. Three
-  original GDB/PID/Volshell screenshots are already preserved.
-- Independently verify the historical "most recent PyTorch" requirement against
-  the date of the experiment; keep observed package versions distinct from that claim.
-- Complete the requested textbook reading personally. The repository does not
-  certify that reading or reproduction of the reference papers' full systems.
-- Establish any instructor-required native machine-code/call coverage beyond
-  the recovered TorchScript implementation. Current limits are explicit in
-  [FINDINGS.md](FINDINGS.md).
-
 The raw imported `analysis-summary.json` describes an earlier working state.
 This status file and the walkthrough reflect repository consolidation on
 October 20, 2026. Original reports/logs are preserved rather than edited to
