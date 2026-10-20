@@ -12,7 +12,9 @@ check stages. Reproduction binaries and tensors remain outside Git at
 
 ## How the screenshots were collected
 
-Three original GDB/PID/Volshell screenshots remain unchanged. The eight new
+The three original-session GDB/PID/Volshell screenshots use the user-updated
+image versions from GitHub commit `6be9f1f`. The checksum index retains each
+previous hash and records its current revision hash. The eight new
 images consist of one official release-page screenshot and seven screenshots
 of clearly labeled browser reports displaying saved check logs. These are
 actual browser captures. They are not reconstructions of historical terminals.

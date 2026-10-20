@@ -353,18 +353,18 @@
     },
     {
       "path": "docs/images/01-gdb-pid-and-addresses.png",
-      "bytes": 7453221,
-      "sha256": "ad2868e42ce7d83ce85bc94a7a22f4d1f19449c2ab7034a683a5d07b12c1323d"
+      "bytes": 6364618,
+      "sha256": "9488e114490e955dd371ac2ae60b00d1cdf08cfb8bbafb372152e0046af24ff3"
     },
     {
       "path": "docs/images/02-volatility-pid.png",
-      "bytes": 6399802,
-      "sha256": "5a23be96c5450cc202e1d6d014e8f3e1a561e84a2fcad2f794077329aee71b4a"
+      "bytes": 5315533,
+      "sha256": "4de8d2f6da2f3c94ef0a9b78c3075dad213fec53ecc71b2a11e7028a86680a90"
     },
     {
       "path": "docs/images/03-vmas-and-volshell.png",
-      "bytes": 4116181,
-      "sha256": "59553f4beb0473fa3c8b7dd0530fcb102c9b9d47b3e100d640f5c4dffc81e348"
+      "bytes": 3027634,
+      "sha256": "3002d772d6ecc545a396eefac604e2662e3b6db9840290e7e6924a41485ab2b8"
     },
     {
       "path": "docs/images/04-pytorch-release.jpg",
@@ -408,8 +408,8 @@
     },
     {
       "path": "docs/images/index.json",
-      "bytes": 3970,
-      "sha256": "d3a65b0fb991bde797cb285e7d1fa5cb3e02a25be12caab5a44d4a0b124d28bf"
+      "bytes": 4666,
+      "sha256": "ec009135668f6bae5668c51c2f85998c651951b2344fd2634186572dbc82c0ce"
     }
   ]
 }

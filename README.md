@@ -30,7 +30,7 @@ the same 5,225 correct predictions out of 6,000 images.
   setup or prepare the pinned experimental framework.
 - [Findings and scope](docs/FINDINGS.md): what the evidence establishes and the
   limits of this implementation.
-- [Interview notes](docs/INTERVIEW.md): explain the goal, methods, and results.
+- [Detailed project explanation](docs/WORK-COMPLETED.md): goal, methods, and results.
 - [Current status](docs/STATUS.md): completed evidence and remaining submission checks.
 - [Forensics background](docs/FORENSICS_BACKGROUND.md): chapter-based concepts tied to the experiment.
 - [Evidence inventory](evidence/README.md): which reports to inspect.

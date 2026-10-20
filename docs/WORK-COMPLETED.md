@@ -1,9 +1,9 @@
-# Explaining the project in an interview
+# Detailed explanation of the project
 
 ## A short introduction
 
 "I built a custom CIFAR-10 CNN, exported it to TorchScript, and ran it through a
-C++ executable. I used GDB to inspect its live objects, captured Linux RAM with
+C++ executable. I used GDB to inspect its live objects, captured Linux Ubuntu 26.04 version RAM with
 LiME, and wrote a Volatility 3 plugin to recover the model's tensors, hierarchy,
 and generated implementation. I validated those artifacts against the original,
 then reconstructed the model from the recovered information. On all 6,000 test
@@ -38,7 +38,7 @@ Methods lead to GraphFunctions and graphs. SourceRanges reference resident Sourc
 text. That source contains the generated implementation, including functional
 helpers needed by the model's forward pass.
 
-## Numbers to remember
+## Important numbers
 
 - Custom split: 48,000 / 6,000 / 6,000; seed 42.
 - Training: 25 epochs, 87.0833% test accuracy.
@@ -52,7 +52,7 @@ helpers needed by the model's forward pass.
 The 31 tensors include nine batch-normalization buffers. The 26 modules include
 the root and containers. They are not counts of convolution layers.
 
-## Explain validation clearly
+## Explaining the validation part
 
 The recovery plugin did not load the checkpoint. The reference was used later
 to compare state and source. For replay, construction used captured classes,
@@ -66,11 +66,11 @@ PyTorch operators remain installed runtime dependencies.
 Agreement is not accuracy: both models agreed on every prediction and were
 correct on 5,225 of 6,000 ground-truth labels.
 
-## Challenges and limits to discuss
+## Challenges and limitations
 
 The ARM64 kernel needed suitable framework translation support and an exact
-kernel symbol table. The kernel symbol conversion exceeded VM RAM, so it was
-performed on the Mac using the same debug ELF. PyTorch's C++ layout also changed
+kernel symbol table. **The kernel symbol conversion exceeded VM RAM, so it was
+performed on the Mac using the same debug ELF.** PyTorch's C++ layout also changed
 between builds, so offsets were measured from target debug types rather than
 assumed.
 
@@ -78,7 +78,3 @@ The approach is GDB-guided and build-specific. It does not discover unknown
 models automatically, recover GPU VRAM, recreate the original training script,
 or reconstruct native C++ kernel source. Evaluation-path tracing does not prove
 all-branch coverage. These limits are part of the findings.
-
-Use the [walkthrough](WALKTHROUGH.md) and [evidence reports](../evidence/README.md)
-when preparing detailed examples. Describe the measured environment versions;
-do not claim a version is the latest without release-date verification.
