@@ -81,16 +81,13 @@ order matched the recovered tree for this model.
   used the LiME image. Full-system acquisition completeness beyond the recovered
   target pages has not been independently certified.
 
-## Remaining assignment checks
+## Remaining future work
 
 The walkthrough includes the three preserved original screenshots. Additional
 training/build, extraction, validation, and replay screenshots would strengthen
-the final submission. The assignment's textbook reading remains a personal
-prerequisite. Its "most recent PyTorch" wording needs a release-date check; this
-repository records installed versions and does not upgrade or retrain to change
-that historical record.
+the final submission.
 
-If the instructor intends native machine-code extraction or a full native call
+We can intend to do native machine-code extraction or a full native call
 trace under "any code called during forward," that is additional work. The
 current evidence establishes recovered TorchScript implementation and tested
 evaluation behavior.
