@@ -1,0 +1,15 @@
+Breakpoint 1 at 0x8128: file /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp, line 91.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/aarch64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=4, argv=0xfffffffff928) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+91	            auto logits = model.forward({images}).toTensor();
+{
+  "pid": 4540,
+  "completed_images_before_stop": 128,
+  "model_object": "0xaaaaae076cb0",
+  "input_tensor_impl": "0xaaaaadfd1940",
+  "scope": "Paused before the second forward call after one completed CPU batch. This does not establish all-branch coverage."
+}
+WARMUP_CAPTURE_READY
+[Inferior 1 (process 4540) killed]

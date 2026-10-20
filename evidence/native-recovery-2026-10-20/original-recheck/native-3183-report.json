@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "pid": 3183,
+  "process_layer": "layer_name_Process3183",
+  "plan": {
+    "schema": 1,
+    "method": "symbols-guided",
+    "library_name": "libtorch_cpu.so",
+    "reference_library": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so",
+    "reference_library_sha256": "2befcd2b97a282fb2f2cc0ce069f9943dd12c67cf88ab41c17824966f750e14d",
+    "elf_machine": 183,
+    "identity_ranges": [
+      {
+        "kind": "ELF header",
+        "file_offset": 0,
+        "size": 64,
+        "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c"
+      },
+      {
+        "kind": "GNU build ID",
+        "file_offset": 640,
+        "size": 20,
+        "hex": "9bf94dfd38ea8b0540afb4ba70de28579ae1f058",
+        "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c"
+      }
+    ],
+    "functions": [
+      {
+        "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+        "elf_value": 20066128,
+        "file_offset": 15871824,
+        "size": 584
+      }
+    ],
+    "scope": "Symbol locations and sizes come from the reference ELF. The recovery plugin reads code bytes only from the captured process layer."
+  },
+  "mappings": [
+    {
+      "start": 281474657222656,
+      "end": 281474672631808,
+      "file_offset": 0,
+      "flags": "r--",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474672631808,
+      "end": 281474672689152,
+      "file_offset": 15409152,
+      "flags": "---",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474672689152,
+      "end": 281474803798016,
+      "file_offset": 15466496,
+      "flags": "r-x",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474803798016,
+      "end": 281474803826688,
+      "file_offset": 146575360,
+      "flags": "---",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474803826688,
+      "end": 281474836197376,
+      "file_offset": 146604032,
+      "flags": "r--",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474836197376,
+      "end": 281474836230144,
+      "file_offset": 178974720,
+      "flags": "---",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474836230144,
+      "end": 281474838953984,
+      "file_offset": 179007488,
+      "flags": "r--",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474838953984,
+      "end": 281474839801856,
+      "file_offset": 181731328,
+      "flags": "rw-",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    }
+  ],
+  "identity_checks": [
+    {
+      "kind": "ELF header",
+      "address": "0xffffecf50000",
+      "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c",
+      "match": true
+    },
+    {
+      "kind": "GNU build ID",
+      "address": "0xffffecf50280",
+      "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c",
+      "match": true
+    }
+  ],
+  "functions": [
+    {
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "elf_value": 20066128,
+      "file_offset": 15871824,
+      "size": 584,
+      "status": "unreadable",
+      "error": "PagedInvalidAddressException",
+      "error_type": "PagedInvalidAddressException",
+      "invalid_address": "0xffffede72f50"
+    }
+  ],
+  "complete_selected_functions": false,
+  "scope": "Selected native functions only. Code bytes come from the memory image, without padding or disk fallback. This is not exhaustive forward-path discovery, branch coverage, or native source recovery."
+}

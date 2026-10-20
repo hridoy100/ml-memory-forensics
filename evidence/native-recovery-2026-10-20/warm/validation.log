@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "pid": 4540,
+  "functions": [
+    {
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 584,
+      "address": "0xffffede72f50",
+      "memory_sha256": "32eed4e332633b1cd18abe29ad2cee997e1baa81f8c123b39fc42f8fad85f740",
+      "reference_sha256": "32eed4e332633b1cd18abe29ad2cee997e1baa81f8c123b39fc42f8fad85f740",
+      "disassembly": "native-000.asm.txt"
+    }
+  ],
+  "scope": "Exact bytes of selected functions, not all native functions or all forward-pass calls."
+}
+NATIVE_CODE_VALIDATION_PASS

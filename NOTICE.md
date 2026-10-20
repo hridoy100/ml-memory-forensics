@@ -15,7 +15,8 @@ The generated TorchScript sources in `evidence/recovery/pytorch-3183-source-*.py
 include the custom model and serialized PyTorch module/helper implementations.
 The [PyTorch license](licenses/PyTorch-LICENSE.txt) was copied from the installed
 target PyTorch distribution. The repository does not redistribute LibTorch,
-CUDA, or other runtime binaries.
+CUDA, or other runtime binaries. The native-recovery branch includes ARM64 disassembly of one
+function from the installed PyTorch CPU runtime under the same PyTorch notice. The extracted binary itself remains outside Git.
 
 CIFAR-10 is obtained separately through torchvision. Dataset attribution and
 download information are available from the

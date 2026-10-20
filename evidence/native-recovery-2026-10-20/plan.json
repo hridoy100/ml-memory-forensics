@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "method": "symbols-guided",
+  "library_name": "libtorch_cpu.so",
+  "reference_library": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so",
+  "reference_library_sha256": "2befcd2b97a282fb2f2cc0ce069f9943dd12c67cf88ab41c17824966f750e14d",
+  "elf_machine": 183,
+  "identity_ranges": [
+    {
+      "kind": "ELF header",
+      "file_offset": 0,
+      "size": 64,
+      "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c"
+    },
+    {
+      "kind": "GNU build ID",
+      "file_offset": 640,
+      "size": 20,
+      "hex": "9bf94dfd38ea8b0540afb4ba70de28579ae1f058",
+      "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c"
+    }
+  ],
+  "functions": [
+    {
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "elf_value": 20066128,
+      "file_offset": 15871824,
+      "size": 584
+    }
+  ],
+  "scope": "Symbol locations and sizes come from the reference ELF. The recovery plugin reads code bytes only from the captured process layer."
+}

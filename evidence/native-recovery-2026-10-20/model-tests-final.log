@@ -1,0 +1,15 @@
+test_gpu_storage_is_rejected (test_pytorch_model.TensorRecoveryTests.test_gpu_storage_is_rejected) ... ok
+test_invalid_shape_is_rejected (test_pytorch_model.TensorRecoveryTests.test_invalid_shape_is_rejected) ... ok
+test_manifest_uses_filename_resolved_on_close (test_pytorch_model.TensorRecoveryTests.test_manifest_uses_filename_resolved_on_close) ... ok
+test_missing_page_is_not_zero_filled (test_pytorch_model.TensorRecoveryTests.test_missing_page_is_not_zero_filled) ... ok
+test_noncontiguous_tensor_is_rejected (test_pytorch_model.TensorRecoveryTests.test_noncontiguous_tensor_is_rejected) ... ok
+test_numpy_header_keeps_scalar_shape (test_pytorch_model.TensorRecoveryTests.test_numpy_header_keeps_scalar_shape) ... ok
+test_storage_bounds_are_checked (test_pytorch_model.TensorRecoveryTests.test_storage_bounds_are_checked) ... ok
+test_storage_offset_excludes_unrelated_prefix (test_pytorch_model.TensorRecoveryTests.test_storage_offset_excludes_unrelated_prefix) ... ok
+test_tuple_vector_arm_does_not_look_empty (test_pytorch_model.TensorRecoveryTests.test_tuple_vector_arm_does_not_look_empty) ... ok
+test_vector_cycle_or_bad_bounds_is_rejected (test_pytorch_model.TensorRecoveryTests.test_vector_cycle_or_bad_bounds_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK

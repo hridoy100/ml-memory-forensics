@@ -1,0 +1,10 @@
+test_cast_type_is_erased_without_changing_tensor_value (test_pytorch_confirmation.RecoveredSourceTests.test_cast_type_is_erased_without_changing_tensor_value) ... ok
+test_changed_source_is_rejected_before_execution (test_pytorch_confirmation.RecoveredSourceTests.test_changed_source_is_rejected_before_execution) ... ok
+test_missing_helper_via_local_alias_is_detected (test_pytorch_confirmation.RecoveredSourceTests.test_missing_helper_via_local_alias_is_detected) ... ok
+test_missing_reported_definition_is_rejected (test_pytorch_confirmation.RecoveredSourceTests.test_missing_reported_definition_is_rejected) ... ok
+test_recovered_body_is_executed_and_traced (test_pytorch_confirmation.RecoveredSourceTests.test_recovered_body_is_executed_and_traced) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.333s
+
+OK

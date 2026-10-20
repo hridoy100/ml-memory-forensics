@@ -1,0 +1,5 @@
+40000000-13c05ffff : System RAM
+13c070000-13c15ffff : System RAM
+13c480000-13f75ffff : System RAM
+13f7f0000-13f7fffff : System RAM
+13f920000-13fffffff : System RAM

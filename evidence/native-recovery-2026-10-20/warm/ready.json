@@ -1,0 +1,7 @@
+{
+  "pid": 4540,
+  "completed_images_before_stop": 128,
+  "model_object": "0xaaaaae076cb0",
+  "input_tensor_impl": "0xaaaaadfd1940",
+  "scope": "Paused before the second forward call after one completed CPU batch. This does not establish all-branch coverage."
+}

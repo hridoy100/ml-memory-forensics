@@ -107,6 +107,111 @@
       "sha256": "c23fca489ee95c9ce16fce9c82f37a760f204dfb59e0950dd6e4d5c6db600c6e"
     },
     {
+      "path": "evidence/native-recovery-2026-10-20/README.md",
+      "bytes": 2101,
+      "sha256": "283a16204791ba0a1de76723aebe77d875ac06d88cf0fab807df23c32ff2db7c"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/artifacts.json",
+      "bytes": 1597,
+      "sha256": "ca18930cb411a27678d76d26f2d05cfd98519a7e6a4cd66c96eb54b7c57a3ec8"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/model-tests-final.log",
+      "bytes": 1343,
+      "sha256": "32aafa9f482e55e9df2138580e5d4ec279d019bf4d3de22455302d28227a9a88"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/native-tests-final.log",
+      "bytes": 2471,
+      "sha256": "1e1f7a37c6d3d0487810603d0d393847437c8c5602d8de7ea0166de3202156a6"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/original-recheck/extraction.log",
+      "bytes": 323,
+      "sha256": "11294c9d0cd7d572263b329c672ea6da39ec4fab32ca2d0381e48e3fc5f0bd11"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/original-recheck/native-3183-report.json",
+      "bytes": 4533,
+      "sha256": "bce8812af621e8d28831dcb661ab99138e5d853edbffbaf44ab0bcabf85fc3b5"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/plan.json",
+      "bytes": 1224,
+      "sha256": "4a3a9d3845b93f5eeefef091a8a8f8cc82998788c48ae39848192ba4843e7d61"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/plan.log",
+      "bytes": 242,
+      "sha256": "878f499fcea561fdf896a31a2c089f52e91ee8ac04ae1aa644bb1bb2304d84fb"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/replay-tests-final.log",
+      "bytes": 858,
+      "sha256": "862053a3b2b9ddf5e0052378254ca4998ad68cb969622b3b5db45c019b6a4293"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/tests.log",
+      "bytes": 1613,
+      "sha256": "914e45f6b730e79662e52067cb5748929d5314c9245746e47142c020378bbdf3"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/acquisition.log",
+      "bytes": 1434,
+      "sha256": "0c0a8e584d5b6a33f1027c580ff43df4f5cb9a931990e159f5059574fe4da5dd"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/analysis.log",
+      "bytes": 1105,
+      "sha256": "e689777bd328fba0ddf426715713bdc927f695afe7ac1d58772cd3c3cc22b295"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/capture.json",
+      "bytes": 1174,
+      "sha256": "f261405d4dc63916aaa5398c3a0a207b5acaf8f8dc17f39ec6205864b8866883"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/extraction.log",
+      "bytes": 339,
+      "sha256": "b28bc5bf1e8f996977931973f2d1932f8e48caaef88c00b0d6f6beb462036ed1"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/gdb.log",
+      "bytes": 740,
+      "sha256": "bedd5e8725a68f1ff83f0186ed7981f89821f2be2046861ff49a637eacd1ce98"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/physical-ranges.txt",
+      "bytes": 164,
+      "sha256": "6f03ce25b18380af22f2260004c62280575d97be1a6298569e8fe5e0faae8793"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/ready.json",
+      "bytes": 262,
+      "sha256": "ac3ab17ccec854766ad50dfe4a513d2fc8dc97cfe34129629ffc1041d0ccdd67"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/recovery/native-4540-report.json",
+      "bytes": 4545,
+      "sha256": "1ccd1f06f4dad2c3b177742971d3d8ed8386dbc57ce804dbd5086086dd4cd310"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/validation/native-000.asm.txt",
+      "bytes": 7235,
+      "sha256": "b4cd1c7ce50585c24e675951ae3d72e6e1e75d05147885fc11012e8a7d46532f"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/validation/validation.json",
+      "bytes": 712,
+      "sha256": "444901b9ecc1988ff89d96ca6416d2a32fb3b2ac2a732d4303fc4ba758e66269"
+    },
+    {
+      "path": "evidence/native-recovery-2026-10-20/warm/validation.log",
+      "bytes": 740,
+      "sha256": "effe861c3e8c15df7f8e8a922d8636d1444fc558329e16bc679d5b94f53d00d7"
+    },
+    {
       "path": "evidence/recovery/pytorch-3183-model.json",
       "bytes": 403837,
       "sha256": "b9911aed7b88ad7b368edec2cb2b8eaa796a6294faddf011094ff4b21f120c5e"

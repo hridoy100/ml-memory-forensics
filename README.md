@@ -5,6 +5,10 @@ checks that the recovered implementation produces the same outputs as the
 original. It brings together the training code, C++ inference program, GDB
 inspection, Volatility recovery plugin, evidence, and reproduction instructions.
 
+This branch adds a separate [native-code recovery experiment](docs/NATIVE_RECOVERY.md).
+Its first milestone recovers one complete native function from a new warm-up
+capture. It does not claim exhaustive native coverage.
+
 ## Recorded results
 
 | Check | Result |

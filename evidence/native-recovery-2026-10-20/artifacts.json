@@ -1,0 +1,47 @@
+{
+  "native_binary": {
+    "path": "/home/raihan/Downloads/memory-evidence/native-recovery-20261020-125554/warm/recovery/native-4540-000.bin",
+    "bytes": 584,
+    "sha256": "32eed4e332633b1cd18abe29ad2cee997e1baa81f8c123b39fc42f8fad85f740"
+  },
+  "capture": {
+    "capture": "/home/raihan/Downloads/memory-evidence/native-recovery-20261020-125554/warm/memory.lime",
+    "bytes": 4289855648,
+    "sha256": "5dc577eda3b17f4d79697263810269ed41147aea72913409eacfb87c3f56121e",
+    "range_framing_valid": true,
+    "ranges": [
+      {
+        "header_file_offset": 0,
+        "physical_start": "0x40000000",
+        "physical_end": "0x13c05ffff",
+        "bytes": 4228251648
+      },
+      {
+        "header_file_offset": 4228251680,
+        "physical_start": "0x13c070000",
+        "physical_end": "0x13c15ffff",
+        "bytes": 983040
+      },
+      {
+        "header_file_offset": 4229234752,
+        "physical_start": "0x13c480000",
+        "physical_end": "0x13f75ffff",
+        "bytes": 53346304
+      },
+      {
+        "header_file_offset": 4282581088,
+        "physical_start": "0x13f7f0000",
+        "physical_end": "0x13f7fffff",
+        "bytes": 65536
+      },
+      {
+        "header_file_offset": 4282646656,
+        "physical_start": "0x13f920000",
+        "physical_end": "0x13fffffff",
+        "bytes": 7208960
+      }
+    ],
+    "scope": "All stored ranges have complete payloads and valid framing. This does not prove all system RAM was acquired or that the capture is temporally atomic."
+  },
+  "scope": "One selected complete function; no exhaustive native trace is claimed."
+}
