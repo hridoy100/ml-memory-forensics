@@ -16,5 +16,69 @@
     "original": "/Users/smraalam/Desktop/Screenshot 2026-10-18 at 1.00.25\u202fPM.png",
     "sha256": "59553f4beb0473fa3c8b7dd0530fcb102c9b9d47b3e100d640f5c4dffc81e348",
     "caption": "Tail of the process VMA listing and Volshell address verification with input shape [128, 3, 32, 32] and ADDRESS_CHECK_PASS."
+  },
+  {
+    "file": "04-pytorch-release.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "official-release-page",
+    "sha256": "6158921db9add0fc6ede4d36d4f0c2af4c0f867b577ab718e9daf024da15e3fe",
+    "caption": "Official PyTorch 2.14.1 release page, captured October 20, 2026; shows Latest badge and September 30 publication date."
+  },
+  {
+    "file": "05-training-record.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "2326e00bce87b860744c3c888acfe035591f2241dfda903e9f86ea6de1f46f19",
+    "caption": "Browser report of a new checkpoint/metrics check. Historical epoch-25 record; training was not rerun."
+  },
+  {
+    "file": "06-export.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "a3e419bba4d4a94a47c9e1f110ac384e769b3a456a7b62bb37a11fc0e21bc3ab",
+    "caption": "Browser report of the fresh TorchScript export and batch-size 1/4 comparison."
+  },
+  {
+    "file": "07-debug-build.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "518edad45e01309e58af3de0b49b682872e9b87de27cfc5b4367891c6316f83b",
+    "caption": "Browser report of the fresh Debug build, emitted debug sections, and successful C++ inference on 6,000 images."
+  },
+  {
+    "file": "08-extraction.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "57213e5c70c634a52b47c924e7ab45de2b99f57e17c6a8dd9b4b5ac066c8bcca",
+    "caption": "Browser report of fresh extraction from the original PID-3183 LiME capture: 26 modules, 31 tensors, 19 sources, zero errors."
+  },
+  {
+    "file": "09-validation.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "8e79c6888443cd0a95d0ddf718e5cd888ae92bac0f794c9e18ae88daa54e5ede",
+    "caption": "Browser report of fresh byte-level tensor/source validation."
+  },
+  {
+    "file": "10-replay.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "56587a3991fc493d4e19d8b99f17e43c7de98cfe099d1fbb2bfb3cb0721a7c4c",
+    "caption": "Browser report of a fresh full replay: 6,000 matching predictions and zero logit difference."
+  },
+  {
+    "file": "11-native-forward.jpg",
+    "captured_on": "2026-10-20",
+    "capture_method": "Chrome browser screenshot",
+    "view_kind": "labeled-saved-log-report",
+    "sha256": "666ad1836e106234297caf44ef29f4d21040820b4bfaff6373ee9abddb4b75b2",
+    "caption": "Browser report excerpt of live PID 3220 native convolution backtrace and .text instructions; not a complete native trace."
   }
 ]

@@ -83,14 +83,17 @@ order matched the recovered tree for this model.
 
 ## Remaining assignment checks
 
-The walkthrough includes the three preserved original screenshots. Additional
-training/build, extraction, validation, and replay screenshots would strengthen
-the final submission. The assignment's textbook reading remains a personal
-prerequisite. Its "most recent PyTorch" wording needs a release-date check; this
-repository records installed versions and does not upgrade or retrain to change
-that historical record.
+The walkthrough now includes a [submission evidence supplement](SUBMISSION_EVIDENCE.md)
+with fresh report screenshots, measured Debug build/inference, and a repeated
+full extraction/validation/replay. [Release verification](VERSION_VERIFICATION.md)
+compares the recorded training version with official metadata as of the
+October 17 artifact commit; exact training timestamps remain outside that record.
 
 If the instructor intends native machine-code extraction or a full native call
 trace under "any code called during forward," that is additional work. The
 current evidence establishes recovered TorchScript implementation and tested
 evaluation behavior.
+
+A [new native sample](CODE_SCOPE.md#new-native-evidence) adds a live convolution
+backtrace and 12 implementation instructions. It does not change the stated
+limits on native code extraction or exhaustive call coverage.

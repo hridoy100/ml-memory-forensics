@@ -1,0 +1,34 @@
+Reproduction check: native-forward
+2026-10-20T11:37:38-05:00
+Command: env OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 gdb -q -batch -x /home/raihan/Downloads/ml-memory-forensics/scripts/inspect_native_forward.gdb --args /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build/cifar10_inference /home/raihan/Downloads/volatility/cifar10_cnn/outputs/cifar10_torchscript.pt /home/raihan/Downloads/volatility/cifar10_cnn/data/cifar10_test.bin /home/raihan/Downloads/memory-evidence/submission-20261020-113652/gdb-predictions.csv
+
+Breakpoint 1 at 0x8128: file /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp, line 91.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/aarch64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=4, argv=0xfffffffffa38) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+91	            auto logits = model.forward({images}).toTensor();
+Live reproduction PID: 3145
+
+Stopped before the C++ model forward pass:
+#0  main (argc=4, argv=0xfffffffffa38) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+Breakpoint 2 at 0xffffedeb2dac
+Image 0: predicted=airplane, actual=airplane
+Image 1: predicted=airplane, actual=airplane
+Image 2: predicted=airplane, actual=airplane
+Image 3: predicted=airplane, actual=airplane
+Image 4: predicted=airplane, actual=airplane
+Image 5: predicted=truck, actual=airplane
+Image 6: predicted=airplane, actual=airplane
+Image 7: predicted=airplane, actual=airplane
+Image 8: predicted=airplane, actual=airplane
+Image 9: predicted=airplane, actual=airplane
+Test images: 6000
+Correct: 5225/6000
+Accuracy: 87.08%
+Predictions: "/home/raihan/Downloads/memory-evidence/submission-20261020-113652/gdb-predictions.csv"
+[Inferior 1 (process 3145) exited normally]
+
+Sample native operator call during model.forward:
+/home/raihan/Downloads/ml-memory-forensics/scripts/inspect_native_forward.gdb:15: Error in sourced command file:
+No stack.

@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "pid": 3183,
+  "images_compared": 6000,
+  "prediction_matches": 6000,
+  "max_absolute_logit_difference": 0.0,
+  "logits_allclose": true,
+  "rtol": 1e-05,
+  "atol": 1e-05,
+  "finite_logits": true,
+  "first_batch_forward_order_matches_recovered_tree": true,
+  "first_batch_forward_order": [
+    "",
+    "features",
+    "features.0",
+    "features.1",
+    "features.2",
+    "features.3",
+    "features.4",
+    "features.5",
+    "features.6",
+    "features.7",
+    "features.8",
+    "features.9",
+    "features.10",
+    "features.11",
+    "features.12",
+    "features.13",
+    "features.14",
+    "features.15",
+    "features.16",
+    "features.17",
+    "classifier",
+    "classifier.0",
+    "classifier.1",
+    "classifier.2",
+    "classifier.3",
+    "classifier.4"
+  ],
+  "first_batch_function_calls": [
+    {
+      "function": "__torch__.train.CIFAR10CNN.forward",
+      "module": ""
+    },
+    {
+      "function": "__torch__.torch.nn.modules.container.Sequential.forward",
+      "module": "features"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.Conv2d.forward",
+      "module": "features.0"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.Conv2d._conv_forward",
+      "module": "features.0"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.batchnorm.BatchNorm2d.forward",
+      "module": "features.1"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.batchnorm.BatchNorm2d._check_input_dim",
+      "module": "features.1"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.batch_norm",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "features.2"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d.forward",
+      "module": "features.3"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d._conv_forward",
+      "module": "features.3"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "features.4"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.pooling.MaxPool2d.forward",
+      "module": "features.5"
+    },
+    {
+      "function": "__torch__.torch.nn.functional._max_pool2d",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_1.Conv2d.forward",
+      "module": "features.6"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_1.Conv2d._conv_forward",
+      "module": "features.6"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_2.BatchNorm2d.forward",
+      "module": "features.7"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_2.BatchNorm2d._check_input_dim",
+      "module": "features.7"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.batch_norm",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "features.8"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d.forward",
+      "module": "features.9"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d._conv_forward",
+      "module": "features.9"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "features.10"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.pooling.MaxPool2d.forward",
+      "module": "features.11"
+    },
+    {
+      "function": "__torch__.torch.nn.functional._max_pool2d",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d.forward",
+      "module": "features.12"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d._conv_forward",
+      "module": "features.12"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_5.BatchNorm2d.forward",
+      "module": "features.13"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_5.BatchNorm2d._check_input_dim",
+      "module": "features.13"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.batch_norm",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "features.14"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d.forward",
+      "module": "features.15"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d._conv_forward",
+      "module": "features.15"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "features.16"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.pooling.MaxPool2d.forward",
+      "module": "features.17"
+    },
+    {
+      "function": "__torch__.torch.nn.functional._max_pool2d",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.container.___torch_mangle_8.Sequential.forward",
+      "module": "classifier"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.flatten.Flatten.forward",
+      "module": "classifier.0"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.linear.Linear.forward",
+      "module": "classifier.1"
+    },
+    {
+      "function": "__torch__.torch.nn.modules.activation.ReLU.forward",
+      "module": "classifier.2"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.relu",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.dropout.Dropout.forward",
+      "module": "classifier.3"
+    },
+    {
+      "function": "__torch__.torch.nn.functional.dropout",
+      "module": null
+    },
+    {
+      "function": "__torch__.torch.nn.modules.linear.___torch_mangle_7.Linear.forward",
+      "module": "classifier.4"
+    }
+  ],
+  "first_batch_runtime_operator_calls": {
+    "torch.conv2d": 6,
+    "torch.dim": 3,
+    "torch.ne": 3,
+    "torch.lt": 4,
+    "torch.batch_norm": 3,
+    "torch.relu": 7,
+    "torch.__is__": 3,
+    "torch.max_pool2d": 3,
+    "torch.flatten": 1,
+    "torch.linear": 2,
+    "torch.gt": 1,
+    "torch.dropout": 1
+  },
+  "recovered_accuracy": 0.8708333333333333,
+  "reference_accuracy": 0.8708333333333333,
+  "torch_version": "2.14.1+cpu",
+  "torch_git_version": "5c4886908584029761b579af026dcfb627c84070",
+  "reference_sha256": "b62adee22fbea5bdb9f3ecab1b35a0ad1fe95f30644aff36a81ea838490dab83",
+  "test_bin_sha256": "e20f8c46934d96ce589aeb93389dd4b3a5d8d25758370c150487e45e61c3def2",
+  "recovery_report_sha256": "b9911aed7b88ad7b368edec2cb2b8eaa796a6294faddf011094ff4b21f120c5e",
+  "scope": "Static recovered definitions and observed first-batch evaluation calls. This is not all-branch coverage or native C++ kernel/source recovery."
+}

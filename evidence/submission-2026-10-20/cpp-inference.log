@@ -1,0 +1,20 @@
+Reproduction check: cpp-inference
+2026-10-20T11:37:07-05:00
+Command: env OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build/cifar10_inference /home/raihan/Downloads/memory-evidence/submission-20261020-113652/reexported.pt /home/raihan/Downloads/volatility/cifar10_cnn/data/cifar10_test.bin /home/raihan/Downloads/memory-evidence/submission-20261020-113652/cpp-predictions.csv
+
+Image 0: predicted=airplane, actual=airplane
+Image 1: predicted=airplane, actual=airplane
+Image 2: predicted=airplane, actual=airplane
+Image 3: predicted=airplane, actual=airplane
+Image 4: predicted=airplane, actual=airplane
+Image 5: predicted=truck, actual=airplane
+Image 6: predicted=airplane, actual=airplane
+Image 7: predicted=airplane, actual=airplane
+Image 8: predicted=airplane, actual=airplane
+Image 9: predicted=airplane, actual=airplane
+Test images: 6000
+Correct: 5225/6000
+Accuracy: 87.08%
+Predictions: "/home/raihan/Downloads/memory-evidence/submission-20261020-113652/cpp-predictions.csv"
+
+STEP_PASS: cpp-inference

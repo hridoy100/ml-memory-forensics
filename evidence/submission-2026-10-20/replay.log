@@ -1,0 +1,16 @@
+Reproduction check: replay
+2026-10-20T11:37:23-05:00
+Command: env OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/raihan/Downloads/volatility/cifar10_cnn/.venv/bin/python /home/raihan/Downloads/ml-memory-forensics/forensics/confirm_recovery.py --report /home/raihan/Downloads/memory-evidence/submission-20261020-113652/recovery/pytorch-3183-model.json --reference /home/raihan/Downloads/volatility/cifar10_cnn/outputs/cifar10_torchscript.pt --test-bin /home/raihan/Downloads/volatility/cifar10_cnn/data/cifar10_test.bin --output-dir /home/raihan/Downloads/memory-evidence/submission-20261020-113652/replay --limit 6000
+
+Recovered definitions found: 34/34
+Unresolved script/runtime dependencies: 0
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_serialization.py:170: FutureWarning: `torch.jit.load` is not supported in Python 3.14+ and may break. Please switch to `torch.export`.
+  warnings.warn(
+Predictions matching: 6000/6000
+Maximum absolute logit difference: 0
+Logits within rtol=1e-5, atol=1e-5: True
+Observed layer forward order matches recovered tree: True
+INFERENCE_COMPARISON_PASS
+/home/raihan/Downloads/memory-evidence/submission-20261020-113652/replay/inference-comparison.json
+
+STEP_PASS: replay

@@ -2,30 +2,33 @@
 
 ## Completed and evidenced
 
-- Custom CIFAR-10 CNN, recorded 80/10/10 split, trained checkpoint and metrics.
+- Custom CIFAR-10 CNN, recorded 80/10/10 split, checkpoint and training metrics.
 - TorchScript export and C++ CPU inference with full application debug types.
-- GDB PID/object inspection and a LiME-format image containing the target pages.
-- PID/VMA analysis and Volshell verification of recorded model/input addresses.
-- Build-specific model extractor, byte-level validation, and generated source recovery.
+- GDB PID/object inspection, LiME capture, PID/VMA analysis, and Volshell checks.
+- Recovery of 31 tensors, 26 modules, 19 archived source files, and 34 function graphs.
 - Recovered-source inference with identical outputs on all 6,000 test images.
-- Combined walkthrough, findings, interview notes, artifact manifest, and preserved evidence.
-- Consolidated repository checks: all 15 tests pass, fresh extraction/validation and
-  128-image replay pass, and the updated GDB helper reads the expected weights.
-  See the [verification logs](../evidence/README.md#consolidated-repository-checks).
+- All 15 decoder/replay tests and the original consolidation checks passed.
+- October 20 reproduction: fresh export, Debug build, C++ inference, extraction,
+  validation, and full replay passed. A live native convolution sample also passed.
+- Three original screenshots plus eight new browser screenshots are preserved.
+  New report views are labeled accurately; they do not recreate historical terminals.
+- Official release metadata confirms that recorded PyTorch 2.14.1 matches the
+  latest stable release as of the October 17 training-artifact commit. See
+  [version verification](VERSION_VERIFICATION.md) for the timestamp limitation.
 
-## Still needed for the final assignment submission
+## Remaining scope clarification
 
-- Add training/export/build and extraction/validation/replay screenshots. Three
-  original GDB/PID/Volshell screenshots are already preserved.
-- Independently verify the historical "most recent PyTorch" requirement against
-  the date of the experiment; keep observed package versions distinct from that claim.
-- Complete the requested textbook reading personally. The repository does not
-  certify that reading or reproduction of the reference papers' full systems.
-- Establish any instructor-required native machine-code/call coverage beyond
-  the recovered TorchScript implementation. Current limits are explicit in
-  [FINDINGS.md](FINDINGS.md).
+The instructor has not clarified whether the model-code requirement extends to
+every native library/kernel call. The recovered TorchScript implementation and
+one live native sample are evidenced; exhaustive native coverage and native
+code extraction from the original image are not claimed. Use the ready-to-send
+[scope question](CODE_SCOPE.md#clarification-to-send-to-the-instructor).
+
+If historical training-terminal screenshots or exact start/end times are
+required, obtain the original Argon job stdout and scheduler record. The current
+training screenshot checks the saved checkpoint and metrics; it is labeled as
+a new check. The Git commit is a dated artifact record, not a scheduler timestamp.
 
 The raw imported `analysis-summary.json` describes an earlier working state.
-This status file and the walkthrough reflect repository consolidation on
-October 20, 2026. Original reports/logs are preserved rather than edited to
-rewrite their history.
+Original reports/logs are preserved. The [submission evidence supplement](SUBMISSION_EVIDENCE.md)
+records the October 20 reproduction and the scope of each new screenshot.

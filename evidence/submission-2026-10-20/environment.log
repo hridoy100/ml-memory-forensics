@@ -1,0 +1,11 @@
+Reproduction check: environment
+2026-10-20T11:36:52-05:00
+Command: /home/raihan/Downloads/volatility/cifar10_cnn/.venv/bin/python -c import\ platform\,\ torch\,\ torchvision\;\ print\(\"Python:\"\,\ platform.python_version\(\)\)\;\ print\(\"Architecture:\"\,\ platform.machine\(\)\)\;\ print\(\"PyTorch:\"\,\ torch.__version__\)\;\ print\(\"PyTorch\ commit:\"\,\ torch.version.git_version\)\;\ print\(\"torchvision:\"\,\ torchvision.__version__\)
+
+Python: 3.14.4
+Architecture: aarch64
+PyTorch: 2.14.1+cpu
+PyTorch commit: 5c4886908584029761b579af026dcfb627c84070
+torchvision: 0.29.1+cpu
+
+STEP_PASS: environment

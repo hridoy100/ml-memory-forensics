@@ -1,0 +1,299 @@
+{
+  "passed": true,
+  "pid": 3183,
+  "reference_sha256": "b62adee22fbea5bdb9f3ecab1b35a0ad1fe95f30644aff36a81ea838490dab83",
+  "tensor_count": 31,
+  "total_tensor_bytes": 3260096,
+  "tensors": [
+    {
+      "name": "features.0.weight",
+      "sha256": "628a84e76fbfabea7b71d2e8f7d6432485fb514b54897e9bcabc0983c474a4e2",
+      "reference_sha256": "628a84e76fbfabea7b71d2e8f7d6432485fb514b54897e9bcabc0983c474a4e2",
+      "match": true
+    },
+    {
+      "name": "features.0.bias",
+      "sha256": "0ec3f8bc4b5a2762591bcc1db86374688e42ecf23e98b8a0df80e5cea3d19d4f",
+      "reference_sha256": "0ec3f8bc4b5a2762591bcc1db86374688e42ecf23e98b8a0df80e5cea3d19d4f",
+      "match": true
+    },
+    {
+      "name": "features.1.weight",
+      "sha256": "e59ae729d6e0a361ed09b0061e782dfbd1a3d4b7e572ffd64021c79c3ef34e8e",
+      "reference_sha256": "e59ae729d6e0a361ed09b0061e782dfbd1a3d4b7e572ffd64021c79c3ef34e8e",
+      "match": true
+    },
+    {
+      "name": "features.1.bias",
+      "sha256": "20ca813863d1b1851a4b77345fc5ff6c7baebad0f9c54063645fc994f8de6d8e",
+      "reference_sha256": "20ca813863d1b1851a4b77345fc5ff6c7baebad0f9c54063645fc994f8de6d8e",
+      "match": true
+    },
+    {
+      "name": "features.1.running_mean",
+      "sha256": "d071fa92d8eff734c7f044c4574269dfae6d93a875387dbde660e111199a4bc3",
+      "reference_sha256": "d071fa92d8eff734c7f044c4574269dfae6d93a875387dbde660e111199a4bc3",
+      "match": true
+    },
+    {
+      "name": "features.1.running_var",
+      "sha256": "99a80930288dce2dfb07d98c1a7a516ad05299b3aa7bae697b0f7f1ec5641ff1",
+      "reference_sha256": "99a80930288dce2dfb07d98c1a7a516ad05299b3aa7bae697b0f7f1ec5641ff1",
+      "match": true
+    },
+    {
+      "name": "features.1.num_batches_tracked",
+      "sha256": "6dda4839054fca21e4d747b9e25a098e662b58f2172f731250055181eeab4313",
+      "reference_sha256": "6dda4839054fca21e4d747b9e25a098e662b58f2172f731250055181eeab4313",
+      "match": true
+    },
+    {
+      "name": "features.3.weight",
+      "sha256": "7ab0a4df7b11af17ca1ebb3b5807109fc313ad1f4bc81cc5294c33aaa4d9573b",
+      "reference_sha256": "7ab0a4df7b11af17ca1ebb3b5807109fc313ad1f4bc81cc5294c33aaa4d9573b",
+      "match": true
+    },
+    {
+      "name": "features.3.bias",
+      "sha256": "9bbadc2f2bb16106a3682e2c49fa95f8605a92dea8480c1b9f2698308e685908",
+      "reference_sha256": "9bbadc2f2bb16106a3682e2c49fa95f8605a92dea8480c1b9f2698308e685908",
+      "match": true
+    },
+    {
+      "name": "features.6.weight",
+      "sha256": "770b1d60f34f8f6d2512f04099de42339dc202f57c2739fadbf715aec872d725",
+      "reference_sha256": "770b1d60f34f8f6d2512f04099de42339dc202f57c2739fadbf715aec872d725",
+      "match": true
+    },
+    {
+      "name": "features.6.bias",
+      "sha256": "7eb29ce4fd544d8cf37f5cae57edb5d98f373e7e3dc7cd60e36aac1679d3063a",
+      "reference_sha256": "7eb29ce4fd544d8cf37f5cae57edb5d98f373e7e3dc7cd60e36aac1679d3063a",
+      "match": true
+    },
+    {
+      "name": "features.7.weight",
+      "sha256": "4067aae24c18c735fd56c04c76539a7bf49baa68c935fa43bb8a31a5c2bfe5c9",
+      "reference_sha256": "4067aae24c18c735fd56c04c76539a7bf49baa68c935fa43bb8a31a5c2bfe5c9",
+      "match": true
+    },
+    {
+      "name": "features.7.bias",
+      "sha256": "c5adf457215387413af45162aca37c56c8ebf0684db1878079b24345ef2b8684",
+      "reference_sha256": "c5adf457215387413af45162aca37c56c8ebf0684db1878079b24345ef2b8684",
+      "match": true
+    },
+    {
+      "name": "features.7.running_mean",
+      "sha256": "6edf1fc391edf909a9c1fb3eb2ee654bb02231334536f1ac87eea0a29c77e39c",
+      "reference_sha256": "6edf1fc391edf909a9c1fb3eb2ee654bb02231334536f1ac87eea0a29c77e39c",
+      "match": true
+    },
+    {
+      "name": "features.7.running_var",
+      "sha256": "45af47e023ef07a3c4d149c902674c967f6696665d076c3bacec8550c8ca2256",
+      "reference_sha256": "45af47e023ef07a3c4d149c902674c967f6696665d076c3bacec8550c8ca2256",
+      "match": true
+    },
+    {
+      "name": "features.7.num_batches_tracked",
+      "sha256": "6dda4839054fca21e4d747b9e25a098e662b58f2172f731250055181eeab4313",
+      "reference_sha256": "6dda4839054fca21e4d747b9e25a098e662b58f2172f731250055181eeab4313",
+      "match": true
+    },
+    {
+      "name": "features.9.weight",
+      "sha256": "f7c2c9be2db6e29bccdae97400dbf6700585055f231d42568055ff5225c95793",
+      "reference_sha256": "f7c2c9be2db6e29bccdae97400dbf6700585055f231d42568055ff5225c95793",
+      "match": true
+    },
+    {
+      "name": "features.9.bias",
+      "sha256": "6d29ebad95da3da807520fee306a5d6a2a440ab64e261de4f02b126ee92310ee",
+      "reference_sha256": "6d29ebad95da3da807520fee306a5d6a2a440ab64e261de4f02b126ee92310ee",
+      "match": true
+    },
+    {
+      "name": "features.12.weight",
+      "sha256": "bd81bbd746eb8057721df77e9be1214da2370035b7c54cb0dd912b228b055c43",
+      "reference_sha256": "bd81bbd746eb8057721df77e9be1214da2370035b7c54cb0dd912b228b055c43",
+      "match": true
+    },
+    {
+      "name": "features.12.bias",
+      "sha256": "adcec49b8c046c204f92cc82b9f8847faa48ed11599b9b3e09dc997fc9ff28c8",
+      "reference_sha256": "adcec49b8c046c204f92cc82b9f8847faa48ed11599b9b3e09dc997fc9ff28c8",
+      "match": true
+    },
+    {
+      "name": "features.13.weight",
+      "sha256": "78428e48958b1e3479d744d8c4029f91fd52c9a124830132a08861ead802638a",
+      "reference_sha256": "78428e48958b1e3479d744d8c4029f91fd52c9a124830132a08861ead802638a",
+      "match": true
+    },
+    {
+      "name": "features.13.bias",
+      "sha256": "8dee5cfdabb3286daa561603f5cb630da6c726da6cc5445a86c4653bb56faa4e",
+      "reference_sha256": "8dee5cfdabb3286daa561603f5cb630da6c726da6cc5445a86c4653bb56faa4e",
+      "match": true
+    },
+    {
+      "name": "features.13.running_mean",
+      "sha256": "5f16291816417ed6cb8ba13368f9c3bcc856894e232cc5a8ed264e87e0f2286f",
+      "reference_sha256": "5f16291816417ed6cb8ba13368f9c3bcc856894e232cc5a8ed264e87e0f2286f",
+      "match": true
+    },
+    {
+      "name": "features.13.running_var",
+      "sha256": "7176e791ba398224173fc96c9fb0f86b92f62276ef82ffabe5f886c430fb3bd2",
+      "reference_sha256": "7176e791ba398224173fc96c9fb0f86b92f62276ef82ffabe5f886c430fb3bd2",
+      "match": true
+    },
+    {
+      "name": "features.13.num_batches_tracked",
+      "sha256": "6dda4839054fca21e4d747b9e25a098e662b58f2172f731250055181eeab4313",
+      "reference_sha256": "6dda4839054fca21e4d747b9e25a098e662b58f2172f731250055181eeab4313",
+      "match": true
+    },
+    {
+      "name": "features.15.weight",
+      "sha256": "d9c9f4b01ec3db5c94ceeabb67c3d8277fc626580ccbbb5e08ee71501553784b",
+      "reference_sha256": "d9c9f4b01ec3db5c94ceeabb67c3d8277fc626580ccbbb5e08ee71501553784b",
+      "match": true
+    },
+    {
+      "name": "features.15.bias",
+      "sha256": "6a47e92fe7ce7c939700229cbad69fb431362ff15a29bc06e4ce29fc75d8210b",
+      "reference_sha256": "6a47e92fe7ce7c939700229cbad69fb431362ff15a29bc06e4ce29fc75d8210b",
+      "match": true
+    },
+    {
+      "name": "classifier.1.weight",
+      "sha256": "dfc3189d79519912f4ae0109270bf4dcf37438495f5e82b8b37e7f4cf6e5b209",
+      "reference_sha256": "dfc3189d79519912f4ae0109270bf4dcf37438495f5e82b8b37e7f4cf6e5b209",
+      "match": true
+    },
+    {
+      "name": "classifier.1.bias",
+      "sha256": "44a094dbcf5c6db378bc434b3f17369a9325f1d91899f2ab719d19cc5098a4ea",
+      "reference_sha256": "44a094dbcf5c6db378bc434b3f17369a9325f1d91899f2ab719d19cc5098a4ea",
+      "match": true
+    },
+    {
+      "name": "classifier.4.weight",
+      "sha256": "b04e9e13818d5f2458342cc680d64336841d86634b879f6dc84a87e990e71103",
+      "reference_sha256": "b04e9e13818d5f2458342cc680d64336841d86634b879f6dc84a87e990e71103",
+      "match": true
+    },
+    {
+      "name": "classifier.4.bias",
+      "sha256": "335282ddf68cd828e9efa2c4674d0825c457f3d8fff23abd5e6753eac6f5ad71",
+      "reference_sha256": "335282ddf68cd828e9efa2c4674d0825c457f3d8fff23abd5e6753eac6f5ad71",
+      "match": true
+    }
+  ],
+  "module_count": 26,
+  "module_names_types_and_order_match": true,
+  "source_count": 19,
+  "sources": [
+    {
+      "file": "pytorch-3183-source-000.py",
+      "archive_path": "__torch__/torch/nn/modules/conv.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-001.py",
+      "archive_path": "__torch__/torch/nn/modules/batchnorm.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-002.py",
+      "archive_path": "__torch__/torch/nn/modules/activation.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-003.py",
+      "archive_path": "__torch__/torch/nn/modules/conv/___torch_mangle_0.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-004.py",
+      "archive_path": "__torch__/torch/nn/modules/pooling.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-005.py",
+      "archive_path": "__torch__/torch/nn/modules/conv/___torch_mangle_1.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-006.py",
+      "archive_path": "__torch__/torch/nn/modules/batchnorm/___torch_mangle_2.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-007.py",
+      "archive_path": "__torch__/torch/nn/modules/conv/___torch_mangle_3.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-008.py",
+      "archive_path": "__torch__/torch/nn/modules/conv/___torch_mangle_4.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-009.py",
+      "archive_path": "__torch__/torch/nn/modules/batchnorm/___torch_mangle_5.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-010.py",
+      "archive_path": "__torch__/torch/nn/modules/conv/___torch_mangle_6.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-011.py",
+      "archive_path": "__torch__/torch/nn/modules/container.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-012.py",
+      "archive_path": "__torch__/torch/nn/modules/flatten.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-013.py",
+      "archive_path": "__torch__/torch/nn/modules/linear.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-014.py",
+      "archive_path": "__torch__/torch/nn/modules/dropout.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-015.py",
+      "archive_path": "__torch__/torch/nn/modules/linear/___torch_mangle_7.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-016.py",
+      "archive_path": "__torch__/torch/nn/modules/container/___torch_mangle_8.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-017.py",
+      "archive_path": "__torch__/train.py",
+      "match": true
+    },
+    {
+      "file": "pytorch-3183-source-018.py",
+      "archive_path": "__torch__/torch/nn/functional.py",
+      "match": true
+    }
+  ],
+  "all_archive_sources_recovered": true,
+  "graph_count": 34,
+  "recovery_errors": [],
+  "recovered_state_dict": "/home/raihan/Downloads/memory-evidence/submission-20261020-113652/recovery/recovered_state_dict.pt"
+}

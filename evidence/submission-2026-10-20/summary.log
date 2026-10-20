@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-20T16:41:08.003668+00:00",
+  "guest_run_dir": "/home/raihan/Downloads/memory-evidence/submission-20261020-113652",
+  "kind": "New reproduction checks, not historical training/capture screenshots",
+  "steps_verified": [
+    "environment",
+    "training-record",
+    "export",
+    "configure",
+    "build",
+    "debug-sections",
+    "cpp-inference",
+    "extraction",
+    "validation",
+    "replay",
+    "native-forward"
+  ],
+  "captured_pid": 3183,
+  "live_native_sample_pid": 3220,
+  "tensor_count": 31,
+  "source_count": 19,
+  "images_compared": 6000,
+  "prediction_matches": 6000,
+  "max_absolute_logit_difference": 0.0,
+  "accuracy": 0.8708333333333333,
+  "native_scope": "One live native convolution entry, its backtrace and 12 instructions. Not an exhaustive call trace or native code extraction from the LiME image.",
+  "passed": true
+}
+SUBMISSION_EVIDENCE_PASS

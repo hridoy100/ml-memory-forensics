@@ -1,0 +1,493 @@
+{
+  "checked_at": "2026-10-20T16:38:06.958046+00:00",
+  "repository_evidence_date": "2026-10-17T11:50:14-05:00",
+  "date_basis": {
+    "repository": "https://github.com/hridoy100/volatility",
+    "commit": "280a385a8722a449d013c70e2a20175575eb4809",
+    "message": "after training",
+    "limitation": "Git metadata dates the recorded artifacts, not the exact training start/end. Commit timestamps are not independently authenticated scheduler timestamps."
+  },
+  "recorded_training_torch": "2.14.1+cu126",
+  "recorded_training_python": "3.10.8",
+  "latest_stable_at_evidence_date": {
+    "tag_name": "v2.14.1",
+    "published_at": "2026-09-30T19:14:48Z",
+    "prerelease": false,
+    "draft": false,
+    "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.1"
+  },
+  "latest_release_at_check": {
+    "tag_name": "v2.14.1",
+    "published_at": "2026-09-30T19:14:48Z",
+    "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.1",
+    "prerelease": false
+  },
+  "pypi_version_at_check": "2.14.1",
+  "recorded_cpu_build_commit": "5c4886908584029761b579af026dcfb627c84070",
+  "pypi_2_14_1_first_upload": "2026-09-30T17:43:48.426734Z",
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/pytorch/pytorch/releases/latest",
+      "response_sha256": "250fd96e8689b83fff8fb6437b583606bcf9277e75c1affb6caf8e2a3c0cbef4"
+    },
+    {
+      "url": "https://api.github.com/repos/pytorch/pytorch/releases?per_page=100",
+      "response_sha256": "4239985c85b3955d5d5729615169880655d589e90349c20c0bb17f434aa4c413"
+    },
+    {
+      "url": "https://pypi.org/pypi/torch/json",
+      "response_sha256": "cad63dc8aa6714ea2133a44b64985d87b3e4ebea217657f1e02e35481fa33b61"
+    }
+  ],
+  "stable_release_metadata": [
+    {
+      "tag_name": "v2.14.1",
+      "published_at": "2026-09-30T19:14:48Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.1"
+    },
+    {
+      "tag_name": "v2.14.0",
+      "published_at": "2026-09-02T17:40:10Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.0"
+    },
+    {
+      "tag_name": "v2.13.0",
+      "published_at": "2026-07-08T17:39:58Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.13.0"
+    },
+    {
+      "tag_name": "v2.12.1",
+      "published_at": "2026-06-18T00:41:17Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.12.1"
+    },
+    {
+      "tag_name": "v2.12.0",
+      "published_at": "2026-05-13T17:38:06Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.12.0"
+    },
+    {
+      "tag_name": "v2.11.0",
+      "published_at": "2026-03-23T18:38:28Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.11.0"
+    },
+    {
+      "tag_name": "v2.10.0",
+      "published_at": "2026-01-21T17:05:16Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.10.0"
+    },
+    {
+      "tag_name": "v2.9.1",
+      "published_at": "2025-11-12T19:27:19Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.9.1"
+    },
+    {
+      "tag_name": "v2.9.0",
+      "published_at": "2025-10-15T17:12:27Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.9.0"
+    },
+    {
+      "tag_name": "v2.8.0",
+      "published_at": "2025-08-06T17:06:10Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.8.0"
+    },
+    {
+      "tag_name": "v2.7.1",
+      "published_at": "2025-06-04T18:13:15Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.7.1"
+    },
+    {
+      "tag_name": "v2.7.0",
+      "published_at": "2025-04-23T16:16:06Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.7.0"
+    },
+    {
+      "tag_name": "v2.6.0",
+      "published_at": "2025-01-29T17:18:54Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.6.0"
+    },
+    {
+      "tag_name": "v2.5.1",
+      "published_at": "2024-10-29T17:58:24Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.5.1"
+    },
+    {
+      "tag_name": "v2.5.0",
+      "published_at": "2024-10-17T16:26:53Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.5.0"
+    },
+    {
+      "tag_name": "v2.4.1",
+      "published_at": "2024-09-04T19:59:29Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.4.1"
+    },
+    {
+      "tag_name": "v2.4.0",
+      "published_at": "2024-07-24T18:39:28Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.4.0"
+    },
+    {
+      "tag_name": "v2.3.1",
+      "published_at": "2024-06-05T19:16:07Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.3.1"
+    },
+    {
+      "tag_name": "v2.3.0",
+      "published_at": "2024-04-24T16:12:17Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.3.0"
+    },
+    {
+      "tag_name": "v2.2.2",
+      "published_at": "2024-03-27T22:27:02Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.2.2"
+    },
+    {
+      "tag_name": "v2.2.1",
+      "published_at": "2024-02-22T21:15:00Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.2.1"
+    },
+    {
+      "tag_name": "v2.2.0",
+      "published_at": "2024-01-30T17:58:51Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.2.0"
+    },
+    {
+      "tag_name": "v2.1.2",
+      "published_at": "2023-12-15T01:59:57Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.1.2"
+    },
+    {
+      "tag_name": "v2.1.1",
+      "published_at": "2023-11-15T22:59:33Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.1.1"
+    },
+    {
+      "tag_name": "v2.1.0",
+      "published_at": "2023-10-04T17:32:12Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.1.0"
+    },
+    {
+      "tag_name": "v2.0.1",
+      "published_at": "2023-05-08T19:55:19Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.0.1"
+    },
+    {
+      "tag_name": "v2.0.0",
+      "published_at": "2023-03-15T19:38:58Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.0.0"
+    },
+    {
+      "tag_name": "v1.13.1",
+      "published_at": "2022-12-16T00:17:16Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.13.1"
+    },
+    {
+      "tag_name": "v1.13.0",
+      "published_at": "2022-10-28T16:54:00Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.13.0"
+    },
+    {
+      "tag_name": "v1.12.1",
+      "published_at": "2022-08-05T19:35:19Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.12.1"
+    },
+    {
+      "tag_name": "v1.12.0",
+      "published_at": "2022-06-28T16:48:06Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.12.0"
+    },
+    {
+      "tag_name": "v1.11.0",
+      "published_at": "2022-03-10T16:59:55Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.11.0"
+    },
+    {
+      "tag_name": "v1.10.2",
+      "published_at": "2022-01-27T21:51:23Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.10.2"
+    },
+    {
+      "tag_name": "v1.10.1",
+      "published_at": "2021-12-15T22:27:43Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.10.1"
+    },
+    {
+      "tag_name": "v1.10.0",
+      "published_at": "2021-10-21T15:49:53Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.10.0"
+    },
+    {
+      "tag_name": "v1.9.1",
+      "published_at": "2021-09-22T12:58:15Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.9.1"
+    },
+    {
+      "tag_name": "v1.8.2",
+      "published_at": "2021-08-17T18:33:00Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.8.2"
+    },
+    {
+      "tag_name": "v1.9.0",
+      "published_at": "2021-06-15T16:06:52Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.9.0"
+    },
+    {
+      "tag_name": "v1.8.1",
+      "published_at": "2021-03-25T16:07:08Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.8.1"
+    },
+    {
+      "tag_name": "v1.8.0",
+      "published_at": "2021-03-04T20:44:39Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.8.0"
+    },
+    {
+      "tag_name": "v1.7.1",
+      "published_at": "2020-12-10T17:19:58Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.7.1"
+    },
+    {
+      "tag_name": "v1.7.0",
+      "published_at": "2020-10-27T16:35:58Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.7.0"
+    },
+    {
+      "tag_name": "v1.6.0",
+      "published_at": "2020-07-28T17:13:18Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.6.0"
+    },
+    {
+      "tag_name": "v1.5.1",
+      "published_at": "2020-06-18T16:43:46Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.5.1"
+    },
+    {
+      "tag_name": "v1.5.0",
+      "published_at": "2020-04-21T16:26:30Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.5.0"
+    },
+    {
+      "tag_name": "v1.4.0",
+      "published_at": "2020-01-16T00:03:49Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.4.0"
+    },
+    {
+      "tag_name": "v1.3.1",
+      "published_at": "2019-11-07T17:19:44Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.3.1"
+    },
+    {
+      "tag_name": "v1.3.0",
+      "published_at": "2019-10-10T17:26:52Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.3.0"
+    },
+    {
+      "tag_name": "v1.2.0",
+      "published_at": "2019-08-08T16:06:38Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.2.0"
+    },
+    {
+      "tag_name": "v1.1.0",
+      "published_at": "2019-05-01T00:09:03Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.1.0"
+    },
+    {
+      "tag_name": "v1.0.1",
+      "published_at": "2019-02-07T08:51:04Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.0.1"
+    },
+    {
+      "tag_name": "v1.0.0",
+      "published_at": "2018-12-07T19:19:01Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v1.0.0"
+    },
+    {
+      "tag_name": "v0.4.1",
+      "published_at": "2018-07-26T19:09:19Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.4.1"
+    },
+    {
+      "tag_name": "v0.4.0",
+      "published_at": "2018-04-24T20:49:48Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.4.0"
+    },
+    {
+      "tag_name": "v0.3.1",
+      "published_at": "2018-02-14T00:36:58Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.3.1"
+    },
+    {
+      "tag_name": "v0.3.0",
+      "published_at": "2017-12-05T01:57:11Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.3.0"
+    },
+    {
+      "tag_name": "v0.2.0",
+      "published_at": "2017-08-28T14:43:31Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.2.0"
+    },
+    {
+      "tag_name": "v0.1.12",
+      "published_at": "2017-05-02T22:26:49Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.12"
+    },
+    {
+      "tag_name": "v0.1.11",
+      "published_at": "2017-03-31T16:27:41Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.11"
+    },
+    {
+      "tag_name": "v0.1.10",
+      "published_at": "2017-03-15T05:58:21Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.10"
+    },
+    {
+      "tag_name": "v0.1.9",
+      "published_at": "2017-02-24T13:02:03Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.9"
+    },
+    {
+      "tag_name": "v0.1.8",
+      "published_at": "2017-02-05T02:01:26Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.8"
+    },
+    {
+      "tag_name": "v0.1.7",
+      "published_at": "2017-02-02T12:40:39Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.7"
+    },
+    {
+      "tag_name": "v0.1.6",
+      "published_at": "2017-02-02T12:29:07Z",
+      "prerelease": false,
+      "draft": false,
+      "html_url": "https://github.com/pytorch/pytorch/releases/tag/v0.1.6"
+    }
+  ],
+  "conclusion": "Recorded training version matches the latest stable release as of the repository evidence date. Exact training timestamps and package installation provenance are not reconstructed."
+}

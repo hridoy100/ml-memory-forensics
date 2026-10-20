@@ -1,0 +1,15 @@
+Reproduction check: export
+2026-10-20T11:36:55-05:00
+Command: /home/raihan/Downloads/volatility/cifar10_cnn/.venv/bin/python /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/export_model.py --checkpoint /home/raihan/Downloads/volatility/cifar10_cnn/outputs/best_model.pt --output /home/raihan/Downloads/memory-evidence/submission-20261020-113652/reexported.pt
+
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_script.py:1485: FutureWarning: `torch.jit.script` is not supported in Python 3.14+ and may break. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_serialization.py:83: FutureWarning: `torch.jit.save` is not supported in Python 3.14+ and may break. Please switch to `torch.export`.
+  warnings.warn(
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_serialization.py:170: FutureWarning: `torch.jit.load` is not supported in Python 3.14+ and may break. Please switch to `torch.export`.
+  warnings.warn(
+Exported checkpoint from epoch 25
+Saved TorchScript predictions match the original model (batch sizes 1 and 4).
+TorchScript model: /home/raihan/Downloads/memory-evidence/submission-20261020-113652/reexported.pt
+
+STEP_PASS: export

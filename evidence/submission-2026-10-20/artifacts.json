@@ -1,0 +1,185 @@
+{
+  "guest_run_dir": "/home/raihan/Downloads/memory-evidence/submission-20261020-113652",
+  "artifacts": [
+    {
+      "relative_path": "build/cifar10_inference",
+      "bytes": 18079984,
+      "sha256": "c34d36c8853a9027a164d0b51b3cc75e2f0ec714828b1adb9d6acbf52d3f2beb"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-classifier.1.bias.npy",
+      "bytes": 1152,
+      "sha256": "4224f855efc7abffab9973ec58511fc923ee5de3895776aefa5cd03b8c5ba3cb"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-classifier.1.weight.npy",
+      "bytes": 2097280,
+      "sha256": "5dddc1fb73b1dfe89b0fb0795ebb034b0a82ca61721bf352106cf0fb5d7f4376"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-classifier.4.bias.npy",
+      "bytes": 168,
+      "sha256": "6b2da50b7ca87873bef3e44a16de5c9574ede166c2cbd3ebc8e207957a00c826"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-classifier.4.weight.npy",
+      "bytes": 10368,
+      "sha256": "92937e7607e5665c8e9c1762da2260adc7e83ba7c0abbb1360e7820eab3c4b43"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.0.bias.npy",
+      "bytes": 256,
+      "sha256": "d03fd57c59ba8b57288b528909fa2f7c32959ad7cdb47e1134799cbc93b51a83"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.0.weight.npy",
+      "bytes": 3584,
+      "sha256": "4da9dd5ab8563ca1486762adc83143f28bf76deedbc7bbbbf3e45ebf83fedf82"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.1.bias.npy",
+      "bytes": 256,
+      "sha256": "e583897aa05f9653f447be33b9a8336f4262cafb95a32eb7bb2c66611196e031"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.1.num_batches_tracked.npy",
+      "bytes": 72,
+      "sha256": "89b97106379d0898c489ffe4ae80d8268ceb0a2e788087e61064c92172732061"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.1.running_mean.npy",
+      "bytes": 256,
+      "sha256": "c0f7bcfb7690a51d0aa1443377d0707ffb686f3ec6240fae62c3b0291cdc82ed"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.1.running_var.npy",
+      "bytes": 256,
+      "sha256": "4de8c7a94cf3c9e5e3db6b8415dbafd5e1b410a5026386323fe3c76f688b0fc0"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.1.weight.npy",
+      "bytes": 256,
+      "sha256": "bdfb639fa6e6ef44637dd59e7d68ccfae45fd69d151ba18eda5638219f9773f7"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.12.bias.npy",
+      "bytes": 640,
+      "sha256": "243d033daae2ba4ffe59d2bdd3d8b033761875502ca6b88e0d50f845e2cae778"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.12.weight.npy",
+      "bytes": 295040,
+      "sha256": "da73cb16c06237695f015df89658969e1339b6ed52879b92c36a3d349a98fbcd"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.13.bias.npy",
+      "bytes": 640,
+      "sha256": "9ade826662741fad9d23b071987027defb8455a95da6d59fa9575b3d0845c71e"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.13.num_batches_tracked.npy",
+      "bytes": 72,
+      "sha256": "89b97106379d0898c489ffe4ae80d8268ceb0a2e788087e61064c92172732061"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.13.running_mean.npy",
+      "bytes": 640,
+      "sha256": "3599123fe0ccafc7383558ee521220f6cd06c76604a4646fe749704f2af66569"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.13.running_var.npy",
+      "bytes": 640,
+      "sha256": "93a0d195cffa647b7c7399cb6cf764c4d58e3bb71618310372748615e2c90655"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.13.weight.npy",
+      "bytes": 640,
+      "sha256": "38bd9e42080ecc08898d49e5b9bca484dba58e40a423fed26b6a68e1f585072e"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.15.bias.npy",
+      "bytes": 640,
+      "sha256": "f0f5516a58d8ac1b0b1567754ab94f7e02f2c0146d9329749b8d88d701ba877c"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.15.weight.npy",
+      "bytes": 589952,
+      "sha256": "5810802c9a50fce4d67cc9e4f8dfea8bb5426a72cd28fd9ce3d6847651c9608e"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.3.bias.npy",
+      "bytes": 256,
+      "sha256": "a82a3dae832d78904c5f9deb9418ee67e0b6da0b34e6de9de3819e37fc309f66"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.3.weight.npy",
+      "bytes": 36992,
+      "sha256": "2dc6b6c887a8ce8d9aa3bb020f717c47fcfa45b8b33659b70bb16d088ebd6c30"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.6.bias.npy",
+      "bytes": 384,
+      "sha256": "94752f51e2914c03251efbc5c38dcbf98773b86d073cf83f29019890cd49409b"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.6.weight.npy",
+      "bytes": 73856,
+      "sha256": "8120dcce499c3487ba50f07054c37b4a9a1830eb8793c9a4364e672bca0aa7ab"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.7.bias.npy",
+      "bytes": 384,
+      "sha256": "65ee1190e207ee6731494319e5a452170c624fef9c3f5952b694c7228bd41cde"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.7.num_batches_tracked.npy",
+      "bytes": 72,
+      "sha256": "89b97106379d0898c489ffe4ae80d8268ceb0a2e788087e61064c92172732061"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.7.running_mean.npy",
+      "bytes": 384,
+      "sha256": "458cffec12c25168497427c8ba6d456ac14fb322b594588d5af94338fd04d322"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.7.running_var.npy",
+      "bytes": 384,
+      "sha256": "94ae9efd90d601091ef54901a26ea3a6e0b9d555810d2e5332640aeac61f3dc0"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.7.weight.npy",
+      "bytes": 384,
+      "sha256": "f6b8c14cc623645b5e1ac52872a9626f0e40a3ed70f62152703947b0aa4d47db"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.9.bias.npy",
+      "bytes": 384,
+      "sha256": "809b0c624fdf6285fe3132f233373f84f7318f0121f8876e78a6dae316bb512e"
+    },
+    {
+      "relative_path": "recovery/pytorch-3183-features.9.weight.npy",
+      "bytes": 147584,
+      "sha256": "3547ed989ea15eca24eb91ddfea09e8e743ec21e93fb105d64e4aa42858ec19e"
+    },
+    {
+      "relative_path": "recovery/recovered_state_dict.pt",
+      "bytes": 3270183,
+      "sha256": "ae6eeca07ccdd7666bb506f8747f7dd0469c646b0fc8fb1dcbeb370abb59c513"
+    },
+    {
+      "relative_path": "reexported.pt",
+      "bytes": 3303656,
+      "sha256": "0c72135fcb7b830858059faa0317d5a9e5f7244ffc64fa6b91c1fd8f6412abad"
+    },
+    {
+      "relative_path": "replay/recovered-logits.npy",
+      "bytes": 240128,
+      "sha256": "c2a8db16b14380585a008a28a9bbde4627cb634ad4b4c8ced60205c03f60b5ef"
+    },
+    {
+      "relative_path": "replay/reference-logits.npy",
+      "bytes": 240128,
+      "sha256": "c2a8db16b14380585a008a28a9bbde4627cb634ad4b4c8ced60205c03f60b5ef"
+    }
+  ]
+}

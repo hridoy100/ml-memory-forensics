@@ -46,7 +46,8 @@ The run used Python 3.10.8, PyTorch 2.14.1+cu126, batch size 128, and learning
 rate 0.001. The best validation epoch was 25. Final accuracy was 5,225/6,000,
 or 87.0833%, as recorded in [metrics.json](../evidence/training/metrics.json).
 The installed versions are preserved; verifying the assignment's historical
-"most recent" release requirement remains separate from those observations.
+[release comparison](VERSION_VERIFICATION.md) checks the recorded version against
+the dated October 17 training-artifact commit.
 
 ## 2. Export the trained checkpoint
 
@@ -270,9 +271,11 @@ and archived TorchScript implementation, followed by identical evaluation output
 on the held-out dataset. The [findings](FINDINGS.md) explain the supported layout,
 CPU-only scope, and distinction between generated source and native C++ kernels.
 
-The write-up preserves three original screenshots. Training/build and final
-recovery/replay screenshots remain to be added; the logs are not presented as
-fabricated screenshots. The requested textbook reading is not certified here.
+The write-up preserves three original screenshots and adds eight new browser
+screenshots in the [submission supplement](SUBMISSION_EVIDENCE.md). The new log
+report views are labeled as October 20 reproduction evidence. They do not
+recreate historical terminal sessions. See the [version check](VERSION_VERIFICATION.md)
+and [code scope](CODE_SCOPE.md) for the remaining timestamp and coverage limits.
 
 The related [AI Psychiatry work](https://www.usenix.org/conference/usenixsecurity24/presentation/oygenblik)
 studies recovery and rehosting of deployed models from memory. The

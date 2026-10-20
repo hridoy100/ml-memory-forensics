@@ -205,3 +205,16 @@ gdb -q -batch /path/to/cifar10_inference \
 This reads DWARF types and the matching installed header. It does not run
 inferior functions. A changed build may require updating decoder logic and field
 paths, not just generating a different JSON file.
+
+## 9. Reproduce the submission evidence
+
+The [October 20 supplement](SUBMISSION_EVIDENCE.md) documents a new Debug build,
+export, full recovery/replay, and bounded native inspection. From this project:
+
+```bash
+bash scripts/collect_submission_evidence.sh
+```
+
+It writes a new directory under `~/Downloads/memory-evidence`. Restore private
+artifacts and the existing environments first. The checkpoint-record check does
+not rerun historical training. The native sample is a new live process.

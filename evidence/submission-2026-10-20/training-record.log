@@ -1,0 +1,23 @@
+Reproduction check: training-record
+2026-10-20T11:36:54-05:00
+Command: /home/raihan/Downloads/volatility/cifar10_cnn/.venv/bin/python - /home/raihan/Downloads/volatility/cifar10_cnn/outputs/best_model.pt /home/raihan/Downloads/ml-memory-forensics/evidence/training/metrics.json
+
+Historical training record; this check does not rerun training.
+Checkpoint SHA256: d236bb4f9d31df8278a678fcb15ba197fece3cd2815be9bdff005c9614af7464
+Checkpoint epoch: 25
+State tensors: 31
+python_version: 3.10.8
+torch_version: 2.14.1+cu126
+torchvision_version: 0.29.1+cu126
+seed: 42
+split_sizes: {'train': 48000, 'validation': 6000, 'test': 6000}
+epochs: 25
+batch_size: 128
+learning_rate: 0.001
+best_epoch: 25
+best_validation_loss: 0.40126137487093605
+test_loss: 0.3856049473683039
+test_accuracy: 0.8708333333333333
+TRAINING_RECORD_CHECK_PASS
+
+STEP_PASS: training-record

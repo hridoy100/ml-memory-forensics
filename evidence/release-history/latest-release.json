@@ -1,0 +1,11 @@
+{
+  "tag_name": "v2.14.1",
+  "name": "PyTorch 2.14.1 Release",
+  "published_at": "2026-09-30T19:14:48Z",
+  "created_at": "2026-09-30T01:47:31Z",
+  "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.1",
+  "prerelease": false,
+  "draft": false,
+  "target_commitish": "main",
+  "snapshot_kind": "Selected official metadata; release prose omitted"
+}

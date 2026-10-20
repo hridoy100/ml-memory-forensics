@@ -1,0 +1,15 @@
+Reproduction check: validation
+2026-10-20T11:37:22-05:00
+Command: /home/raihan/Downloads/volatility/cifar10_cnn/.venv/bin/python /home/raihan/Downloads/ml-memory-forensics/forensics/validate_recovery.py --report /home/raihan/Downloads/memory-evidence/submission-20261020-113652/recovery/pytorch-3183-model.json --reference /home/raihan/Downloads/volatility/cifar10_cnn/outputs/cifar10_torchscript.pt
+
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_serialization.py:170: FutureWarning: `torch.jit.load` is not supported in Python 3.14+ and may break. Please switch to `torch.export`.
+  warnings.warn(
+Tensors: 31/31 byte-identical
+Module names, types, and order: MATCH
+TorchScript source files: 19/19 byte-identical
+All archived source files recovered: True
+Materialized graphs: 34
+VALIDATION_PASS
+/home/raihan/Downloads/memory-evidence/submission-20261020-113652/recovery/validation.json
+
+STEP_PASS: validation

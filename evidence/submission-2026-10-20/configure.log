@@ -1,0 +1,23 @@
+Reproduction check: configure
+2026-10-20T11:36:57-05:00
+Command: cmake -S /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp -B /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/share/cmake
+
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning at /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:22 (message):
+  library kineto not found.
+Call Stack (most recent call first):
+  /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:119 (append_torchlib_if_found)
+  CMakeLists.txt:9 (find_package)
+
+
+-- Found Torch: /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build
+
+STEP_PASS: configure

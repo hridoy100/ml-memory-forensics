@@ -16,7 +16,7 @@ logs and paths are retained so the recorded addresses and versions can be audite
 | [replay/inference-comparison.json](replay/inference-comparison.json) | Full 6,000-image comparison, first-batch call trace, and output differences |
 | [replay/predictions.csv](replay/predictions.csv) | Per-image labels, predictions, and agreement |
 | [logs/replay-confirmation-6000.log](logs/replay-confirmation-6000.log) | Console confirmation of the successful full replay |
-| [screenshots](../docs/images/index.json) | Three original screenshots with captions and SHA-256 checksums |
+| [screenshots](../docs/images/index.json) | Three original screenshots and eight browser captures, with captions and SHA-256 checksums |
 
 The 19 `recovery/pytorch-3183-source-*.py` files are recovered generated
 TorchScript source. File `017` contains the custom `CIFAR10CNN.forward` code.
@@ -45,3 +45,13 @@ collision that was fixed by giving the external module its own name.
 consolidated helper follows the Ubuntu build's object/type layout and reads the
 known first eight weight values. Its PID **3391** belongs to a new live test;
 the memory capture and recovery evidence still refer to PID **3183**.
+
+## October 20 submission supplement
+
+[New reproduction evidence](submission-2026-10-20/summary.json) verifies export,
+Debug build, inference, recovery, validation, and full replay. Logs and small
+reports are preserved in that directory. The final native sample is live PID
+3220; the original capture remains PID 3183. Initial wrapper/PLT attempts are
+retained with explicit filenames. [Release metadata](release-history/pytorch-release-check.json)
+and [training commit dates](release-history/training-commit.txt) support the
+historical version comparison. See the [supplement](../docs/SUBMISSION_EVIDENCE.md).

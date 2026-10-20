@@ -1,0 +1,220 @@
+Breakpoint 1 at 0x8128: file /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp, line 91.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/aarch64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=4, argv=0xfffffffffa38) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+91	            auto logits = model.forward({images}).toTensor();
+Live reproduction PID: 3195
+
+Stopped before the C++ model forward pass:
+#0  main (argc=4, argv=0xfffffffffa38) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+Breakpoint 2 at 0xffffede11500
+<function, no debug info> _ZN2at6native24convolution_overrideableERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l@plt;
+Breakpoint 3 at 0xffffede12930
+<function, no debug info> _ZN2at6native33convolution_backward_overrideableERKNS_6TensorES3_S3_N3c108ArrayRefIlEES6_S6_bS6_lSt5arrayIbLm3EE@plt;
+Breakpoint 4 at 0xffffede150a0
+<function, no debug info> _ZN2at6native45mps_convolution_transpose_backward_out_symintERKNS_6TensorES3_S3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S7_S6_St5arrayIbLm2EERS1_SA_@plt;
+Breakpoint 5 at 0xffffede16730
+<function, no debug info> _ZN2at6native12_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_lbbbb@plt;
+Breakpoint 6 at 0xffffede1aeb0
+<function, no debug info> _ZN2at6native38cudnn_convolution_transpose_out_symintERKNS_6TensorES3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S7_S6_bbbRS1_@plt;
+Breakpoint 7 at 0xffffede1bed0
+<function, no debug info> _ZN2at6native39miopen_depthwise_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_bbRS1_@plt;
+Breakpoint 8 at 0xffffede1c6d0
+<function, no debug info> _ZN2at6native28mkldnn_convolution_pointwiseERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_lSt17basic_string_viewIcSt11char_traitsIcEENS8_4ListIS4_INS8_6ScalarEEEES4_ISE_E@plt;
+Breakpoint 9 at 0xffffede212c0
+<function, no debug info> _ZN2at6native12_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_lbbb@plt;
+Breakpoint 10 at 0xffffede28320
+<function, no debug info> _ZN2at6native37cudnn_convolution_add_relu_out_symintERKNS_6TensorES3_S3_RKSt8optionalIN3c106ScalarEERKS4_IS1_ENS5_8ArrayRefINS5_6SymIntEEESF_SF_SE_RS1_@plt;
+Breakpoint 11 at 0xffffede28ee0
+<function, no debug info> _ZN2at6native28_convolution_double_backwardERKSt8optionalINS_6TensorEES5_S5_RKS2_S7_S7_N3c108ArrayRefIlEESA_SA_bSA_lSt5arrayIbLm3EE@plt;
+Breakpoint 12 at 0xffffede2b6e0
+<function, no debug info> _ZN2at6native27_nnpack_spatial_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_@plt;
+Breakpoint 13 at 0xffffede2ebb0
+<function, no debug info> _ZN2at6native39miopen_convolution_transpose_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SB_SA_bbRS1_@plt;
+Breakpoint 14 at 0xffffede2ef00
+<function, no debug info> _ZN2at6native24_convolution_mode_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESt17basic_string_viewIcSt11char_traitsIcEESB_SA_@plt;
+Breakpoint 15 at 0xffffede32310
+<function, no debug info> _ZN2at6native18mkldnn_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_l@plt;
+Breakpoint 16 at 0xffffede32760
+<function, no debug info> _ZN2at6native20convolution_backwardERKNS_6TensorES3_S3_N3c1016OptionalArrayRefIlEENS4_8ArrayRefIlEES8_S8_bS8_lSt5arrayIbLm3EE@plt;
+Breakpoint 17 at 0xffffede343f0
+<function, no debug info> _ZN2at6native11convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l@plt;
+Breakpoint 18 at 0xffffede39900
+<function, no debug info> _ZN2at6native22convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_bSB_SA_RS1_@plt;
+Breakpoint 19 at 0xffffede3b420
+<function, no debug info> _ZN2at6native29miopen_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_bbRS1_@plt;
+Breakpoint 20 at 0xffffede3bd40
+<function, no debug info> _ZN2at6native31convolution_backward_out_symintERKNS_6TensorES3_S3_N3c1016OptionalArrayRefINS4_6SymIntEEENS4_8ArrayRefIS6_EES9_S9_bS9_S6_St5arrayIbLm3EERS1_SC_SC_@plt;
+Breakpoint 21 at 0xffffede3bd70
+<function, no debug info> _ZN2at6native38_nnpack_spatial_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_RS1_@plt;
+Breakpoint 22 at 0xffffede3cc60
+<function, no debug info> _ZN2at6native44convolution_backward_overrideable_out_symintERKNS_6TensorES3_S3_N3c108ArrayRefINS4_6SymIntEEES7_S7_bS7_S6_St5arrayIbLm3EERS1_SA_SA_@plt;
+Breakpoint 23 at 0xffffede3e210
+<function, no debug info> _ZN2at6native29mkldnn_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_RS1_@plt;
+Breakpoint 24 at 0xffffede44a10
+<function, no debug info> _ZN2at6native23_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_bSB_SA_bbbbRS1_@plt;
+Breakpoint 25 at 0xffffede459d0
+<function, no debug info> _ZN2at6native27_mps_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_RS1_@plt;
+Breakpoint 26 at 0xffffede46db0
+<function, no debug info> _ZN2at6native37_mps_convolution_transpose_out_symintERKNS_6TensorES3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S7_S6_RS1_@plt;
+Breakpoint 27 at 0xffffede49aa0
+<function, no debug info> _ZN2at6native35convolution_overrideable_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_bSB_SA_RS1_@plt;
+Breakpoint 28 at 0xffffede4bf40
+<function, no debug info> _ZN2at6native33cudnn_convolution_relu_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_RS1_@plt;
+Breakpoint 29 at 0xffffede4fdd0
+<function, no debug info> _ZN2at6native36mkldnn_convolution_pointwise_binary_ERNS_6TensorERKS1_S4_RKSt8optionalIS1_EN3c108ArrayRefIlEESB_SB_lSt17basic_string_viewIcSt11char_traitsIcEES5_INS9_6ScalarEES5_ISF_ENS9_4ListISH_EESI_@plt;
+Breakpoint 30 at 0xffffede51580
+<function, no debug info> _ZN2at6native35mkldnn_convolution_pointwise_binaryERKNS_6TensorES3_S3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_lSt17basic_string_viewIcSt11char_traitsIcEES4_INS8_6ScalarEES4_ISE_ENS8_4ListISG_EESH_@plt;
+Breakpoint 31 at 0xffffede58950
+<function, no debug info> _ZN2at6native35mps_convolution_backward_out_symintERKNS_6TensorES3_S3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S6_St5arrayIbLm3EERS1_SA_SA_@plt;
+Breakpoint 32 at 0xffffede72f5c
+<function, no debug info> _ZN2at6native11convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l;
+Breakpoint 33 at 0xffffede731ac
+<function, no debug info> _ZN2at6native12_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_lbbbb;
+Breakpoint 34 at 0xffffedee3d1c
+<function, no debug info> _ZN2at6native24convolution_overrideableERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l;
+Breakpoint 35 at 0xffffedee3dcc
+<function, no debug info> _ZN2at6native33convolution_backward_overrideableERKNS_6TensorES3_S3_N3c108ArrayRefIlEES6_S6_bS6_lSt5arrayIbLm3EE;
+Breakpoint 36 at 0xffffee387920
+<function, no debug info> _ZN2at6nativeL37_convolution_backward_nogroup_backendERKNS_6TensorES3_S3_St5arrayIbLm3EENS0_11ConvBackendERKNS0_10ConvParamsIlEE;
+Breakpoint 37 at 0xffffee390cac
+<function, no debug info> _ZN2at6nativeL28_convolution_nogroup_backendERKNS_6TensorES3_S3_NS0_11ConvBackendERKNS0_10ConvParamsIlEE;
+Breakpoint 38 at 0xffffee39122c
+<function, no debug info> _ZN2at6native12_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_lbbb;
+Breakpoint 39 at 0xffffee39143c
+<function, no debug info> _ZN2at6native24_convolution_mode_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESt17basic_string_viewIcSt11char_traitsIcEESB_SA_;
+Breakpoint 40 at 0xffffee394bec
+<function, no debug info> _ZN2at6native28_convolution_double_backwardERKSt8optionalINS_6TensorEES5_S5_RKS2_S7_S7_N3c108ArrayRefIlEESA_SA_bSA_lSt5arrayIbLm3EE;
+Breakpoint 41 at 0xffffee396370
+<function, no debug info> _ZN2at6native12_GLOBAL__N_119complex_convolutionERKNS_6TensorES4_S4_N3c108ArrayRefINS5_6SymIntEEES8_S8_bS8_RKS7_;
+Breakpoint 42 at 0xffffee39870c
+<function, no debug info> _ZN2at6native12_GLOBAL__N_124complex_convolution_modeERKNS_6TensorES4_RKSt8optionalIS2_EN3c108ArrayRefINS9_6SymIntEEESt17basic_string_viewIcSt11char_traitsIcEESC_RKSB_;
+Breakpoint 43 at 0xffffee399d94
+<function, no debug info> _ZN2at6native20convolution_backwardERKNS_6TensorES3_S3_N3c1016OptionalArrayRefIlEENS4_8ArrayRefIlEES8_S8_bS8_lSt5arrayIbLm3EE;
+Breakpoint 44 at 0xffffee50e9f8
+<function, no debug info> _ZZN2at6native27_nnpack_spatial_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_ENKUlmE_clEm;
+Breakpoint 45 at 0xffffee50ef3c
+<function, no debug info> _ZN2at6native27_nnpack_spatial_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_;
+Breakpoint 46 at 0xffffeeb052a0
+<function, no debug info> _ZN2at6native12_GLOBAL__N_143mkldnn_convolution_transpose_pointwise_metaERKNS_6TensorES4_RKSt8optionalIS2_EN3c108ArrayRefIlEESB_SB_SB_lSt17basic_string_viewIcSt11char_traitsIcEENS9_4ListIS5_INS9_6ScalarEEEES5_ISF_E.isra.0;
+Breakpoint 47 at 0xffffeeb0d7e4
+<function, no debug info> _ZN2at6native12_GLOBAL__N_135mkldnn_convolution_backward_weightsEN3c108ArrayRefIlEERKNS_6TensorES7_S4_S4_S4_lbb;
+Breakpoint 48 at 0xffffeeb0ec1c
+<function, no debug info> _ZN2at6nativeL23_mkldnn_convolution_outERKNS_6TensorES3_S3_RSt6vectorIlSaIlEERN5ideep6tensorEN3c108ArrayRefIlEESD_SD_lbRKNS8_6attr_tEN4dnnl9prop_kindE;
+Breakpoint 49 at 0xffffeeb0f394
+<function, no debug info> _ZN2at6nativeL19_mkldnn_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_lbSt17basic_string_viewIcSt11char_traitsIcEENS8_4ListIS4_INS8_6ScalarEEEES4_ISE_EN4dnnl9prop_kindE;
+Breakpoint 50 at 0xffffeeb0fddc
+<function, no debug info> _ZN2at6native18mkldnn_convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_l;
+Breakpoint 51 at 0xffffeeb0ff94
+<function, no debug info> _ZN2at6native28mkldnn_convolution_pointwiseERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_lSt17basic_string_viewIcSt11char_traitsIcEENS8_4ListIS4_INS8_6ScalarEEEES4_ISE_E;
+Breakpoint 52 at 0xffffeeb102ac
+<function, no debug info> _ZN2at6native36mkldnn_convolution_pointwise_binary_ERNS_6TensorERKS1_S4_RKSt8optionalIS1_EN3c108ArrayRefIlEESB_SB_lSt17basic_string_viewIcSt11char_traitsIcEES5_INS9_6ScalarEES5_ISF_ENS9_4ListISH_EESI_;
+Breakpoint 53 at 0xffffeeb11394
+<function, no debug info> _ZN2at6native12_GLOBAL__N_129_mkldnn_convolution_transposeERKNS_6TensorES4_RKSt8optionalIS2_EN3c108ArrayRefIlEESB_SB_SB_lbSt17basic_string_viewIcSt11char_traitsIcEENS9_4ListIS5_INS9_6ScalarEEEES5_ISF_E;
+Breakpoint 54 at 0xffffeeb128b4
+<function, no debug info> _ZN2at6native38mkldnn_convolution_transpose_pointwiseERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_SA_lSt17basic_string_viewIcSt11char_traitsIcEENS8_4ListIS4_INS8_6ScalarEEEES4_ISE_E;
+Breakpoint 55 at 0xffffeeb12a1c
+<function, no debug info> _ZN2at6native12_GLOBAL__N_128mkldnn_convolution_transposeERKNS_6TensorES4_RKSt8optionalIS2_EN3c108ArrayRefIlEESB_SB_SB_l;
+Breakpoint 56 at 0xffffeeb12e20
+<function, no debug info> _ZN2at6native12_GLOBAL__N_127mkldnn_convolution_backwardERKNS_6TensorES4_S4_N3c108ArrayRefIlEES7_S7_lSt5arrayIbLm3EE;
+Breakpoint 57 at 0xffffeeb13874
+<function, no debug info> _ZN2at6native12_GLOBAL__N_137mkldnn_convolution_transpose_backwardERKNS_6TensorES4_S4_N3c108ArrayRefIlEES7_S7_S7_lSt5arrayIbLm3EE;
+Breakpoint 58 at 0xffffeeb15864
+<function, no debug info> _ZN2at6native35mkldnn_convolution_pointwise_binaryERKNS_6TensorES3_S3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_lSt17basic_string_viewIcSt11char_traitsIcEES4_INS8_6ScalarEES4_ISE_ENS8_4ListISG_EESH_;
+Breakpoint 59 at 0xffffeeb19f30
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolution8conv_runERKNS_6TensorERKN3c1013intrusive_ptrINS1_13ConvOpContextENS7_6detail34intrusive_target_default_null_typeIS9_EEEE;
+Breakpoint 60 at 0xffffeeb1b59c
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolutionL16get_output_sizesERNS1_11ContextConvERKNS_6TensorE;
+Breakpoint 61 at 0xffffeeb1be94
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolution26createConvPrePackOpContextENS_6TensorESt8optionalIS4_ESt6vectorIlSaIlEES9_S9_lS9_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE;
+Breakpoint 62 at 0xffffeeb1db58
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolution6createERKNS_6TensorERKSt8optionalIS4_EN3c108ArrayRefIlEESD_SD_lSD_RKN5ideep6attr_tE;
+Breakpoint 63 at 0xffffeeb1f8bc
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolutionL22mkldnn_convolution_outERKNS_6TensorERN5ideep6tensorERKS8_RKSt8optionalIS4_EN3c108ArrayRefIlEESI_SI_SI_lRKNS7_6attr_tE;
+Breakpoint 64 at 0xffffeeb20160
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolution3runERNS1_11ContextConvERKNS_6TensorEPv;
+Breakpoint 65 at 0xffffeeb2080c
+<function, no debug info> _ZN2at6native6mkldnn8internal11convolution3runERNS1_11ContextConvERKNS_6TensorE;
+Breakpoint 66 at 0xffffeeb85584
+<function, no debug info> _ZN2at6native7xnnpack17use_convolution2dERKNS_6TensorES4_N3c1016OptionalArrayRefIlEENS5_8ArrayRefIlEES9_S9_lb;
+Breakpoint 67 at 0xffffeeb85594
+<function, no debug info> _ZN2at6native7xnnpack13convolution2dERKNS_6TensorES4_S4_N3c108ArrayRefIlEES7_S7_l;
+Breakpoint 68 at 0xffffeeb89710
+<function, no debug info> _ZN2at6native22convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_bSB_SA_RS1_;
+Breakpoint 69 at 0xffffeeb89890
+<function, no debug info> _ZN2at6native35convolution_overrideable_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_bSB_SA_RS1_;
+Breakpoint 70 at 0xffffeeb89a0c
+<function, no debug info> _ZN2at6native23_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_bSB_SA_bbbbRS1_;
+Breakpoint 71 at 0xffffeeb8a20c
+<function, no debug info> _ZN2at6native38cudnn_convolution_transpose_out_symintERKNS_6TensorES3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S7_S6_bbbRS1_;
+Breakpoint 72 at 0xffffeeb8a3b0
+<function, no debug info> _ZN2at6native37_mps_convolution_transpose_out_symintERKNS_6TensorES3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S7_S6_RS1_;
+Breakpoint 73 at 0xffffeeb8a530
+<function, no debug info> _ZN2at6native33cudnn_convolution_relu_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_RS1_;
+Breakpoint 74 at 0xffffeeb8a6a0
+<function, no debug info> _ZN2at6native37cudnn_convolution_add_relu_out_symintERKNS_6TensorES3_S3_RKSt8optionalIN3c106ScalarEERKS4_IS1_ENS5_8ArrayRefINS5_6SymIntEEESF_SF_SE_RS1_;
+Breakpoint 75 at 0xffffeeb8e090
+<function, no debug info> _ZN2at6native27_mps_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_RS1_;
+Breakpoint 76 at 0xffffeeb8e200
+<function, no debug info> _ZN2at6native29mkldnn_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_RS1_;
+Breakpoint 77 at 0xffffeeb8e49c
+<function, no debug info> _ZN2at6native29miopen_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_bbRS1_;
+Breakpoint 78 at 0xffffeeb8e62c
+<function, no debug info> _ZN2at6native39miopen_convolution_transpose_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SB_SA_bbRS1_;
+Breakpoint 79 at 0xffffeeb8e7cc
+<function, no debug info> _ZN2at6native39miopen_depthwise_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_SB_SA_bbRS1_;
+Breakpoint 80 at 0xffffeeb8ebd8
+<function, no debug info> _ZN2at6native38_nnpack_spatial_convolution_out_symintERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefINS8_6SymIntEEESB_RS1_;
+Breakpoint 81 at 0xffffeeb9f3ac
+<function, no debug info> _ZN2at6native45mps_convolution_transpose_backward_out_symintERKNS_6TensorES3_S3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S7_S6_St5arrayIbLm2EERS1_SA_;
+Breakpoint 82 at 0xffffeeba5d3c
+<function, no debug info> _ZN2at6native35mps_convolution_backward_out_symintERKNS_6TensorES3_S3_N3c108ArrayRefINS4_6SymIntEEES7_S7_S6_St5arrayIbLm3EERS1_SA_SA_;
+Breakpoint 83 at 0xffffeeba5efc
+<function, no debug info> _ZN2at6native44convolution_backward_overrideable_out_symintERKNS_6TensorES3_S3_N3c108ArrayRefINS4_6SymIntEEES7_S7_bS7_S6_St5arrayIbLm3EERS1_SA_SA_;
+Breakpoint 84 at 0xffffeeba61dc
+<function, no debug info> _ZN2at6native31convolution_backward_out_symintERKNS_6TensorES3_S3_N3c1016OptionalArrayRefINS4_6SymIntEEENS4_8ArrayRefIS6_EES9_S9_bS9_S6_St5arrayIbLm3EERS1_SC_SC_;
+Breakpoint 85 at 0xfffff0646a38 (3 locations)
+<function, no debug info> _ZN2at6native12_GLOBAL__N_134_convolution_depthwise3x3_winogradERKNS_6TensorES4_S4_N3c108ArrayRefIlEES7_l;
+Successfully created breakpoints 2-85.
+
+Breakpoint 17, 0x0000ffffede343f0 in at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)@plt () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+
+Sample native operator call during model.forward:
+#0  0x0000ffffede343f0 in at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)@plt () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#1  0x0000ffffedeb4ae0 in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#2  0x0000ffffedea1f94 in at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#3  0x0000ffffedec76f8 in torch::autograd::VariableType::(anonymous namespace)::convolution(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#4  0x0000ffffedec853c in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &torch::autograd::VariableType::(anonymous namespace)::convolution>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#5  0x0000ffffedea2c74 in at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#6  0x0000ffffede755b4 in at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#7  0x0000ffffef6d9b54 in c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#8  0x0000fffff3b3cc70 in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#9  0x0000fffff36d77bc in bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#10 0x0000fffff36db308 in torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#11 0x0000fffff36ba9f4 in torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&) () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#12 0x0000fffff3377744 in torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const () from /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+#13 0x0000aaaaaaab1d38 in torch::jit::Module::forward (this=0xfffffffff358, inputs=std::vector of length 0, capacity 0, kwargs=std::unordered_map with 0 elements) at /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/include/torch/csrc/jit/api/module.h:117
+#14 0x0000aaaaaaaa81b8 in main (argc=4, argv=0xfffffffffa38) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)@plt in section .plt of /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+
+Instructions at the stopped native entry:
+=> 0xffffede343f0 <_ZN2at6native11convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l@plt>:	adrp	x16, 0xfffff7cb2000 <_ZN5torch8profiler4impl19CuptiMonitorBuffers13return_bufferEPh@got.plt>
+   0xffffede343f4 <_ZN2at6native11convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l@plt+4>:	ldr	x17, [x16, #472]
+   0xffffede343f8 <_ZN2at6native11convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l@plt+8>:	add	x16, x16, #0x1d8
+   0xffffede343fc <_ZN2at6native11convolutionERKNS_6TensorES3_RKSt8optionalIS1_EN3c108ArrayRefIlEESA_SA_bSA_l@plt+12>:	br	x17
+   0xffffede34400 <_ZN2at6native15weight_norm_cpuERKNS_6TensorES3_l@plt>:	adrp	x16, 0xfffff7cb2000 <_ZN5torch8profiler4impl19CuptiMonitorBuffers13return_bufferEPh@got.plt>
+   0xffffede34404 <_ZN2at6native15weight_norm_cpuERKNS_6TensorES3_l@plt+4>:	ldr	x17, [x16, #480]
+   0xffffede34408 <_ZN2at6native15weight_norm_cpuERKNS_6TensorES3_l@plt+8>:	add	x16, x16, #0x1e0
+   0xffffede3440c <_ZN2at6native15weight_norm_cpuERKNS_6TensorES3_l@plt+12>:	br	x17
+   0xffffede34410 <accept@plt>:	adrp	x16, 0xfffff7cb2000 <_ZN5torch8profiler4impl19CuptiMonitorBuffers13return_bufferEPh@got.plt>
+   0xffffede34414 <accept@plt+4>:	ldr	x17, [x16, #488]
+   0xffffede34418 <accept@plt+8>:	add	x16, x16, #0x1e8
+   0xffffede3441c <accept@plt+12>:	br	x17
+
+Loaded CPU runtime:
+From                To                  Syms Read   Shared Object Library
+0x0000ffffecf50000  0x0000fffff7e40000  Yes (*)     /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so
+(*): Shared library is missing debugging information.
+NATIVE_FORWARD_SAMPLE_PASS
+[Inferior 1 (process 3195) killed]

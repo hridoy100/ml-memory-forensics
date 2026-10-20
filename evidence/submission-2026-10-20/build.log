@@ -1,0 +1,29 @@
+Reproduction check: build
+2026-10-20T11:36:57-05:00
+Command: cmake --build /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build --parallel 1 --verbose
+
+Change Dir: '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j1
+/usr/bin/cmake -S/home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp -B/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build/CMakeFiles /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+/usr/bin/gmake  -f CMakeFiles/cifar10_inference.dir/build.make CMakeFiles/cifar10_inference.dir/depend
+gmake[2]: Entering directory '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+cd /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build/CMakeFiles/cifar10_inference.dir/DependInfo.cmake "--color=" cifar10_inference
+gmake[2]: Leaving directory '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+/usr/bin/gmake  -f CMakeFiles/cifar10_inference.dir/build.make CMakeFiles/cifar10_inference.dir/build
+gmake[2]: Entering directory '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+[ 50%] Building CXX object CMakeFiles/cifar10_inference.dir/main.cpp.o
+/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/include -isystem /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/include/torch/csrc/api/include -g -std=c++20 -g3 -O0 -fno-omit-frame-pointer -fno-eliminate-unused-debug-types -femit-class-debug-always -MD -MT CMakeFiles/cifar10_inference.dir/main.cpp.o -MF CMakeFiles/cifar10_inference.dir/main.cpp.o.d -o CMakeFiles/cifar10_inference.dir/main.cpp.o -c /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp
+[100%] Linking CXX executable cifar10_inference
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cifar10_inference.dir/link.txt --verbose=1
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/cifar10_inference.dir/link.d CMakeFiles/cifar10_inference.dir/main.cpp.o -o cifar10_inference  -Wl,-rpath,/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so -Wl,--no-as-needed,"/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so" -Wl,--as-needed /home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so -Wl,--no-as-needed,"/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so" -Wl,--as-needed
+gmake[2]: Leaving directory '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+[100%] Built target cifar10_inference
+gmake[1]: Leaving directory '/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build'
+/usr/bin/cmake -E cmake_progress_start /home/raihan/Downloads/memory-evidence/submission-20261020-113652/build/CMakeFiles 0
+
+
+STEP_PASS: build

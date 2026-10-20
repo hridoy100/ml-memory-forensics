@@ -32,6 +32,7 @@ the same 5,225 correct predictions out of 6,000 images.
   limits of this implementation.
 - [Interview notes](docs/INTERVIEW.md): explain the goal, methods, and results.
 - [Current status](docs/STATUS.md): completed evidence and remaining submission checks.
+- [Forensics background](docs/FORENSICS_BACKGROUND.md): chapter-based concepts tied to the experiment.
 - [Evidence inventory](evidence/README.md): which reports to inspect.
 - [Artifacts kept outside Git](manifests/artifacts.json): hashes, sizes, and known
   locations of captures, kernel files, and model/data binaries.
@@ -97,10 +98,11 @@ are outside this implementation.
 The replay checks the evaluation path on this test set. It does not establish
 all-branch or native call coverage. See [FINDINGS.md](docs/FINDINGS.md).
 
-Three original screenshots are preserved. Additional training/build and
-recovery/replay screenshots remain to be collected for the final submission.
-Package versions are recorded as observed; the historical "most recent PyTorch"
-requirement needs its own release-date verification. Textbook reading is a
-separate prerequisite and is not certified by these artifacts.
+The [submission evidence supplement](docs/SUBMISSION_EVIDENCE.md) adds fresh
+export/build/recovery/replay reports and eight browser screenshots to the three
+original screenshots. [Version verification](docs/VERSION_VERIFICATION.md) checks
+the recorded PyTorch release against the dated training-artifact commit.
+[Code scope](docs/CODE_SCOPE.md) distinguishes recovered model implementation
+from the added native sample and the remaining instructor clarification.
 
 See [NOTICE.md](NOTICE.md) for third-party software and recovered-source notices.
