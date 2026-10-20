@@ -5,6 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from native_trace_support import select_observed
+
 
 def main():
     root = Path(__file__).resolve().parents[1]
@@ -65,6 +67,33 @@ def main():
     print("Recovery: 31 tensors, 26 modules, 19 source files, 34 graphs")
     print("Replay: 6000/6000 predictions agree; maximum logit difference 0")
     print("Ground-truth accuracy: 5225/6000 (87.0833%)")
+    native = root / "evidence/native-trace-2026-10-20"
+    candidate_bytes = (native / "candidates.json").read_bytes()
+    trace_bytes = (native / "trace.json").read_bytes()
+    trace = json.loads(trace_bytes)
+    selected = select_observed(candidate_bytes, trace)
+    selected["trace_sha256"] = hashlib.sha256(trace_bytes).hexdigest()
+    assert selected == json.loads((native / "observed-plan.json").read_text())
+    recovered = json.loads((native / "recovery/native-4540-report.json").read_text())
+    checked = json.loads((native / "validation/validation.json").read_text())
+    assert recovered["plan"] == selected and recovered["complete_selected_functions"]
+    assert checked["passed"] and checked["pid"] == recovered["pid"] == 4540
+    assert len(recovered["functions"]) == len(checked["functions"]) == 10
+    for expected, actual, check in zip(
+        selected["functions"], recovered["functions"], checked["functions"]
+    ):
+        assert all(
+            expected[key] == actual[key] for key in ("name", "file_offset", "size")
+        )
+        assert actual["status"] == "recovered" and check["match"]
+        assert check["name"] == actual["name"] and check["bytes"] == actual["size"]
+        assert actual["sha256"] == check["memory_sha256"] == check["reference_sha256"]
+    assert sum(item["size"] for item in recovered["functions"]) == 23340
+    assert len(trace["events"]) == 40 and len(trace["hits"]) == 12
+    assert sum(hit["count"] > 0 for hit in trace["hits"]) == 10
+    print(
+        "Native reports: 40 entries, 10/12 candidates; 23,340 selected-body bytes match"
+    )
     print("EVIDENCE_CHECK_PASS")
 
 

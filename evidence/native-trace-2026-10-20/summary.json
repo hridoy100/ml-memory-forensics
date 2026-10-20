@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "run_directory": "/home/raihan/Downloads/memory-evidence/native-trace-20261020-132538",
+  "trace_pid": 2782,
+  "captured_pid": 4540,
+  "candidate_functions": 12,
+  "observed_functions": 10,
+  "entry_events": 40,
+  "observed_threads": [
+    1
+  ],
+  "recovered_functions": 10,
+  "recovered_function_bytes": 23340,
+  "all_selected_bodies_match": true,
+  "unmatched_prefixes": [
+    "at::native::native_batch_norm(",
+    "at::native::max_pool2d_with_indices(",
+    "at::native::addmm("
+  ],
+  "report_archive_sha256": "3e7fca026b3780689078b6df68421e9b71b279498f27833f20b0362a5513e97f",
+  "scope": "Selected dynamic-symbol entries during one CPU forward call. Body-byte recovery is not executed-instruction coverage or exhaustive native coverage. Ubuntu executed the runner; small reports were transferred to the Mac for consistency checks."
+}

@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "pid": 4540,
+  "process_layer": "layer_name_Process4540",
+  "plan": {
+    "schema": 1,
+    "method": "observed-entry-guided",
+    "library_name": "libtorch_cpu.so",
+    "reference_library": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so",
+    "reference_library_sha256": "2befcd2b97a282fb2f2cc0ce069f9943dd12c67cf88ab41c17824966f750e14d",
+    "elf_machine": 183,
+    "identity_ranges": [
+      {
+        "kind": "ELF header",
+        "file_offset": 0,
+        "size": 64,
+        "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c"
+      },
+      {
+        "kind": "GNU build ID",
+        "file_offset": 640,
+        "size": 20,
+        "hex": "9bf94dfd38ea8b0540afb4ba70de28579ae1f058",
+        "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c"
+      }
+    ],
+    "functions": [
+      {
+        "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+        "elf_value": 27282208,
+        "file_offset": 23087904,
+        "size": 1088
+      },
+      {
+        "name": "at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)",
+        "elf_value": 27561072,
+        "file_offset": 23366768,
+        "size": 164
+      },
+      {
+        "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+        "elf_value": 20066128,
+        "file_offset": 15871824,
+        "size": 584
+      },
+      {
+        "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)",
+        "elf_value": 20066720,
+        "file_offset": 15872416,
+        "size": 8436
+      },
+      {
+        "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "elf_value": 20075168,
+        "file_offset": 15880864,
+        "size": 1444
+      },
+      {
+        "name": "at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)",
+        "elf_value": 27400480,
+        "file_offset": 23206176,
+        "size": 2624
+      },
+      {
+        "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+        "elf_value": 27355264,
+        "file_offset": 23160960,
+        "size": 4580
+      },
+      {
+        "name": "at::native::relu(at::Tensor const&)",
+        "elf_value": 24610672,
+        "file_offset": 20416368,
+        "size": 340
+      },
+      {
+        "name": "at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)",
+        "elf_value": 20100048,
+        "file_offset": 15905744,
+        "size": 2068
+      },
+      {
+        "name": "at::native::flatten(at::Tensor const&, long, long)",
+        "elf_value": 29245216,
+        "file_offset": 25050912,
+        "size": 2012
+      }
+    ],
+    "scope": "Observed entries among selected dynamic symbols in one forward window. This excludes undiscovered, inline and uninstrumented native code; recovery reads bytes only from the captured process layer.",
+    "candidate_profile": "model-forward",
+    "unmatched_prefixes": [
+      "at::native::native_batch_norm(",
+      "at::native::max_pool2d_with_indices(",
+      "at::native::addmm("
+    ],
+    "trace_candidate_count": 12,
+    "trace_observed_count": 10,
+    "trace_sha256": "4b5005aa219d4beafb9bcc42c1a625ef512a4f9c9f7d5d1794d95cdc227701da"
+  },
+  "mappings": [
+    {
+      "start": 281474657222656,
+      "end": 281474672631808,
+      "file_offset": 0,
+      "flags": "r--",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474672631808,
+      "end": 281474672689152,
+      "file_offset": 15409152,
+      "flags": "---",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474672689152,
+      "end": 281474803798016,
+      "file_offset": 15466496,
+      "flags": "r-x",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474803798016,
+      "end": 281474803826688,
+      "file_offset": 146575360,
+      "flags": "---",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474803826688,
+      "end": 281474836197376,
+      "file_offset": 146604032,
+      "flags": "r--",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474836197376,
+      "end": 281474836230144,
+      "file_offset": 178974720,
+      "flags": "---",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474836230144,
+      "end": 281474838953984,
+      "file_offset": 179007488,
+      "flags": "r--",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474838953984,
+      "end": 281474839801856,
+      "file_offset": 181731328,
+      "flags": "rw-",
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    }
+  ],
+  "identity_checks": [
+    {
+      "kind": "ELF header",
+      "address": "0xffffecf50000",
+      "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c",
+      "match": true
+    },
+    {
+      "kind": "GNU build ID",
+      "address": "0xffffecf50280",
+      "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c",
+      "match": true
+    }
+  ],
+  "functions": [
+    {
+      "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "elf_value": 27282208,
+      "file_offset": 23087904,
+      "size": 1088,
+      "status": "recovered",
+      "address": "0xffffee554b20",
+      "sha256": "2493c30286bff6e62d9d1138d99c1ec4eff1def107650f9184a152d929d1094c",
+      "file": "native-4540-000.bin"
+    },
+    {
+      "name": "at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)",
+      "elf_value": 27561072,
+      "file_offset": 23366768,
+      "size": 164,
+      "status": "recovered",
+      "address": "0xffffee598c70",
+      "sha256": "82385a10e483ae4eb7340cc462eb659b92e054943f1bdefa0511f476e6d585d5",
+      "file": "native-4540-001.bin"
+    },
+    {
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "elf_value": 20066128,
+      "file_offset": 15871824,
+      "size": 584,
+      "status": "recovered",
+      "address": "0xffffede72f50",
+      "sha256": "32eed4e332633b1cd18abe29ad2cee997e1baa81f8c123b39fc42f8fad85f740",
+      "file": "native-4540-002.bin"
+    },
+    {
+      "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)",
+      "elf_value": 20066720,
+      "file_offset": 15872416,
+      "size": 8436,
+      "status": "recovered",
+      "address": "0xffffede731a0",
+      "sha256": "1053d87997dfe3b34db965f385627a6dda7e123864690e506c3c3ccc090cb46d",
+      "file": "native-4540-003.bin"
+    },
+    {
+      "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+      "elf_value": 20075168,
+      "file_offset": 15880864,
+      "size": 1444,
+      "status": "recovered",
+      "address": "0xffffede752a0",
+      "sha256": "9fddb095200ab2c6e2eefa6b362cdceafcd4dff1ebf4bc34a5540c383a9eb20f",
+      "file": "native-4540-004.bin"
+    },
+    {
+      "name": "at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)",
+      "elf_value": 27400480,
+      "file_offset": 23206176,
+      "size": 2624,
+      "status": "recovered",
+      "address": "0xffffee571920",
+      "sha256": "f680568c07e8812d9e9285f3113ae3d5c9979e9a4f46e2061c43fdea5492cd7e",
+      "file": "native-4540-005.bin"
+    },
+    {
+      "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "elf_value": 27355264,
+      "file_offset": 23160960,
+      "size": 4580,
+      "status": "recovered",
+      "address": "0xffffee566880",
+      "sha256": "a9deeabd952f5bdd1e792b01588f09453c03742f4c23e700f87e2ded927651a7",
+      "file": "native-4540-006.bin"
+    },
+    {
+      "name": "at::native::relu(at::Tensor const&)",
+      "elf_value": 24610672,
+      "file_offset": 20416368,
+      "size": 340,
+      "status": "recovered",
+      "address": "0xffffee2c8770",
+      "sha256": "4beaf0b8db81ff6e2d462044829df09d65c4d10526c001ddc42ea73aaa39d0e4",
+      "file": "native-4540-007.bin"
+    },
+    {
+      "name": "at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)",
+      "elf_value": 20100048,
+      "file_offset": 15905744,
+      "size": 2068,
+      "status": "recovered",
+      "address": "0xffffede7b3d0",
+      "sha256": "8f88930f1a24936886534a99dcb9854e1c87acc13f0f50e57989a5c182851808",
+      "file": "native-4540-008.bin"
+    },
+    {
+      "name": "at::native::flatten(at::Tensor const&, long, long)",
+      "elf_value": 29245216,
+      "file_offset": 25050912,
+      "size": 2012,
+      "status": "recovered",
+      "address": "0xffffee733f20",
+      "sha256": "03057ab84c586bf3cbaebd68072732ce3c125fde64bad7d938dacaae1a2e9b7a",
+      "file": "native-4540-009.bin"
+    }
+  ],
+  "complete_selected_functions": true,
+  "scope": "Selected native functions only. Code bytes come from the memory image, without padding or disk fallback. This is not exhaustive forward-path discovery, branch coverage, or native source recovery."
+}

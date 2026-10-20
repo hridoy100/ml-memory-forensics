@@ -7,7 +7,9 @@ inspection, Volatility recovery plugin, evidence, and reproduction instructions.
 
 This branch adds a separate [native-code recovery experiment](docs/NATIVE_RECOVERY.md).
 Its first milestone recovers one complete native function from a new warm-up
-capture. It does not claim exhaustive native coverage.
+capture. The [trace-guided continuation](docs/NATIVE_TRACE.md) recovers ten
+selected bodies totaling 23,340 bytes, all independently matching the library.
+Exhaustive native coverage is not claimed.
 
 ## Recorded results
 

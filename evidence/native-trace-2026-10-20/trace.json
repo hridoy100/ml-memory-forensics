@@ -1,0 +1,1051 @@
+{
+  "schema": 1,
+  "completed_forward": true,
+  "event_limit_hit": false,
+  "candidate_plan_sha256": "08ad19e77818b6885146fbb0229a55ecae3acec60c60d9f8e3f86ca221dcde73",
+  "event_limit": 10000,
+  "events": [
+    {
+      "index": 5,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 0,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 0,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 0,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "thread": 1,
+      "ptid": [
+        2782,
+        2782,
+        0
+      ]
+    }
+  ],
+  "hits": [
+    {
+      "index": 0,
+      "count": 3,
+      "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "address": "0xffffee554b20",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffee554b20",
+            "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffef6dae88",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__batch_norm>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 1,
+      "count": 3,
+      "name": "at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)",
+      "address": "0xffffee598c70",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffee598c70",
+            "name": "at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)"
+          },
+          {
+            "pc": "0xffffef6ca204",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__max_pool2d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 2,
+      "count": 6,
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "address": "0xffffede72f50",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffede72f50",
+            "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)"
+          },
+          {
+            "pc": "0xffffedeb4ae0",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedea1f94",
+            "name": "at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedec76f8",
+            "name": "torch::autograd::VariableType::(anonymous namespace)::convolution(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedec853c",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &torch::autograd::VariableType::(anonymous namespace)::convolution>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedea2c74",
+            "name": "at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffede755b4",
+            "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffef6d9b54",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 3,
+      "count": 0,
+      "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool)",
+      "address": "0xffffee391220"
+    },
+    {
+      "index": 4,
+      "count": 6,
+      "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)",
+      "address": "0xffffede731a0",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffede731a0",
+            "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)"
+          },
+          {
+            "pc": "0xffffedeb4c54",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd___convolution>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)"
+          },
+          {
+            "pc": "0xffffedea3268",
+            "name": "at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)"
+          },
+          {
+            "pc": "0xffffede730a8",
+            "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)"
+          },
+          {
+            "pc": "0xffffedeb4ae0",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedea1f94",
+            "name": "at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedec76f8",
+            "name": "torch::autograd::VariableType::(anonymous namespace)::convolution(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedec853c",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &torch::autograd::VariableType::(anonymous namespace)::convolution>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffedea2c74",
+            "name": "at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffede755b4",
+            "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffef6d9b54",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 5,
+      "count": 6,
+      "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+      "address": "0xffffede752a0",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffede752a0",
+            "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)"
+          },
+          {
+            "pc": "0xffffef6d9b54",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 6,
+      "count": 3,
+      "name": "at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)",
+      "address": "0xffffee571920",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffee571920",
+            "name": "at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)"
+          },
+          {
+            "pc": "0xffffef3171ac",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<std::tuple<at::Tensor, at::Tensor, at::Tensor> (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CPU__native_batch_norm>, std::tuple<at::Tensor, at::Tensor, at::Tensor>, c10::guts::typelist::typelist<at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double> >, std::tuple<at::Tensor, at::Tensor, at::Tensor> (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)"
+          },
+          {
+            "pc": "0xffffeee7bfdc",
+            "name": "at::_ops::native_batch_norm::redispatch(c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)"
+          },
+          {
+            "pc": "0xfffff285049c",
+            "name": "torch::autograd::VariableType::(anonymous namespace)::native_batch_norm(c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)"
+          },
+          {
+            "pc": "0xfffff2850e30",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<std::tuple<at::Tensor, at::Tensor, at::Tensor> (c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double), &torch::autograd::VariableType::(anonymous namespace)::native_batch_norm>, std::tuple<at::Tensor, at::Tensor, at::Tensor>, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double> >, std::tuple<at::Tensor, at::Tensor, at::Tensor> (c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)"
+          },
+          {
+            "pc": "0xffffeeeb6d04",
+            "name": "at::_ops::native_batch_norm::call(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)"
+          },
+          {
+            "pc": "0xffffee566bfc",
+            "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffef645174",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, long> (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd___batch_norm_impl_index>, std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, long>, c10::guts::typelist::typelist<at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool> >, std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, long> (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffeed0e184",
+            "name": "at::_ops::_batch_norm_impl_index::call(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffee554c74",
+            "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffef6dae88",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__batch_norm>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 7,
+      "count": 3,
+      "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "address": "0xffffee566880",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffee566880",
+            "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffef645174",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, long> (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd___batch_norm_impl_index>, std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, long>, c10::guts::typelist::typelist<at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool> >, std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, long> (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffeed0e184",
+            "name": "at::_ops::_batch_norm_impl_index::call(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffee554c74",
+            "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)"
+          },
+          {
+            "pc": "0xffffef6dae88",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__batch_norm>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 8,
+      "count": 7,
+      "name": "at::native::relu(at::Tensor const&)",
+      "address": "0xffffee2c8770",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffee2c8770",
+            "name": "at::native::relu(at::Tensor const&)"
+          },
+          {
+            "pc": "0xffffef390d58",
+            "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CPU__relu>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&> >, at::Tensor (at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&)"
+          },
+          {
+            "pc": "0xffffef1d4298",
+            "name": "at::_ops::relu::redispatch(c10::DispatchKeySet, at::Tensor const&)"
+          },
+          {
+            "pc": "0xfffff299ada0",
+            "name": "torch::autograd::VariableType::(anonymous namespace)::relu(c10::DispatchKeySet, at::Tensor const&)"
+          },
+          {
+            "pc": "0xfffff299b3e4",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&), &torch::autograd::VariableType::(anonymous namespace)::relu>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 9,
+      "count": 0,
+      "name": "at::native::relu_(at::Tensor&)",
+      "address": "0xffffee2c88d0"
+    },
+    {
+      "index": 10,
+      "count": 2,
+      "name": "at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)",
+      "address": "0xffffede7b3d0",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffede7b3d0",
+            "name": "at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)"
+          },
+          {
+            "pc": "0xffffef6d70fc",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__linear>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    },
+    {
+      "index": 11,
+      "count": 1,
+      "name": "at::native::flatten(at::Tensor const&, long, long)",
+      "address": "0xffffee733f20",
+      "first_stack": {
+        "frames": [
+          {
+            "pc": "0xffffee733f20",
+            "name": "at::native::flatten(at::Tensor const&, long, long)"
+          },
+          {
+            "pc": "0xffffef6cc924",
+            "name": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, long, long), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd_using_ints_flatten>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, long, long> >, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)"
+          },
+          {
+            "pc": "0xfffff3b3cc70",
+            "name": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0]"
+          },
+          {
+            "pc": "0xfffff36d77bc",
+            "name": "bool torch::jit::InterpreterStateImpl::runTemplate<false>(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36db308",
+            "name": "torch::jit::InterpreterState::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff36ba9f4",
+            "name": "torch::jit::GraphExecutorImplBase::run(std::vector<c10::IValue, std::allocator<c10::IValue> >&)"
+          },
+          {
+            "pc": "0xfffff3377744",
+            "name": "torch::jit::Method::operator()(std::vector<c10::IValue, std::allocator<c10::IValue> >, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10::IValue, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, c10::IValue> > > const&) const"
+          },
+          {
+            "pc": "0xaaaaaaab1d38",
+            "name": "torch::jit::Module::forward"
+          },
+          {
+            "pc": "0xaaaaaaaa81b8",
+            "name": "main"
+          }
+        ],
+        "limit_reached": false
+      }
+    }
+  ],
+  "scope": "Temporal entry hits at selected libtorch_cpu dynamic symbols across observed process threads, during the first forward call. Not a full call graph, instruction trace or all-branch coverage.",
+  "pid": 2782,
+  "main_thread": 1,
+  "batch_start": 0,
+  "batch_end": 128,
+  "gdb_version": "17.1",
+  "executable": "/home/raihan/Downloads/memory-evidence/submission-20261020-113652/build/cifar10_inference",
+  "library_mappings": [
+    {
+      "start": 281474657222656,
+      "end": 281474672631808,
+      "flags": "r--p",
+      "file_offset": 0,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474672631808,
+      "end": 281474672689152,
+      "flags": "---p",
+      "file_offset": 15409152,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474672689152,
+      "end": 281474803798016,
+      "flags": "r-xp",
+      "file_offset": 15466496,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474803798016,
+      "end": 281474803826688,
+      "flags": "---p",
+      "file_offset": 146575360,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474803826688,
+      "end": 281474836197376,
+      "flags": "r--p",
+      "file_offset": 146604032,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474836197376,
+      "end": 281474836230144,
+      "flags": "---p",
+      "file_offset": 178974720,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474836230144,
+      "end": 281474838953984,
+      "flags": "r--p",
+      "file_offset": 179007488,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "start": 281474838953984,
+      "end": 281474839801856,
+      "flags": "rw-p",
+      "file_offset": 181731328,
+      "path": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so"
+    }
+  ],
+  "identity_checks": [
+    {
+      "kind": "ELF header",
+      "address": "0xffffecf50000",
+      "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c"
+    },
+    {
+      "kind": "GNU build ID",
+      "address": "0xffffecf50280",
+      "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c"
+    }
+  ],
+  "observed_candidate_count": 10
+}

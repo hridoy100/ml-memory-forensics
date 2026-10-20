@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "pid": 4540,
+  "functions": [
+    {
+      "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 1088,
+      "address": "0xffffee554b20",
+      "memory_sha256": "2493c30286bff6e62d9d1138d99c1ec4eff1def107650f9184a152d929d1094c",
+      "reference_sha256": "2493c30286bff6e62d9d1138d99c1ec4eff1def107650f9184a152d929d1094c",
+      "disassembly": "native-000.asm.txt"
+    },
+    {
+      "name": "at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 164,
+      "address": "0xffffee598c70",
+      "memory_sha256": "82385a10e483ae4eb7340cc462eb659b92e054943f1bdefa0511f476e6d585d5",
+      "reference_sha256": "82385a10e483ae4eb7340cc462eb659b92e054943f1bdefa0511f476e6d585d5",
+      "disassembly": "native-001.asm.txt"
+    },
+    {
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 584,
+      "address": "0xffffede72f50",
+      "memory_sha256": "32eed4e332633b1cd18abe29ad2cee997e1baa81f8c123b39fc42f8fad85f740",
+      "reference_sha256": "32eed4e332633b1cd18abe29ad2cee997e1baa81f8c123b39fc42f8fad85f740",
+      "disassembly": "native-002.asm.txt"
+    },
+    {
+      "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 8436,
+      "address": "0xffffede731a0",
+      "memory_sha256": "1053d87997dfe3b34db965f385627a6dda7e123864690e506c3c3ccc090cb46d",
+      "reference_sha256": "1053d87997dfe3b34db965f385627a6dda7e123864690e506c3c3ccc090cb46d",
+      "disassembly": "native-003.asm.txt"
+    },
+    {
+      "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 1444,
+      "address": "0xffffede752a0",
+      "memory_sha256": "9fddb095200ab2c6e2eefa6b362cdceafcd4dff1ebf4bc34a5540c383a9eb20f",
+      "reference_sha256": "9fddb095200ab2c6e2eefa6b362cdceafcd4dff1ebf4bc34a5540c383a9eb20f",
+      "disassembly": "native-004.asm.txt"
+    },
+    {
+      "name": "at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 2624,
+      "address": "0xffffee571920",
+      "memory_sha256": "f680568c07e8812d9e9285f3113ae3d5c9979e9a4f46e2061c43fdea5492cd7e",
+      "reference_sha256": "f680568c07e8812d9e9285f3113ae3d5c9979e9a4f46e2061c43fdea5492cd7e",
+      "disassembly": "native-005.asm.txt"
+    },
+    {
+      "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 4580,
+      "address": "0xffffee566880",
+      "memory_sha256": "a9deeabd952f5bdd1e792b01588f09453c03742f4c23e700f87e2ded927651a7",
+      "reference_sha256": "a9deeabd952f5bdd1e792b01588f09453c03742f4c23e700f87e2ded927651a7",
+      "disassembly": "native-006.asm.txt"
+    },
+    {
+      "name": "at::native::relu(at::Tensor const&)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 340,
+      "address": "0xffffee2c8770",
+      "memory_sha256": "4beaf0b8db81ff6e2d462044829df09d65c4d10526c001ddc42ea73aaa39d0e4",
+      "reference_sha256": "4beaf0b8db81ff6e2d462044829df09d65c4d10526c001ddc42ea73aaa39d0e4",
+      "disassembly": "native-007.asm.txt"
+    },
+    {
+      "name": "at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 2068,
+      "address": "0xffffede7b3d0",
+      "memory_sha256": "8f88930f1a24936886534a99dcb9854e1c87acc13f0f50e57989a5c182851808",
+      "reference_sha256": "8f88930f1a24936886534a99dcb9854e1c87acc13f0f50e57989a5c182851808",
+      "disassembly": "native-008.asm.txt"
+    },
+    {
+      "name": "at::native::flatten(at::Tensor const&, long, long)",
+      "status": "recovered",
+      "match": true,
+      "bytes": 2012,
+      "address": "0xffffee733f20",
+      "memory_sha256": "03057ab84c586bf3cbaebd68072732ce3c125fde64bad7d938dacaae1a2e9b7a",
+      "reference_sha256": "03057ab84c586bf3cbaebd68072732ce3c125fde64bad7d938dacaae1a2e9b7a",
+      "disassembly": "native-009.asm.txt"
+    }
+  ],
+  "scope": "Exact bytes of selected functions, not all native functions or all forward-pass calls."
+}
+NATIVE_CODE_VALIDATION_PASS

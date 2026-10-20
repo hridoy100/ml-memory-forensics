@@ -1,0 +1,92 @@
+
+/home/raihan/Downloads/memory-evidence/native-trace-20261020-132538/recovery/native-4540-007.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000ffffee2c8770 <.data>:
+    ffffee2c8770:	a9b77bfd 	stp	x29, x30, [sp, #-144]!
+    ffffee2c8774:	910003fd 	mov	x29, sp
+    ffffee2c8778:	f9400001 	ldr	x1, [x0]
+    ffffee2c877c:	79414021 	ldrh	w1, [x1, #160]
+    ffffee2c8780:	7100bc3f 	cmp	w1, #0x2f
+    ffffee2c8784:	540002c8 	b.hi	0xffffee2c87dc  // b.pmore
+    ffffee2c8788:	13001c21 	sxtb	w1, w1
+    ffffee2c878c:	71002c3f 	cmp	w1, #0xb
+    ffffee2c8790:	540002e0 	b.eq	0xffffee2c87ec  // b.none
+    ffffee2c8794:	52800022 	mov	w2, #0x1                   	// #1
+    ffffee2c8798:	9101c3e1 	add	x1, sp, #0x70
+    ffffee2c879c:	a90153f3 	stp	x19, x20, [sp, #16]
+    ffffee2c87a0:	aa0803f3 	mov	x19, x8
+    ffffee2c87a4:	b90073e2 	str	w2, [sp, #112]
+    ffffee2c87a8:	f90043ff 	str	xzr, [sp, #128]
+    ffffee2c87ac:	97ed43cd 	bl	0xffffede196e0
+    ffffee2c87b0:	b94073e0 	ldr	w0, [sp, #112]
+    ffffee2c87b4:	51001400 	sub	w0, w0, #0x5
+    ffffee2c87b8:	7100081f 	cmp	w0, #0x2
+    ffffee2c87bc:	54000088 	b.hi	0xffffee2c87cc  // b.pmore
+    ffffee2c87c0:	f94043e0 	ldr	x0, [sp, #128]
+    ffffee2c87c4:	b4000040 	cbz	x0, 0xffffee2c87cc
+    ffffee2c87c8:	97f33f32 	bl	0xffffedf98490
+    ffffee2c87cc:	aa1303e0 	mov	x0, x19
+    ffffee2c87d0:	a94153f3 	ldp	x19, x20, [sp, #16]
+    ffffee2c87d4:	a8c97bfd 	ldp	x29, x30, [sp], #144
+    ffffee2c87d8:	d65f03c0 	ret
+    ffffee2c87dc:	2a0103e0 	mov	w0, w1
+    ffffee2c87e0:	a90153f3 	stp	x19, x20, [sp, #16]
+    ffffee2c87e4:	f90013f5 	str	x21, [sp, #32]
+    ffffee2c87e8:	97ede7c6 	bl	0xffffede42700
+    ffffee2c87ec:	d2801000 	mov	x0, #0x80                  	// #128
+    ffffee2c87f0:	a90153f3 	stp	x19, x20, [sp, #16]
+    ffffee2c87f4:	910163f3 	add	x19, sp, #0x58
+    ffffee2c87f8:	f90013f5 	str	x21, [sp, #32]
+    ffffee2c87fc:	97ed795d 	bl	0xffffede26d70
+    ffffee2c8800:	f004d023 	adrp	x3, 0xfffff7ccf000
+    ffffee2c8804:	91384063 	add	x3, x3, #0xe10
+    ffffee2c8808:	9101c3f5 	add	x21, sp, #0x70
+    ffffee2c880c:	aa0003f4 	mov	x20, x0
+    ffffee2c8810:	d003c5c1 	adrp	x1, 0xfffff5b82000
+    ffffee2c8814:	aa1503e0 	mov	x0, x21
+    ffffee2c8818:	a9401464 	ldp	x4, x5, [x3]
+    ffffee2c881c:	910143e2 	add	x2, sp, #0x50
+    ffffee2c8820:	f9400863 	ldr	x3, [x3, #16]
+    ffffee2c8824:	91322021 	add	x1, x1, #0xc88
+    ffffee2c8828:	f9000a63 	str	x3, [x19, #16]
+    ffffee2c882c:	a90597e4 	stp	x4, x5, [sp, #88]
+    ffffee2c8830:	97f2fae4 	bl	0xffffedf873c0
+    ffffee2c8834:	a94597e4 	ldp	x4, x5, [sp, #88]
+    ffffee2c8838:	9100c3e1 	add	x1, sp, #0x30
+    ffffee2c883c:	f9400a63 	ldr	x3, [x19, #16]
+    ffffee2c8840:	a90317e4 	stp	x4, x5, [sp, #48]
+    ffffee2c8844:	aa1503e2 	mov	x2, x21
+    ffffee2c8848:	f9000823 	str	x3, [x1, #16]
+    ffffee2c884c:	aa1403e0 	mov	x0, x20
+    ffffee2c8850:	97ed83f8 	bl	0xffffede29830
+    ffffee2c8854:	aa1503e0 	mov	x0, x21
+    ffffee2c8858:	97f2b6fa 	bl	0xffffedf76440
+    ffffee2c885c:	d004ce41 	adrp	x1, 0xfffff7c92000
+    ffffee2c8860:	f944f821 	ldr	x1, [x1, #2544]
+    ffffee2c8864:	f0ffe622 	adrp	x2, 0xffffedf8f000
+    ffffee2c8868:	aa1403e0 	mov	x0, x20
+    ffffee2c886c:	91284042 	add	x2, x2, #0xa10
+    ffffee2c8870:	97edce94 	bl	0xffffede3c2c0
+    ffffee2c8874:	b94073e1 	ldr	w1, [sp, #112]
+    ffffee2c8878:	aa0003f3 	mov	x19, x0
+    ffffee2c887c:	f90013f5 	str	x21, [sp, #32]
+    ffffee2c8880:	51001421 	sub	w1, w1, #0x5
+    ffffee2c8884:	7100083f 	cmp	w1, #0x2
+    ffffee2c8888:	54000088 	b.hi	0xffffee2c8898  // b.pmore
+    ffffee2c888c:	f94043e0 	ldr	x0, [sp, #128]
+    ffffee2c8890:	b4000040 	cbz	x0, 0xffffee2c8898
+    ffffee2c8894:	97f33eff 	bl	0xffffedf98490
+    ffffee2c8898:	aa1303e0 	mov	x0, x19
+    ffffee2c889c:	97edcf85 	bl	0xffffede3c6b0
+    ffffee2c88a0:	aa0003f3 	mov	x19, x0
+    ffffee2c88a4:	aa1503e0 	mov	x0, x21
+    ffffee2c88a8:	97f2b6e6 	bl	0xffffedf76440
+    ffffee2c88ac:	aa1403e0 	mov	x0, x20
+    ffffee2c88b0:	97ed9844 	bl	0xffffede2e9c0
+    ffffee2c88b4:	aa1303e0 	mov	x0, x19
+    ffffee2c88b8:	97edcf7e 	bl	0xffffede3c6b0
+    ffffee2c88bc:	aa0003f3 	mov	x19, x0
+    ffffee2c88c0:	17fffffb 	b	0xffffee2c88ac

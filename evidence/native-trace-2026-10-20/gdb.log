@@ -1,0 +1,9 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/aarch64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint -1, main (argc=4, argv=0xffffffffeae8) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:91
+91	            auto logits = model.forward({images}).toTensor();
+
+Temporary breakpoint -22, main (argc=4, argv=0xffffffffeae8) at /home/raihan/Downloads/ml-memory-forensics/cifar10_cnn/cpp/main.cpp:92
+92	            auto predictions = logits.argmax(1);
+NATIVE_TRACE_PASS: 40 entries, 10/12 candidate symbols

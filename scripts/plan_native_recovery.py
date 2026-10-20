@@ -8,6 +8,24 @@ import subprocess
 from pathlib import Path
 
 
+MODEL_FORWARD_PREFIXES = [
+    "at::native::conv2d_symint(",
+    "at::native::convolution(",
+    "at::native::_convolution(",
+    "at::native::batch_norm(",
+    "at::native::_batch_norm_impl_index(",
+    "at::native::native_batch_norm(",
+    "at::native::batch_norm_cpu(",
+    "at::native::relu(",
+    "at::native::relu_(",
+    "at::native::max_pool2d(",
+    "at::native::max_pool2d_with_indices(",
+    "at::native::linear(",
+    "at::native::addmm(",
+    "at::native::flatten(",
+]
+
+
 def file_hash(path):
     digest = hashlib.sha256()
     with path.open("rb") as stream:
@@ -102,7 +120,13 @@ def executable_file_offset(value, size, segments):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--library", required=True, type=Path)
-    parser.add_argument(
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument(
+        "--profile",
+        choices=["model-forward"],
+        help="Candidate entries for this CNN; not all native callees",
+    )
+    selection.add_argument(
         "--prefix",
         action="append",
         help="Exact start of a demangled symbol; repeat for multiple prefixes",
@@ -111,7 +135,11 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         parser.error("Choose a new plan path")
-    prefixes = args.prefix or ["at::native::convolution("]
+    prefixes = (
+        MODEL_FORWARD_PREFIXES
+        if args.profile
+        else args.prefix or ["at::native::convolution("]
+    )
     machine, segments, identities = elf_metadata(args.library)
     symbols = []
     with subprocess.Popen(
@@ -138,10 +166,12 @@ def main():
                 )
         if process.wait():
             raise RuntimeError("nm failed")
-    if any(
-        not any(symbol["name"].startswith(prefix) for symbol in symbols)
+    unmatched = [
+        prefix
         for prefix in prefixes
-    ):
+        if not any(symbol["name"].startswith(prefix) for symbol in symbols)
+    ]
+    if not symbols or (unmatched and not args.profile):
         raise ValueError("At least one requested symbol prefix was not found")
     result = {
         "schema": 1,
@@ -154,6 +184,8 @@ def main():
         "functions": symbols,
         "scope": "Symbol locations and sizes come from the reference ELF. The recovery plugin reads code bytes only from the captured process layer.",
     }
+    if args.profile:
+        result.update(candidate_profile=args.profile, unmatched_prefixes=unmatched)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + "\n")
     for symbol in symbols:

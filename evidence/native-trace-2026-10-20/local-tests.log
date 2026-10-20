@@ -1,0 +1,44 @@
+test_ambiguous_duplicate_mapping_is_rejected (tests.test_native_recovery.NativeRecoveryTests.test_ambiguous_duplicate_mapping_is_rejected) ... ok
+test_aslr_changes_the_process_address_not_the_file_offset (tests.test_native_recovery.NativeRecoveryTests.test_aslr_changes_the_process_address_not_the_file_offset) ... ok
+test_function_cannot_run_past_mapping_boundary (tests.test_native_recovery.NativeRecoveryTests.test_function_cannot_run_past_mapping_boundary) ... ok
+test_function_read_uses_actual_memory_bytes (tests.test_native_recovery.NativeRecoveryTests.test_function_read_uses_actual_memory_bytes) ... ok
+test_missing_page_is_not_replaced_with_reference_bytes (tests.test_native_recovery.NativeRecoveryTests.test_missing_page_is_not_replaced_with_reference_bytes) ... ok
+test_non_executable_mapping_is_not_accepted_as_code (tests.test_native_recovery.NativeRecoveryTests.test_non_executable_mapping_is_not_accepted_as_code) ... ok
+test_nonzero_elf_load_address_is_not_assumed_to_be_file_offset (tests.test_native_recovery.NativeRecoveryTests.test_nonzero_elf_load_address_is_not_assumed_to_be_file_offset) ... ok
+test_oversized_function_is_rejected_before_reading (tests.test_native_recovery.NativeRecoveryTests.test_oversized_function_is_rejected_before_reading) ... ok
+test_short_read_is_not_reported_as_complete (tests.test_native_recovery.NativeRecoveryTests.test_short_read_is_not_reported_as_complete) ... ok
+test_symbol_in_non_file_backed_tail_is_rejected (tests.test_native_recovery.NativeRecoveryTests.test_symbol_in_non_file_backed_tail_is_rejected) ... ok
+test_a_partial_forward_cannot_become_a_recovery_plan (tests.test_native_trace.NativeTraceTests.test_a_partial_forward_cannot_become_a_recovery_plan) ... ok
+test_callback_failure_invalidates_trace (tests.test_native_trace.NativeTraceTests.test_callback_failure_invalidates_trace) ... ok
+test_duplicate_entry_aliases_are_rejected (tests.test_native_trace.NativeTraceTests.test_duplicate_entry_aliases_are_rejected) ... ok
+test_event_limit_hit_invalidates_even_a_completed_flag (tests.test_native_trace.NativeTraceTests.test_event_limit_hit_invalidates_even_a_completed_flag) ... ok
+test_identity_can_be_read_from_non_executable_mapping (tests.test_native_trace.NativeTraceTests.test_identity_can_be_read_from_non_executable_mapping) ... ok
+test_identity_checks_are_required (tests.test_native_trace.NativeTraceTests.test_identity_checks_are_required) ... ok
+test_malformed_event_index_is_rejected (tests.test_native_trace.NativeTraceTests.test_malformed_event_index_is_rejected) ... ok
+test_negative_count_is_not_silently_treated_as_observed (tests.test_native_trace.NativeTraceTests.test_negative_count_is_not_silently_treated_as_observed) ... ok
+test_only_observed_functions_are_selected_in_candidate_order (tests.test_native_trace.NativeTraceTests.test_only_observed_functions_are_selected_in_candidate_order) ... ok
+test_other_plan_or_library_cannot_be_substituted (tests.test_native_trace.NativeTraceTests.test_other_plan_or_library_cannot_be_substituted) ... ok
+test_range_crossing_mapping_boundary_is_rejected (tests.test_native_trace.NativeTraceTests.test_range_crossing_mapping_boundary_is_rejected) ... ok
+test_rebase_uses_file_offset_instead_of_elf_virtual_value (tests.test_native_trace.NativeTraceTests.test_rebase_uses_file_offset_instead_of_elf_virtual_value) ... ok
+test_truncated_events_cannot_pass_on_aggregate_counts (tests.test_native_trace.NativeTraceTests.test_truncated_events_cannot_pass_on_aggregate_counts) ... ok
+test_two_library_paths_are_ambiguous (tests.test_native_trace.NativeTraceTests.test_two_library_paths_are_ambiguous) ... ok
+test_build_id_location_is_a_file_offset_not_a_virtual_address (tests.test_native_capture_formats.CaptureFormatTests.test_build_id_location_is_a_file_offset_not_a_virtual_address) ... ok
+test_complete_lime_range_preserves_physical_address_and_file_hash (tests.test_native_capture_formats.CaptureFormatTests.test_complete_lime_range_preserves_physical_address_and_file_hash) ... ok
+test_overlapping_physical_ranges_are_rejected (tests.test_native_capture_formats.CaptureFormatTests.test_overlapping_physical_ranges_are_rejected) ... ok
+test_truncated_capture_does_not_pass_on_valid_magic_alone (tests.test_native_capture_formats.CaptureFormatTests.test_truncated_capture_does_not_pass_on_valid_magic_alone) ... ok
+test_wrong_endianness_is_rejected_before_symbol_planning (tests.test_native_capture_formats.CaptureFormatTests.test_wrong_endianness_is_rejected_before_symbol_planning) ... ok
+test_gpu_storage_is_rejected (tests.test_pytorch_model.TensorRecoveryTests.test_gpu_storage_is_rejected) ... ok
+test_invalid_shape_is_rejected (tests.test_pytorch_model.TensorRecoveryTests.test_invalid_shape_is_rejected) ... ok
+test_manifest_uses_filename_resolved_on_close (tests.test_pytorch_model.TensorRecoveryTests.test_manifest_uses_filename_resolved_on_close) ... ok
+test_missing_page_is_not_zero_filled (tests.test_pytorch_model.TensorRecoveryTests.test_missing_page_is_not_zero_filled) ... ok
+test_noncontiguous_tensor_is_rejected (tests.test_pytorch_model.TensorRecoveryTests.test_noncontiguous_tensor_is_rejected) ... ok
+test_numpy_header_keeps_scalar_shape (tests.test_pytorch_model.TensorRecoveryTests.test_numpy_header_keeps_scalar_shape) ... ok
+test_storage_bounds_are_checked (tests.test_pytorch_model.TensorRecoveryTests.test_storage_bounds_are_checked) ... ok
+test_storage_offset_excludes_unrelated_prefix (tests.test_pytorch_model.TensorRecoveryTests.test_storage_offset_excludes_unrelated_prefix) ... ok
+test_tuple_vector_arm_does_not_look_empty (tests.test_pytorch_model.TensorRecoveryTests.test_tuple_vector_arm_does_not_look_empty) ... ok
+test_vector_cycle_or_bad_bounds_is_rejected (tests.test_pytorch_model.TensorRecoveryTests.test_vector_cycle_or_bad_bounds_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.024s
+
+OK

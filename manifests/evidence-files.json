@@ -515,6 +515,121 @@
       "path": "docs/images/index.json",
       "bytes": 4666,
       "sha256": "ec009135668f6bae5668c51c2f85998c651951b2344fd2634186572dbc82c0ce"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/README.md",
+      "bytes": 2270,
+      "sha256": "dcb822a6603f1523b7aa70fbf0ea5c1cd284d354afd345f82c89f02e91983e42"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/candidates.json",
+      "bytes": 4189,
+      "sha256": "08ad19e77818b6885146fbb0229a55ecae3acec60c60d9f8e3f86ca221dcde73"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/extraction.log",
+      "bytes": 2047,
+      "sha256": "b36f2979785f209d2099ac94cd296c83f439980c52503b3aa3ce963c4002a855"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/gdb.log",
+      "bytes": 569,
+      "sha256": "79336b9537c4f5563ea23ce66088f4722f7d117d4add9d0bb0966d22b2a94257"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/local-tests.log",
+      "bytes": 5927,
+      "sha256": "eaa6f38a03a646c36a4f8558c3b6ca37323669e04db064086389ae10970f6e6b"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/observed-plan.json",
+      "bytes": 3951,
+      "sha256": "06435550546e899c47afcb359bc5d0bc9779b9073a0373299ac6d860eb834f20"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/plan.log",
+      "bytes": 2212,
+      "sha256": "0e04802df65c9f12715011716e50a57751336d7a3cee82761569218ad3d64b11"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/recovery/native-4540-report.json",
+      "bytes": 11392,
+      "sha256": "c01378ed453b07d04467bd43bb52987d988c2bc952fbf0de552e5d340dff344b"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/selection.log",
+      "bytes": 59,
+      "sha256": "179976ca7b2fc6c67c351a526d2c9e0fc74ef4db459734100792eca765d243e6"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/summary.json",
+      "bytes": 859,
+      "sha256": "4caeaace14e57f0f33def0ee06c1362b0c929d7752addd5fe167f97bc2668c9f"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/trace.json",
+      "bytes": 55172,
+      "sha256": "4b5005aa219d4beafb9bcc42c1a625ef512a4f9c9f7d5d1794d95cdc227701da"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation.log",
+      "bytes": 5355,
+      "sha256": "c2546f377ea27aeca3875637fa2ab726bf7de73d59a72d681cc005ead24b1088"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-000.asm.txt",
+      "bytes": 13415,
+      "sha256": "f1f1e17563776b73f6f6acedc9feee7def07ec799ffb000fecec22721797aba7"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-001.asm.txt",
+      "bytes": 2072,
+      "sha256": "ff7a11bda2c946af2717e2a2590d207bb913a40e734517f721fe46a8e263b652"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-002.asm.txt",
+      "bytes": 7227,
+      "sha256": "47fd36616dcc40cd9478bae81c0d4edeefbf368211dec46eb8017f17060639c8"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-003.asm.txt",
+      "bytes": 99155,
+      "sha256": "0364fd3aa0f13bf35206bfd02621a39cb8ba0a76e9f68a2a57ceb6a1c6c7a7da"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-004.asm.txt",
+      "bytes": 18280,
+      "sha256": "ec35b967ef3311e4d8a6d862e77f839ccd4b3d09f00b5b03fce495f679f70ebf"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-005.asm.txt",
+      "bytes": 31700,
+      "sha256": "76543172376a72335b29689d08273d8ad2f47bcd9e2db43a8576c7d82f56a2c1"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-006.asm.txt",
+      "bytes": 55503,
+      "sha256": "d80c0fbc32dad4e6f6ffd501a9055ba78a87b2d29589ee46681a7503117bc691"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-007.asm.txt",
+      "bytes": 4144,
+      "sha256": "f54e1663d90541441f19c0e83af652253a459e2f4dbcca79a269ac46b3eb99a3"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-008.asm.txt",
+      "bytes": 24593,
+      "sha256": "ee4b9dd37c0e7772121ca87c87da574f0e3f8a5b7abe598e427200e52e473e68"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/native-009.asm.txt",
+      "bytes": 24463,
+      "sha256": "ddc750a55b2d6dc5189964fcfe3b51a7156afea9f911005259b02b0319ed8447"
+    },
+    {
+      "path": "evidence/native-trace-2026-10-20/validation/validation.json",
+      "bytes": 5327,
+      "sha256": "88d78441579c7e68335cf996587b209593915ead368e0197df3829859b891fb0"
     }
   ]
 }

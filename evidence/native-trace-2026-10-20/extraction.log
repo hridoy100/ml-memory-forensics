@@ -1,0 +1,15 @@
+Volatility 3 Framework 2.10.0
+
+PID	Symbol	Status	Bytes	File
+
+4540	at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)	recovered	1088	native-4540-000.bin
+4540	at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)	recovered	164	native-4540-001.bin
+4540	at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)	recovered	584	native-4540-002.bin
+4540	at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)	recovered	8436	native-4540-003.bin
+4540	at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)	recovered	1444	native-4540-004.bin
+4540	at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)	recovered	2624	native-4540-005.bin
+4540	at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)	recovered	4580	native-4540-006.bin
+4540	at::native::relu(at::Tensor const&)	recovered	340	native-4540-007.bin
+4540	at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)	recovered	2068	native-4540-008.bin
+4540	at::native::flatten(at::Tensor const&, long, long)	recovered	2012	native-4540-009.bin
+4540	report	complete	0	native-4540-report.json

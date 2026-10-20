@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "method": "observed-entry-guided",
+  "library_name": "libtorch_cpu.so",
+  "reference_library": "/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so",
+  "reference_library_sha256": "2befcd2b97a282fb2f2cc0ce069f9943dd12c67cf88ab41c17824966f750e14d",
+  "elf_machine": 183,
+  "identity_ranges": [
+    {
+      "kind": "ELF header",
+      "file_offset": 0,
+      "size": 64,
+      "sha256": "940960cd38b2a812df489719445a830cd3dce685083ad46910da0d52ff60780c"
+    },
+    {
+      "kind": "GNU build ID",
+      "file_offset": 640,
+      "size": 20,
+      "hex": "9bf94dfd38ea8b0540afb4ba70de28579ae1f058",
+      "sha256": "52e2565ef6deade702bb6be502c8f6e9893605d241d96f6aac1d321a6fb2c44c"
+    }
+  ],
+  "functions": [
+    {
+      "name": "at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "elf_value": 27282208,
+      "file_offset": 23087904,
+      "size": 1088
+    },
+    {
+      "name": "at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool)",
+      "elf_value": 27561072,
+      "file_offset": 23366768,
+      "size": 164
+    },
+    {
+      "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+      "elf_value": 20066128,
+      "file_offset": 15871824,
+      "size": 584
+    },
+    {
+      "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)",
+      "elf_value": 20066720,
+      "file_offset": 15872416,
+      "size": 8436
+    },
+    {
+      "name": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+      "elf_value": 20075168,
+      "file_offset": 15880864,
+      "size": 1444
+    },
+    {
+      "name": "at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double)",
+      "elf_value": 27400480,
+      "file_offset": 23206176,
+      "size": 2624
+    },
+    {
+      "name": "at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool)",
+      "elf_value": 27355264,
+      "file_offset": 23160960,
+      "size": 4580
+    },
+    {
+      "name": "at::native::relu(at::Tensor const&)",
+      "elf_value": 24610672,
+      "file_offset": 20416368,
+      "size": 340
+    },
+    {
+      "name": "at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)",
+      "elf_value": 20100048,
+      "file_offset": 15905744,
+      "size": 2068
+    },
+    {
+      "name": "at::native::flatten(at::Tensor const&, long, long)",
+      "elf_value": 29245216,
+      "file_offset": 25050912,
+      "size": 2012
+    }
+  ],
+  "scope": "Observed entries among selected dynamic symbols in one forward window. This excludes undiscovered, inline and uninstrumented native code; recovery reads bytes only from the captured process layer.",
+  "candidate_profile": "model-forward",
+  "unmatched_prefixes": [
+    "at::native::native_batch_norm(",
+    "at::native::max_pool2d_with_indices(",
+    "at::native::addmm("
+  ],
+  "trace_candidate_count": 12,
+  "trace_observed_count": 10,
+  "trace_sha256": "4b5005aa219d4beafb9bcc42c1a625ef512a4f9c9f7d5d1794d95cdc227701da"
+}

@@ -144,6 +144,13 @@ Run extraction using the new image and the PID from `ready.json`. The matching
 kernel ISF is still required. New raw images and extracted `.bin` files remain
 excluded from Git.
 
+## Trace-guided continuation
+
+The next tools and exact Ubuntu command are documented in
+[NATIVE_TRACE.md](NATIVE_TRACE.md). The live trace observed ten of twelve candidate entries; all ten selected
+bodies (23,340 bytes) were recovered and independently matched. This remains
+selected-entry evidence, not exhaustive runtime coverage.
+
 ## What remains before any exhaustive claim
 
 1. Define a finite workload and boundary: evaluation batch size/input set,

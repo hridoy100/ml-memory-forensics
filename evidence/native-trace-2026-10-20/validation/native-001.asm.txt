@@ -1,0 +1,48 @@
+
+/home/raihan/Downloads/memory-evidence/native-trace-20261020-132538/recovery/native-4540-001.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000ffffee598c70 <.data>:
+    ffffee598c70:	d10143ff 	sub	sp, sp, #0x50
+    ffffee598c74:	a9027bfd 	stp	x29, x30, [sp, #32]
+    ffffee598c78:	910083fd 	add	x29, sp, #0x20
+    ffffee598c7c:	f9400007 	ldr	x7, [x0]
+    ffffee598c80:	a9452fea 	ldp	x10, x11, [sp, #80]
+    ffffee598c84:	f94054e7 	ldr	x7, [x7, #168]
+    ffffee598c88:	a9002fea 	stp	x10, x11, [sp]
+    ffffee598c8c:	394183e9 	ldrb	w9, [sp, #96]
+    ffffee598c90:	f9001bf3 	str	x19, [sp, #48]
+    ffffee598c94:	aa0803f3 	mov	x19, x8
+    ffffee598c98:	37a00307 	tbnz	w7, #20, 0xffffee598cf8
+    ffffee598c9c:	36b00107 	tbz	w7, #22, 0xffffee598cbc
+    ffffee598ca0:	390043e9 	strb	w9, [sp, #16]
+    ffffee598ca4:	97e22e6b 	bl	0xffffede24650
+    ffffee598ca8:	a9427bfd 	ldp	x29, x30, [sp, #32]
+    ffffee598cac:	aa1303e0 	mov	x0, x19
+    ffffee598cb0:	f9401bf3 	ldr	x19, [sp, #48]
+    ffffee598cb4:	910143ff 	add	sp, sp, #0x50
+    ffffee598cb8:	d65f03c0 	ret
+    ffffee598cbc:	390043e9 	strb	w9, [sp, #16]
+    ffffee598cc0:	910103e8 	add	x8, sp, #0x40
+    ffffee598cc4:	97e2cfff 	bl	0xffffede4ccc0
+    ffffee598cc8:	a9440be0 	ldp	x0, x2, [sp, #64]
+    ffffee598ccc:	f9000262 	str	x2, [x19]
+    ffffee598cd0:	d004b7c1 	adrp	x1, 0xfffff7c92000
+    ffffee598cd4:	f9430021 	ldr	x1, [x1, #1536]
+    ffffee598cd8:	eb01001f 	cmp	x0, x1
+    ffffee598cdc:	54fffe60 	b.eq	0xffffee598ca8  // b.none
+    ffffee598ce0:	97e77e1c 	bl	0xffffedf78550
+    ffffee598ce4:	a9427bfd 	ldp	x29, x30, [sp, #32]
+    ffffee598ce8:	aa1303e0 	mov	x0, x19
+    ffffee598cec:	f9401bf3 	ldr	x19, [sp, #48]
+    ffffee598cf0:	910143ff 	add	sp, sp, #0x50
+    ffffee598cf4:	d65f03c0 	ret
+    ffffee598cf8:	390043e9 	strb	w9, [sp, #16]
+    ffffee598cfc:	97e2c2b1 	bl	0xffffede497c0
+    ffffee598d00:	a9427bfd 	ldp	x29, x30, [sp, #32]
+    ffffee598d04:	aa1303e0 	mov	x0, x19
+    ffffee598d08:	f9401bf3 	ldr	x19, [sp, #48]
+    ffffee598d0c:	910143ff 	add	sp, sp, #0x50
+    ffffee598d10:	d65f03c0 	ret

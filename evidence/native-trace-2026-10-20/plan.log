@@ -1,0 +1,13 @@
+at::native::batch_norm(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool): file offset 0x1604b20, 1088 bytes
+at::native::max_pool2d(at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool): file offset 0x1648c70, 164 bytes
+at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long): file offset 0xf22f50, 584 bytes
+at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool): file offset 0x1441220, 516 bytes
+at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool): file offset 0xf231a0, 8436 bytes
+at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt): file offset 0xf252a0, 1444 bytes
+at::native::batch_norm_cpu(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double): file offset 0x1621920, 2624 bytes
+at::native::_batch_norm_impl_index(at::Tensor const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, std::optional<at::Tensor> const&, bool, double, double, bool): file offset 0x1616880, 4580 bytes
+at::native::relu(at::Tensor const&): file offset 0x1378770, 340 bytes
+at::native::relu_(at::Tensor&): file offset 0x13788d0, 344 bytes
+at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&): file offset 0xf2b3d0, 2068 bytes
+at::native::flatten(at::Tensor const&, long, long): file offset 0x17e3f20, 2012 bytes
+NATIVE_PLAN_PASS
