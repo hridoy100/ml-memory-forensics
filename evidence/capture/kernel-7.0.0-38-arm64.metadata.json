@@ -1,0 +1,31 @@
+{
+  "kernel_elf_sha256": "e7868a577a91e858332073648d208ac9d6d4e891a077da98938f3d9743c2bdfc",
+  "kernel_elf_size": 586417744,
+  "symbol_table_sha256": "0beac397b8ca7df6404baf4b5bbf2860c00c1a4bd529c99571486429f1b6ab7f",
+  "symbol_table_size": 70252224,
+  "converter_commit": "9f14607e0d339d463ea725fbd5c08aa7b7d40f75",
+  "converter_version": "0.9.0",
+  "go_download": {
+    "filename": "go1.27.2.darwin-arm64.tar.gz",
+    "os": "darwin",
+    "arch": "arm64",
+    "version": "go1.27.2",
+    "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+    "size": 68195916,
+    "kind": "archive"
+  },
+  "conversion_environment": {
+    "GOMEMLIMIT": "8GiB",
+    "GOGC": "50"
+  },
+  "validation": {
+    "banner": "Linux version 7.0.0-38-generic (buildd@bos03-arm64-061) (aarch64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:28:02 UTC 2026 (Ubuntu 7.0.0-38.38-generic 7.0.14)\n",
+    "types": 17361,
+    "symbols": 293576,
+    "required_types": [
+      "task_struct",
+      "mm_struct",
+      "vm_area_struct"
+    ]
+  }
+}

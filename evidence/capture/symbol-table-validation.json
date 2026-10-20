@@ -1,0 +1,10 @@
+{
+  "banner": "Linux version 7.0.0-38-generic (buildd@bos03-arm64-061) (aarch64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:28:02 UTC 2026 (Ubuntu 7.0.0-38.38-generic 7.0.14)\n",
+  "types": 17361,
+  "symbols": 293576,
+  "required_types": [
+    "task_struct",
+    "mm_struct",
+    "vm_area_struct"
+  ]
+}

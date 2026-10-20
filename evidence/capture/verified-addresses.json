@@ -1,0 +1,16 @@
+{
+  "model_wrapper": 281474976703880,
+  "model_object": 187650040802032,
+  "input_wrapper": 281474976703656,
+  "input_tensor_impl": 187650040193664,
+  "pid": 3183,
+  "model_pointer": 187650040802032,
+  "input_pointer": 187650040193664,
+  "input_shape": [
+    128,
+    3,
+    32,
+    32
+  ],
+  "input_numel": 393216
+}

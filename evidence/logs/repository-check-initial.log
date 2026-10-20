@@ -1,0 +1,42 @@
+Evidence hashes: 48/48 verified
+Recovery: 31 tensors, 26 modules, 19 source files, 34 graphs
+Replay: 6000/6000 predictions agree; maximum logit difference 0
+Ground-truth accuracy: 5225/6000 (87.0833%)
+EVIDENCE_CHECK_PASS
+ARM64 requirements already applied.
+test_gpu_storage_is_rejected (test_pytorch_model.TensorRecoveryTests.test_gpu_storage_is_rejected) ... ok
+test_invalid_shape_is_rejected (test_pytorch_model.TensorRecoveryTests.test_invalid_shape_is_rejected) ... ok
+test_manifest_uses_filename_resolved_on_close (test_pytorch_model.TensorRecoveryTests.test_manifest_uses_filename_resolved_on_close) ... ok
+test_missing_page_is_not_zero_filled (test_pytorch_model.TensorRecoveryTests.test_missing_page_is_not_zero_filled) ... ok
+test_noncontiguous_tensor_is_rejected (test_pytorch_model.TensorRecoveryTests.test_noncontiguous_tensor_is_rejected) ... ok
+test_numpy_header_keeps_scalar_shape (test_pytorch_model.TensorRecoveryTests.test_numpy_header_keeps_scalar_shape) ... ok
+test_storage_bounds_are_checked (test_pytorch_model.TensorRecoveryTests.test_storage_bounds_are_checked) ... ok
+test_storage_offset_excludes_unrelated_prefix (test_pytorch_model.TensorRecoveryTests.test_storage_offset_excludes_unrelated_prefix) ... ok
+test_tuple_vector_arm_does_not_look_empty (test_pytorch_model.TensorRecoveryTests.test_tuple_vector_arm_does_not_look_empty) ... ok
+test_vector_cycle_or_bad_bounds_is_rejected (test_pytorch_model.TensorRecoveryTests.test_vector_cycle_or_bad_bounds_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK
+test_cast_type_is_erased_without_changing_tensor_value (test_pytorch_confirmation.RecoveredSourceTests.test_cast_type_is_erased_without_changing_tensor_value) ... ok
+test_changed_source_is_rejected_before_execution (test_pytorch_confirmation.RecoveredSourceTests.test_changed_source_is_rejected_before_execution) ... ok
+test_missing_helper_via_local_alias_is_detected (test_pytorch_confirmation.RecoveredSourceTests.test_missing_helper_via_local_alias_is_detected) ... ok
+test_missing_reported_definition_is_rejected (test_pytorch_confirmation.RecoveredSourceTests.test_missing_reported_definition_is_rejected) ... ok
+test_recovered_body_is_executed_and_traced (test_pytorch_confirmation.RecoveredSourceTests.test_recovered_body_is_executed_and_traced) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.200s
+
+OK
+usage: volatility [-h] [-c CONFIG] [--parallelism [{processes,threads,off}]]
+                  [-e EXTEND] [-p PLUGIN_DIRS] [-s SYMBOL_DIRS] [-v] [-l LOG]
+                  [-o OUTPUT_DIR] [-q] [-r RENDERER] [-f FILE]
+                  [--write-config] [--save-config SAVE_CONFIG] [--clear-cache]
+                  [--cache-path CACHE_PATH] [--offline] [--filters FILTERS]
+                  [--single-location SINGLE_LOCATION]
+                  [--stackers [STACKERS ...]]
+                  [--single-swap-locations [SINGLE_SWAP_LOCATIONS ...]]
+                  {banners.Banners,configwriter.ConfigWriter,frameworkinfo.FrameworkInfo,isfinfo.IsfInfo,layerwriter.LayerWriter,linux.bash.Bash,linux.capabilities.Capabilities,linux.check_afinfo.Check_afinfo,linux.check_creds.Check_creds,linux.check_idt.Check_idt,linux.check_modules.Check_modules,linux.check_syscall.Check_syscall,linux.ebpf.EBPF,linux.elfs.Elfs,linux.envars.Envars,linux.iomem.IOMem,linux.keyboard_notifiers.Keyboard_notifiers,linux.kmsg.Kmsg,linux.library_list.LibraryList,linux.lsmod.Lsmod,linux.lsof.Lsof,linux.malfind.Malfind,linux.mountinfo.MountInfo,linux.netfilter.Netfilter,linux.pagecache.Files,linux.pagecache.InodePages,linux.pidhashtable.PIDHashTable,linux.proc.Maps,linux.psaux.PsAux,linux.pslist.PsList,linux.psscan.PsScan,linux.pstree.PsTree,linux.pytorch_model.PytorchModel,linux.sockstat.Sockstat,linux.tty_check.tty_check,mac.bash.Bash,mac.check_syscall.Check_syscall,mac.check_sysctl.Check_sysctl,mac.check_trap_table.Check_trap_table,mac.dmesg.Dmesg,mac.ifconfig.Ifconfig,mac.kauth_listeners.Kauth_listeners,mac.kauth_scopes.Kauth_scopes,mac.kevents.Kevents,mac.list_files.List_Files,mac.lsmod.Lsmod,mac.lsof.Lsof,mac.malfind.Malfind,mac.mount.Mount,mac.netstat.Netstat,mac.proc_maps.Maps,mac.psaux.Psaux,mac.pslist.PsList,mac.pstree.PsTree,mac.socket_filters.Socket_filters,mac.timers.Timers,mac.trustedbsd.Trustedbsd,mac.vfsevents.VFSevents,pytorch_model.PytorchModel,timeliner.Timeliner,vmscan.Vmscan,windows.bigpools.BigPools,windows.callbacks.Callbacks,windows.cmdline.CmdLine,windows.crashinfo.Crashinfo,windows.devicetree.DeviceTree,windows.dlllist.DllList,windows.driverirp.DriverIrp,windows.drivermodule.DriverModule,windows.driverscan.DriverScan,windows.dumpfiles.DumpFiles,windows.envars.Envars,windows.filescan.FileScan,windows.getservicesids.GetServiceSIDs,windows.getsids.GetSIDs,windows.handles.Handles,windows.hollowprocesses.HollowProcesses,windows.iat.IAT,windows.info.Info,windows.joblinks.JobLinks,windows.kpcrs.KPCRs,windows.ldrmodules.LdrModules,windows.malfind.Malfind,windows.mbrscan.MBRScan,windows.memmap.Memmap,windows.modscan.ModScan,windows.modules.Modules,windows.mutantscan.MutantScan,windows.netscan.NetScan,windows.netstat.NetStat,windows.orphan_kernel_threads.Threads,windows.pedump.PEDump,windows.poolscanner.PoolScanner,windows.privileges.Privs,windows.processghosting.ProcessGhosting,windows.pslist.PsList,windows.psscan.PsScan,windows.pstree.PsTree,windows.psxview.PsXView,windows.registry.certificates.Certificates,windows.registry.getcellroutine.GetCellRoutine,windows.registry.hivelist.HiveList,windows.registry.hivescan.HiveScan,windows.registry.printkey.PrintKey,windows.registry.userassist.UserAssist,windows.sessions.Sessions,windows.shimcachemem.ShimcacheMem,windows.skeleton_key_check.Skeleton_Key_Check,windows.ssdt.SSDT,windows.statistics.Statistics,windows.strings.Strings,windows.suspicious_threads.SupsiciousThreads,windows.symlinkscan.SymlinkScan,windows.thrdscan.ThrdScan,windows.threads.Threads,windows.timers.Timers,windows.truecrypt.Passphrase,windows.unloadedmodules.UnloadedModules,windows.vadinfo.VadInfo,windows.vadwalk.VadWalk,windows.verinfo.VerInfo,windows.virtmap.VirtMap} ...
+volatility: error: argument plugin: plugin pytorch_model.PytorchModel matches multiple plugins (linux.pytorch_model.PytorchModel, pytorch_model.PytorchModel)
+Volatility 3 Framework 2.10.0

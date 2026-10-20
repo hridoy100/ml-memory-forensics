@@ -1,0 +1,42 @@
+# Runtime environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Dataset, model binaries, memory captures, containers, and generated output
+artifacts/
+outputs/
+cifar10_cnn/data/
+cifar10_cnn/outputs/
+*.lime
+*.core
+*.dmp
+*.vmem
+*.sif
+*.pt
+*.pth
+*.npy
+*.npz
+*.bin
+*.ko
+*.tar.gz
+vmlinux*
+kernel-*-arm64.json
+
+# CMake output: keep source, never a machine-specific build tree
+**/build/
+**/build-*/
+**/CMakeFiles/
+**/CMakeCache.txt
+*.o
+*.so
+*.dSYM/
+
+# Local-only settings or credentials
+.env
+.env.*
+*.pem
+*.key

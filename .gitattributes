@@ -1,0 +1,5 @@
+* text=auto
+# Preserve the exact imported evidence bytes, including original CSV line endings.
+evidence/** -text -whitespace
+docs/images/** -text
+*.png binary

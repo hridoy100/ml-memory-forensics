@@ -1,0 +1,2 @@
+OFFSET (V)	PID	TID	PPID	COMM	File output
+0xffff000014098000	3183	3183	3174	cifar10_inferen	Disabled

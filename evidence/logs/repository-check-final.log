@@ -1,0 +1,82 @@
+ARM64 requirements already applied.
+test_gpu_storage_is_rejected (test_pytorch_model.TensorRecoveryTests.test_gpu_storage_is_rejected) ... ok
+test_invalid_shape_is_rejected (test_pytorch_model.TensorRecoveryTests.test_invalid_shape_is_rejected) ... ok
+test_manifest_uses_filename_resolved_on_close (test_pytorch_model.TensorRecoveryTests.test_manifest_uses_filename_resolved_on_close) ... ok
+test_missing_page_is_not_zero_filled (test_pytorch_model.TensorRecoveryTests.test_missing_page_is_not_zero_filled) ... ok
+test_noncontiguous_tensor_is_rejected (test_pytorch_model.TensorRecoveryTests.test_noncontiguous_tensor_is_rejected) ... ok
+test_numpy_header_keeps_scalar_shape (test_pytorch_model.TensorRecoveryTests.test_numpy_header_keeps_scalar_shape) ... ok
+test_storage_bounds_are_checked (test_pytorch_model.TensorRecoveryTests.test_storage_bounds_are_checked) ... ok
+test_storage_offset_excludes_unrelated_prefix (test_pytorch_model.TensorRecoveryTests.test_storage_offset_excludes_unrelated_prefix) ... ok
+test_tuple_vector_arm_does_not_look_empty (test_pytorch_model.TensorRecoveryTests.test_tuple_vector_arm_does_not_look_empty) ... ok
+test_vector_cycle_or_bad_bounds_is_rejected (test_pytorch_model.TensorRecoveryTests.test_vector_cycle_or_bad_bounds_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK
+test_cast_type_is_erased_without_changing_tensor_value (test_pytorch_confirmation.RecoveredSourceTests.test_cast_type_is_erased_without_changing_tensor_value) ... ok
+test_changed_source_is_rejected_before_execution (test_pytorch_confirmation.RecoveredSourceTests.test_changed_source_is_rejected_before_execution) ... ok
+test_missing_helper_via_local_alias_is_detected (test_pytorch_confirmation.RecoveredSourceTests.test_missing_helper_via_local_alias_is_detected) ... ok
+test_missing_reported_definition_is_rejected (test_pytorch_confirmation.RecoveredSourceTests.test_missing_reported_definition_is_rejected) ... ok
+test_recovered_body_is_executed_and_traced (test_pytorch_confirmation.RecoveredSourceTests.test_recovered_body_is_executed_and_traced) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.198s
+
+OK
+Volatility 3 Framework 2.10.0
+
+PID	Kind	Name	Address	Shape	File
+
+3183	tensor	features.0.weight	0x294e4043a00	[32, 3, 3, 3]	pytorch-3183-features.0.weight.npy
+3183	tensor	features.0.bias	0x294e4030100	[32]	pytorch-3183-features.0.bias.npy
+3183	tensor	features.1.weight	0x294e4030180	[32]	pytorch-3183-features.1.weight.npy
+3183	tensor	features.1.bias	0x294e4030200	[32]	pytorch-3183-features.1.bias.npy
+3183	tensor	features.1.running_mean	0x294e4030280	[32]	pytorch-3183-features.1.running_mean.npy
+3183	tensor	features.1.running_var	0x294e4030300	[32]	pytorch-3183-features.1.running_var.npy
+3183	tensor	features.1.num_batches_tracked	0x294e4020100	[]	pytorch-3183-features.1.num_batches_tracked.npy
+3183	tensor	features.3.weight	0x294e4110000	[32, 32, 3, 3]	pytorch-3183-features.3.weight.npy
+3183	tensor	features.3.bias	0x294e4030380	[32]	pytorch-3183-features.3.bias.npy
+3183	tensor	features.6.weight	0x294e4190000	[64, 32, 3, 3]	pytorch-3183-features.6.weight.npy
+3183	tensor	features.6.bias	0x294e4010100	[64]	pytorch-3183-features.6.bias.npy
+3183	tensor	features.7.weight	0x294e4010200	[64]	pytorch-3183-features.7.weight.npy
+3183	tensor	features.7.bias	0x294e4010300	[64]	pytorch-3183-features.7.bias.npy
+3183	tensor	features.7.running_mean	0x294e4010400	[64]	pytorch-3183-features.7.running_mean.npy
+3183	tensor	features.7.running_var	0x294e4010500	[64]	pytorch-3183-features.7.running_var.npy
+3183	tensor	features.7.num_batches_tracked	0x294e4020140	[]	pytorch-3183-features.7.num_batches_tracked.npy
+3183	tensor	features.9.weight	0x294e41b0000	[64, 64, 3, 3]	pytorch-3183-features.9.weight.npy
+3183	tensor	features.9.bias	0x294e4010600	[64]	pytorch-3183-features.9.bias.npy
+3183	tensor	features.12.weight	0x294e41e0000	[128, 64, 3, 3]	pytorch-3183-features.12.weight.npy
+3183	tensor	features.12.bias	0x294e4050a00	[128]	pytorch-3183-features.12.bias.npy
+3183	tensor	features.13.weight	0x294e4050c00	[128]	pytorch-3183-features.13.weight.npy
+3183	tensor	features.13.bias	0x294e4050e00	[128]	pytorch-3183-features.13.bias.npy
+3183	tensor	features.13.running_mean	0x294e4051000	[128]	pytorch-3183-features.13.running_mean.npy
+3183	tensor	features.13.running_var	0x294e4050200	[128]	pytorch-3183-features.13.running_var.npy
+3183	tensor	features.13.num_batches_tracked	0x294e40201c0	[]	pytorch-3183-features.13.num_batches_tracked.npy
+3183	tensor	features.15.weight	0x294e4230000	[128, 128, 3, 3]	pytorch-3183-features.15.weight.npy
+3183	tensor	features.15.bias	0x294e4051200	[128]	pytorch-3183-features.15.bias.npy
+3183	tensor	classifier.1.weight	0x294e4330000	[256, 2048]	pytorch-3183-classifier.1.weight.npy
+3183	tensor	classifier.1.bias	0x294e40f0400	[256]	pytorch-3183-classifier.1.bias.npy
+3183	tensor	classifier.4.weight	0x294e45b1000	[10, 256]	pytorch-3183-classifier.4.weight.npy
+3183	tensor	classifier.4.bias	0x294e4630080	[10]	pytorch-3183-classifier.4.bias.npy
+3183	summary	26 modules, 31 tensors, 19 sources, 0 errors	0xaaaaae062af0		pytorch-3183-model.json
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_serialization.py:170: FutureWarning: `torch.jit.load` is not supported in Python 3.14+ and may break. Please switch to `torch.export`.
+  warnings.warn(
+Tensors: 31/31 byte-identical
+Module names, types, and order: MATCH
+TorchScript source files: 19/19 byte-identical
+All archived source files recovered: True
+Materialized graphs: 34
+VALIDATION_PASS
+/home/raihan/Downloads/memory-evidence/repository-check-20261020-011528/recovery/validation.json
+Recovered definitions found: 34/34
+Unresolved script/runtime dependencies: 0
+/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/jit/_serialization.py:170: FutureWarning: `torch.jit.load` is not supported in Python 3.14+ and may break. Please switch to `torch.export`.
+  warnings.warn(
+Predictions matching: 128/128
+Maximum absolute logit difference: 0
+Logits within rtol=1e-5, atol=1e-5: True
+Observed layer forward order matches recovered tree: True
+INFERENCE_COMPARISON_PASS
+/home/raihan/Downloads/memory-evidence/repository-check-20261020-011528/comparison/inference-comparison.json
+REPOSITORY_CHECK_PASS

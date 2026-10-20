@@ -1,0 +1,397 @@
+{
+  "schema": 1,
+  "artifacts": [
+    {
+      "name": "original-lime-capture",
+      "relative_path": "memory/ubuntu.lime",
+      "bytes": 4289855648,
+      "sha256": "17444d6e2daa1089feb8e1c7c1d01e5effb4c8500f60c4455102d0af4d57a769",
+      "known_locations": [
+        "/home/raihan/Downloads/memory-evidence/ubuntu.lime"
+      ],
+      "note": "Private full-system RAM image; intentionally not uploaded to GitHub."
+    },
+    {
+      "name": "training-checkpoint",
+      "relative_path": "reference/best_model.pt",
+      "bytes": 3451381,
+      "sha256": "d236bb4f9d31df8278a678fcb15ba197fece3cd2815be9bdff005c9614af7464",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/volatility/cifar10_cnn/outputs/best_model.pt",
+        "/home/raihan/Downloads/volatility/cifar10_cnn/outputs/best_model.pt"
+      ],
+      "reference_repository_url": "https://github.com/hridoy100/volatility/blob/800a2100d3e04dba7931512aeeb1746cd01cc582/cifar10_cnn/outputs/best_model.pt"
+    },
+    {
+      "name": "reference-torchscript",
+      "relative_path": "reference/cifar10_torchscript.pt",
+      "bytes": 3304459,
+      "sha256": "b62adee22fbea5bdb9f3ecab1b35a0ad1fe95f30644aff36a81ea838490dab83",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/volatility/cifar10_cnn/outputs/cifar10_torchscript.pt",
+        "/home/raihan/Downloads/volatility/cifar10_cnn/outputs/cifar10_torchscript.pt"
+      ],
+      "reference_repository_url": "https://github.com/hridoy100/volatility/blob/800a2100d3e04dba7931512aeeb1746cd01cc582/cifar10_cnn/outputs/cifar10_torchscript.pt"
+    },
+    {
+      "name": "test-images",
+      "relative_path": "reference/cifar10_test.bin",
+      "bytes": 18438000,
+      "sha256": "e20f8c46934d96ce589aeb93389dd4b3a5d8d25758370c150487e45e61c3def2",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/volatility/cifar10_cnn/data/cifar10_test.bin",
+        "/home/raihan/Downloads/volatility/cifar10_cnn/data/cifar10_test.bin"
+      ],
+      "reference_repository_url": "https://github.com/hridoy100/volatility/blob/800a2100d3e04dba7931512aeeb1746cd01cc582/cifar10_cnn/data/cifar10_test.bin"
+    },
+    {
+      "name": "kernel-debug-elf",
+      "relative_path": "kernel/vmlinux-7.0.0-38-generic",
+      "bytes": 586417744,
+      "sha256": "e7868a577a91e858332073648d208ac9d6d4e891a077da98938f3d9743c2bdfc",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/vmlinux-7.0.0-38-generic",
+        "/usr/lib/debug/boot/vmlinux-7.0.0-38-generic"
+      ]
+    },
+    {
+      "name": "kernel-isf",
+      "relative_path": "kernel/kernel-7.0.0-38-arm64.json",
+      "bytes": 70252224,
+      "sha256": "0beac397b8ca7df6404baf4b5bbf2860c00c1a4bd529c99571486429f1b6ab7f",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/kernel-7.0.0-38-arm64.json",
+        "/home/raihan/Downloads/memory-evidence/kernel-7.0.0-38-arm64.json"
+      ]
+    },
+    {
+      "name": "recovered-state-dict",
+      "relative_path": "recovered/recovered_state_dict.pt",
+      "bytes": 3270183,
+      "sha256": "ae6eeca07ccdd7666bb506f8747f7dd0469c646b0fc8fb1dcbeb370abb59c513",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/recovered_state_dict.pt",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/recovered_state_dict.pt"
+      ]
+    },
+    {
+      "name": "pytorch-3183-classifier.1.bias",
+      "relative_path": "recovered/pytorch-3183-classifier.1.bias.npy",
+      "bytes": 1152,
+      "sha256": "4224f855efc7abffab9973ec58511fc923ee5de3895776aefa5cd03b8c5ba3cb",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-classifier.1.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-classifier.1.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-classifier.1.weight",
+      "relative_path": "recovered/pytorch-3183-classifier.1.weight.npy",
+      "bytes": 2097280,
+      "sha256": "5dddc1fb73b1dfe89b0fb0795ebb034b0a82ca61721bf352106cf0fb5d7f4376",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-classifier.1.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-classifier.1.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-classifier.4.bias",
+      "relative_path": "recovered/pytorch-3183-classifier.4.bias.npy",
+      "bytes": 168,
+      "sha256": "6b2da50b7ca87873bef3e44a16de5c9574ede166c2cbd3ebc8e207957a00c826",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-classifier.4.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-classifier.4.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-classifier.4.weight",
+      "relative_path": "recovered/pytorch-3183-classifier.4.weight.npy",
+      "bytes": 10368,
+      "sha256": "92937e7607e5665c8e9c1762da2260adc7e83ba7c0abbb1360e7820eab3c4b43",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-classifier.4.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-classifier.4.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.0.bias",
+      "relative_path": "recovered/pytorch-3183-features.0.bias.npy",
+      "bytes": 256,
+      "sha256": "d03fd57c59ba8b57288b528909fa2f7c32959ad7cdb47e1134799cbc93b51a83",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.0.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.0.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.0.weight",
+      "relative_path": "recovered/pytorch-3183-features.0.weight.npy",
+      "bytes": 3584,
+      "sha256": "4da9dd5ab8563ca1486762adc83143f28bf76deedbc7bbbbf3e45ebf83fedf82",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.0.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.0.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.1.bias",
+      "relative_path": "recovered/pytorch-3183-features.1.bias.npy",
+      "bytes": 256,
+      "sha256": "e583897aa05f9653f447be33b9a8336f4262cafb95a32eb7bb2c66611196e031",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.1.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.1.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.1.num_batches_tracked",
+      "relative_path": "recovered/pytorch-3183-features.1.num_batches_tracked.npy",
+      "bytes": 72,
+      "sha256": "89b97106379d0898c489ffe4ae80d8268ceb0a2e788087e61064c92172732061",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.1.num_batches_tracked.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.1.num_batches_tracked.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.1.running_mean",
+      "relative_path": "recovered/pytorch-3183-features.1.running_mean.npy",
+      "bytes": 256,
+      "sha256": "c0f7bcfb7690a51d0aa1443377d0707ffb686f3ec6240fae62c3b0291cdc82ed",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.1.running_mean.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.1.running_mean.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.1.running_var",
+      "relative_path": "recovered/pytorch-3183-features.1.running_var.npy",
+      "bytes": 256,
+      "sha256": "4de8c7a94cf3c9e5e3db6b8415dbafd5e1b410a5026386323fe3c76f688b0fc0",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.1.running_var.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.1.running_var.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.1.weight",
+      "relative_path": "recovered/pytorch-3183-features.1.weight.npy",
+      "bytes": 256,
+      "sha256": "bdfb639fa6e6ef44637dd59e7d68ccfae45fd69d151ba18eda5638219f9773f7",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.1.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.1.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.12.bias",
+      "relative_path": "recovered/pytorch-3183-features.12.bias.npy",
+      "bytes": 640,
+      "sha256": "243d033daae2ba4ffe59d2bdd3d8b033761875502ca6b88e0d50f845e2cae778",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.12.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.12.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.12.weight",
+      "relative_path": "recovered/pytorch-3183-features.12.weight.npy",
+      "bytes": 295040,
+      "sha256": "da73cb16c06237695f015df89658969e1339b6ed52879b92c36a3d349a98fbcd",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.12.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.12.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.13.bias",
+      "relative_path": "recovered/pytorch-3183-features.13.bias.npy",
+      "bytes": 640,
+      "sha256": "9ade826662741fad9d23b071987027defb8455a95da6d59fa9575b3d0845c71e",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.13.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.13.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.13.num_batches_tracked",
+      "relative_path": "recovered/pytorch-3183-features.13.num_batches_tracked.npy",
+      "bytes": 72,
+      "sha256": "89b97106379d0898c489ffe4ae80d8268ceb0a2e788087e61064c92172732061",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.13.num_batches_tracked.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.13.num_batches_tracked.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.13.running_mean",
+      "relative_path": "recovered/pytorch-3183-features.13.running_mean.npy",
+      "bytes": 640,
+      "sha256": "3599123fe0ccafc7383558ee521220f6cd06c76604a4646fe749704f2af66569",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.13.running_mean.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.13.running_mean.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.13.running_var",
+      "relative_path": "recovered/pytorch-3183-features.13.running_var.npy",
+      "bytes": 640,
+      "sha256": "93a0d195cffa647b7c7399cb6cf764c4d58e3bb71618310372748615e2c90655",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.13.running_var.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.13.running_var.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.13.weight",
+      "relative_path": "recovered/pytorch-3183-features.13.weight.npy",
+      "bytes": 640,
+      "sha256": "38bd9e42080ecc08898d49e5b9bca484dba58e40a423fed26b6a68e1f585072e",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.13.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.13.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.15.bias",
+      "relative_path": "recovered/pytorch-3183-features.15.bias.npy",
+      "bytes": 640,
+      "sha256": "f0f5516a58d8ac1b0b1567754ab94f7e02f2c0146d9329749b8d88d701ba877c",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.15.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.15.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.15.weight",
+      "relative_path": "recovered/pytorch-3183-features.15.weight.npy",
+      "bytes": 589952,
+      "sha256": "5810802c9a50fce4d67cc9e4f8dfea8bb5426a72cd28fd9ce3d6847651c9608e",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.15.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.15.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.3.bias",
+      "relative_path": "recovered/pytorch-3183-features.3.bias.npy",
+      "bytes": 256,
+      "sha256": "a82a3dae832d78904c5f9deb9418ee67e0b6da0b34e6de9de3819e37fc309f66",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.3.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.3.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.3.weight",
+      "relative_path": "recovered/pytorch-3183-features.3.weight.npy",
+      "bytes": 36992,
+      "sha256": "2dc6b6c887a8ce8d9aa3bb020f717c47fcfa45b8b33659b70bb16d088ebd6c30",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.3.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.3.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.6.bias",
+      "relative_path": "recovered/pytorch-3183-features.6.bias.npy",
+      "bytes": 384,
+      "sha256": "94752f51e2914c03251efbc5c38dcbf98773b86d073cf83f29019890cd49409b",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.6.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.6.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.6.weight",
+      "relative_path": "recovered/pytorch-3183-features.6.weight.npy",
+      "bytes": 73856,
+      "sha256": "8120dcce499c3487ba50f07054c37b4a9a1830eb8793c9a4364e672bca0aa7ab",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.6.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.6.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.7.bias",
+      "relative_path": "recovered/pytorch-3183-features.7.bias.npy",
+      "bytes": 384,
+      "sha256": "65ee1190e207ee6731494319e5a452170c624fef9c3f5952b694c7228bd41cde",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.7.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.7.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.7.num_batches_tracked",
+      "relative_path": "recovered/pytorch-3183-features.7.num_batches_tracked.npy",
+      "bytes": 72,
+      "sha256": "89b97106379d0898c489ffe4ae80d8268ceb0a2e788087e61064c92172732061",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.7.num_batches_tracked.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.7.num_batches_tracked.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.7.running_mean",
+      "relative_path": "recovered/pytorch-3183-features.7.running_mean.npy",
+      "bytes": 384,
+      "sha256": "458cffec12c25168497427c8ba6d456ac14fb322b594588d5af94338fd04d322",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.7.running_mean.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.7.running_mean.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.7.running_var",
+      "relative_path": "recovered/pytorch-3183-features.7.running_var.npy",
+      "bytes": 384,
+      "sha256": "94ae9efd90d601091ef54901a26ea3a6e0b9d555810d2e5332640aeac61f3dc0",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.7.running_var.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.7.running_var.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.7.weight",
+      "relative_path": "recovered/pytorch-3183-features.7.weight.npy",
+      "bytes": 384,
+      "sha256": "f6b8c14cc623645b5e1ac52872a9626f0e40a3ed70f62152703947b0aa4d47db",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.7.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.7.weight.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.9.bias",
+      "relative_path": "recovered/pytorch-3183-features.9.bias.npy",
+      "bytes": 384,
+      "sha256": "809b0c624fdf6285fe3132f233373f84f7318f0121f8876e78a6dae316bb512e",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.9.bias.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.9.bias.npy"
+      ]
+    },
+    {
+      "name": "pytorch-3183-features.9.weight",
+      "relative_path": "recovered/pytorch-3183-features.9.weight.npy",
+      "bytes": 147584,
+      "sha256": "3547ed989ea15eca24eb91ddfea09e8e743ec21e93fb105d64e4aa42858ec19e",
+      "known_locations": [
+        "/Users/smraalam/Downloads/Software/memory-evidence/recovered-model-verified/pytorch-3183-features.9.weight.npy",
+        "/home/raihan/Downloads/memory-evidence/recovered-model-verified/pytorch-3183-features.9.weight.npy"
+      ]
+    }
+  ],
+  "optional_unhashed_artifacts": [
+    {
+      "name": "gdb-core",
+      "bytes": 1262934072,
+      "known_location": "/home/raihan/Downloads/memory-evidence/inference-3183.core",
+      "note": "Optional failed core inspection; target heap page unavailable. Original LiME supplied successful recovery."
+    }
+  ],
+  "restore_note": "Retain private backups; use relative_path under a chosen artifact root. This repository does not contain or download full RAM images."
+}

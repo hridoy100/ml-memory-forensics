@@ -1,0 +1,260 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "evidence/README.md",
+      "bytes": 3340,
+      "sha256": "f4b9bdbee7a76c269f78ae4df0262420318cd4edeae77f4de5b848d2bd5b7e0a"
+    },
+    {
+      "path": "evidence/capture/analysis-summary.json",
+      "bytes": 3285,
+      "sha256": "a7687bafff83cab72eb9dcd1717a99bb644bc063026a1c242d72dd9eb21ae9c5"
+    },
+    {
+      "path": "evidence/capture/kernel-7.0.0-38-arm64.metadata.json",
+      "bytes": 1119,
+      "sha256": "15e2b9cc94e89cbeb90badac30e9128b5867c60401a44e4b1328787458e592a3"
+    },
+    {
+      "path": "evidence/capture/kernel-debug.sha256",
+      "bytes": 111,
+      "sha256": "e4a38cabb565a7df9125f729fe9995090f190dbe8c2f877ac03e1fc1d61d83be"
+    },
+    {
+      "path": "evidence/capture/kernel-debug.size",
+      "bytes": 10,
+      "sha256": "dd4ee49ce045c307bb64d06ae12ea5b234fea9b75f4bf47c14111825808049f3"
+    },
+    {
+      "path": "evidence/capture/maps-3183.tsv",
+      "bytes": 20234,
+      "sha256": "bd91117625dc5a9fd4a454c9fe084ece25e320ed9132caf6b900f3ea4f82ae47"
+    },
+    {
+      "path": "evidence/capture/pslist-3183.tsv",
+      "bytes": 100,
+      "sha256": "d44bccf960777105e1c237d0771c756b190430ddb4ac1cfcb5b72b557e14a959"
+    },
+    {
+      "path": "evidence/capture/symbol-table-validation.json",
+      "bytes": 390,
+      "sha256": "f4c980cc06ebc96251666a1bc2be411c6f00700bded893340a4bd23596b95e70"
+    },
+    {
+      "path": "evidence/capture/ubuntu.lime.verified.sha256",
+      "bytes": 117,
+      "sha256": "ebddb8a41f959ae65107e0017bd3c568e4945a6b5dca81aeaddaccc60deb34fe"
+    },
+    {
+      "path": "evidence/capture/verified-addresses.json",
+      "bytes": 316,
+      "sha256": "3c1e639dde859bd7e2dd0244097b2fc2eca05ed0d48ca59c7a32374e195d148b"
+    },
+    {
+      "path": "evidence/capture/volshell-address-check.log",
+      "bytes": 694,
+      "sha256": "58a8550451c2757cee9a4e8b21b6557fb1a3b5b858ea33c25fbc669f31c7365d"
+    },
+    {
+      "path": "evidence/logs/gdb-core-inspection.gdb",
+      "bytes": 774,
+      "sha256": "d5e15f42995db0ae2af8e14306f2fddfdff6a6dce5bb93eb49df500514cac98a"
+    },
+    {
+      "path": "evidence/logs/gdb-core-inspection.log",
+      "bytes": 1328,
+      "sha256": "063b5ef01f44630734d6e9f3b2847e1ae94aee473a1408d46b6e4b5bff5623e9"
+    },
+    {
+      "path": "evidence/logs/maps-3183.log",
+      "bytes": 52267,
+      "sha256": "266b11a8d30adf7daca8208e7d651bbe9f3749204af46857f369cf633d6702ea"
+    },
+    {
+      "path": "evidence/logs/pslist-3183.log",
+      "bytes": 32017,
+      "sha256": "d5fdab6cf82ca0ca111be6e3b6296669cda6d9a25aa75cfd2b4b0f92530353e8"
+    },
+    {
+      "path": "evidence/logs/pytorch-validation-verified.log",
+      "bytes": 4937,
+      "sha256": "dfa6f6e9a66a37c16f3ea4f7732c9225815b7f5595b95217bb4c79580fa40cb8"
+    },
+    {
+      "path": "evidence/logs/replay-confirmation-6000.log",
+      "bytes": 632,
+      "sha256": "1a23a6d11a1bf00d3a8169f0abb03893f3caae75022877af3cceed3ccf179a0a"
+    },
+    {
+      "path": "evidence/logs/replay-tests.log",
+      "bytes": 884,
+      "sha256": "f3c846c7420ec743137dd4bcc24c3701d805fb988b5a669587c7e9861105b84b"
+    },
+    {
+      "path": "evidence/logs/repository-check-final.log",
+      "bytes": 6395,
+      "sha256": "6b78711a80a0930b0f2e7e01f618cbb72cf323d3ae80d0b3d53cba0637a6c2bd"
+    },
+    {
+      "path": "evidence/logs/repository-check-initial.log",
+      "bytes": 6373,
+      "sha256": "b7e53dddadd286cf50a39080c5a725fab9e405c2a050b434725d4901ac822c21"
+    },
+    {
+      "path": "evidence/logs/repository-gdb-helper-check.log",
+      "bytes": 3925,
+      "sha256": "c23fca489ee95c9ce16fce9c82f37a760f204dfb59e0950dd6e4d5c6db600c6e"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-model.json",
+      "bytes": 403837,
+      "sha256": "b9911aed7b88ad7b368edec2cb2b8eaa796a6294faddf011094ff4b21f120c5e"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-000.py",
+      "bytes": 1033,
+      "sha256": "45ee64c4a2abd524429e2c80dbb94992b8e6ade32af54e05b94e621339e64178"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-001.py",
+      "bytes": 1547,
+      "sha256": "15dcf4c7d92e2eda21c1d88d90244ea9ff012272e3e57baeaa8441bd094e37ee"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-002.py",
+      "bytes": 315,
+      "sha256": "d4d5cd51033e59f00dfd8aeee127eb627258c96381cd077f2d8fdc7333d88fbb"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-003.py",
+      "bytes": 1070,
+      "sha256": "25421c305b99ee7a0affebbd06e4f5ba35aae00b8dc6121be2c20471c0371539"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-004.py",
+      "bytes": 533,
+      "sha256": "7cd21fdfa4f709405064e54a0b9fcce48852c226befb4602b30f8605ef8c3d7b"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-005.py",
+      "bytes": 1070,
+      "sha256": "efc6975ceb81759dc73886e49dff65fada7dbf9585ea1c831ab4d8709aea115e"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-006.py",
+      "bytes": 1583,
+      "sha256": "d8b05a4427a6c5825281ca1b25af37dd843f83cf88f2b513638d77e91639bf67"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-007.py",
+      "bytes": 1070,
+      "sha256": "522126ec3f6900c5cb5484dadd3bc4fb09a84744cd4d19f4e804e8e4d8d9dd11"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-008.py",
+      "bytes": 1071,
+      "sha256": "d7fc21c4186c2a4cfa2337180b1746b49873f1d0dede6651d7a36ae8e8684b1b"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-009.py",
+      "bytes": 1584,
+      "sha256": "90d59b092eb413fa98673747414693963b0e4fc74ef9e4fa7084e97db2ab1243"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-010.py",
+      "bytes": 1072,
+      "sha256": "9de3f22ce726225191891ef442fdd385692c0373de2a452c1a7531e3e2739fe2"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-011.py",
+      "bytes": 2856,
+      "sha256": "4fd9d2da3f67f0458c92a74d1d24c9449a09adb27375f46c0197637261d486a2"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-012.py",
+      "bytes": 304,
+      "sha256": "38eff023ae955f9a77557189736afd1aae7a02e9452b503054b26c99f2bda2a5"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-013.py",
+      "bytes": 420,
+      "sha256": "cfc524f7ab28a9776637f1a12d113ab6f8203eb2121e11b2fb7ebd8baf357938"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-014.py",
+      "bytes": 434,
+      "sha256": "3b8cc1807ffdc75be50e77b053ef5d83a3f9cf8b370d9eb18a1f77220b8c85b3"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-015.py",
+      "bytes": 436,
+      "sha256": "5c800eeffa73e2195255cf38bbb3e12ca78eb6c0ec17baabcffd3634b10e9c3b"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-016.py",
+      "bytes": 1017,
+      "sha256": "c9855121f2e2ac4501415394ed4978a350bd63b3838f4c5c0d520186d8f874af"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-017.py",
+      "bytes": 486,
+      "sha256": "e0f798ce6795bc024a7d3f3d9ee17d94a99a28e020a1e6fb7652950db207ab9c"
+    },
+    {
+      "path": "evidence/recovery/pytorch-3183-source-018.py",
+      "bytes": 2467,
+      "sha256": "9bf330b5ba327857aa71460d3e66b3e94e75bfeca9dc95b6a9a1fc289df728ff"
+    },
+    {
+      "path": "evidence/recovery/validation.json",
+      "bytes": 10997,
+      "sha256": "91e2c817c34ef15d8eb511582684e63f466e07d3fb93f4afaf1012291bc4e1e7"
+    },
+    {
+      "path": "evidence/replay/code-coverage.json",
+      "bytes": 10242,
+      "sha256": "89a9d37068c64b606a1946d563c0c141ce988220bb3d9e1d1d68eafa75ba05b8"
+    },
+    {
+      "path": "evidence/replay/inference-comparison.json",
+      "bytes": 7398,
+      "sha256": "eb3e8d30e979c5e3361898acc23ffba7746205cce0f27a4bdde1a6b672da5add"
+    },
+    {
+      "path": "evidence/replay/predictions.csv",
+      "bytes": 100957,
+      "sha256": "d07d60aca0f6d78135b5bf7f991040e464bf9ac2390846b0e20dea8feacc77ae"
+    },
+    {
+      "path": "evidence/training/metrics.json",
+      "bytes": 412,
+      "sha256": "c7fbf3b18a4f615e1097204fbface65b26f98f74dac130c80eee626d4b3dc16f"
+    },
+    {
+      "path": "evidence/training/test-indices.json",
+      "bytes": 65016,
+      "sha256": "04710f028ae7233856c7fdb9fda20312c815581b67ea48baabbc7f25107cf421"
+    },
+    {
+      "path": "docs/images/01-gdb-pid-and-addresses.png",
+      "bytes": 7453221,
+      "sha256": "ad2868e42ce7d83ce85bc94a7a22f4d1f19449c2ab7034a683a5d07b12c1323d"
+    },
+    {
+      "path": "docs/images/02-volatility-pid.png",
+      "bytes": 6399802,
+      "sha256": "5a23be96c5450cc202e1d6d014e8f3e1a561e84a2fcad2f794077329aee71b4a"
+    },
+    {
+      "path": "docs/images/03-vmas-and-volshell.png",
+      "bytes": 4116181,
+      "sha256": "59553f4beb0473fa3c8b7dd0530fcb102c9b9d47b3e100d640f5c4dffc81e348"
+    },
+    {
+      "path": "docs/images/index.json",
+      "bytes": 995,
+      "sha256": "51aaacf08ca162d1f224bf93e60ab89b718d08667d91c7518f83f67cb150d8b1"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "01-gdb-pid-and-addresses.png",
+    "original": "/Users/smraalam/Desktop/Screenshot 2026-10-18 at 1.11.44\u202fAM.png",
+    "sha256": "ad2868e42ce7d83ce85bc94a7a22f4d1f19449c2ab7034a683a5d07b12c1323d",
+    "caption": "GDB reports inference PID 3183 and the model/input wrapper and object addresses."
+  },
+  {
+    "file": "02-volatility-pid.png",
+    "original": "/Users/smraalam/Desktop/Screenshot 2026-10-18 at 12.59.08\u202fPM.png",
+    "sha256": "5a23be96c5450cc202e1d6d014e8f3e1a561e84a2fcad2f794077329aee71b4a",
+    "caption": "Volatility PsList identifies PID 3183, cifar10_inferen, in the LiME capture."
+  },
+  {
+    "file": "03-vmas-and-volshell.png",
+    "original": "/Users/smraalam/Desktop/Screenshot 2026-10-18 at 1.00.25\u202fPM.png",
+    "sha256": "59553f4beb0473fa3c8b7dd0530fcb102c9b9d47b3e100d640f5c4dffc81e348",
+    "caption": "Tail of the process VMA listing and Volshell address verification with input shape [128, 3, 32, 32] and ADDRESS_CHECK_PASS."
+  }
+]

@@ -1,0 +1,227 @@
+{
+  "source_files_verified": 19,
+  "tensor_files_verified": 31,
+  "layers": [
+    {
+      "path": "<root>",
+      "type": "__torch__.train.CIFAR10CNN",
+      "source": "pytorch-3183-source-017.py",
+      "forward": "__torch__.train.CIFAR10CNN.forward"
+    },
+    {
+      "path": "features",
+      "type": "__torch__.torch.nn.modules.container.Sequential",
+      "source": "pytorch-3183-source-011.py",
+      "forward": "__torch__.torch.nn.modules.container.Sequential.forward"
+    },
+    {
+      "path": "features.0",
+      "type": "__torch__.torch.nn.modules.conv.Conv2d",
+      "source": "pytorch-3183-source-000.py",
+      "forward": "__torch__.torch.nn.modules.conv.Conv2d.forward"
+    },
+    {
+      "path": "features.1",
+      "type": "__torch__.torch.nn.modules.batchnorm.BatchNorm2d",
+      "source": "pytorch-3183-source-001.py",
+      "forward": "__torch__.torch.nn.modules.batchnorm.BatchNorm2d.forward"
+    },
+    {
+      "path": "features.2",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "features.3",
+      "type": "__torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d",
+      "source": "pytorch-3183-source-003.py",
+      "forward": "__torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d.forward"
+    },
+    {
+      "path": "features.4",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "features.5",
+      "type": "__torch__.torch.nn.modules.pooling.MaxPool2d",
+      "source": "pytorch-3183-source-004.py",
+      "forward": "__torch__.torch.nn.modules.pooling.MaxPool2d.forward"
+    },
+    {
+      "path": "features.6",
+      "type": "__torch__.torch.nn.modules.conv.___torch_mangle_1.Conv2d",
+      "source": "pytorch-3183-source-005.py",
+      "forward": "__torch__.torch.nn.modules.conv.___torch_mangle_1.Conv2d.forward"
+    },
+    {
+      "path": "features.7",
+      "type": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_2.BatchNorm2d",
+      "source": "pytorch-3183-source-006.py",
+      "forward": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_2.BatchNorm2d.forward"
+    },
+    {
+      "path": "features.8",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "features.9",
+      "type": "__torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d",
+      "source": "pytorch-3183-source-007.py",
+      "forward": "__torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d.forward"
+    },
+    {
+      "path": "features.10",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "features.11",
+      "type": "__torch__.torch.nn.modules.pooling.MaxPool2d",
+      "source": "pytorch-3183-source-004.py",
+      "forward": "__torch__.torch.nn.modules.pooling.MaxPool2d.forward"
+    },
+    {
+      "path": "features.12",
+      "type": "__torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d",
+      "source": "pytorch-3183-source-008.py",
+      "forward": "__torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d.forward"
+    },
+    {
+      "path": "features.13",
+      "type": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_5.BatchNorm2d",
+      "source": "pytorch-3183-source-009.py",
+      "forward": "__torch__.torch.nn.modules.batchnorm.___torch_mangle_5.BatchNorm2d.forward"
+    },
+    {
+      "path": "features.14",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "features.15",
+      "type": "__torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d",
+      "source": "pytorch-3183-source-010.py",
+      "forward": "__torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d.forward"
+    },
+    {
+      "path": "features.16",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "features.17",
+      "type": "__torch__.torch.nn.modules.pooling.MaxPool2d",
+      "source": "pytorch-3183-source-004.py",
+      "forward": "__torch__.torch.nn.modules.pooling.MaxPool2d.forward"
+    },
+    {
+      "path": "classifier",
+      "type": "__torch__.torch.nn.modules.container.___torch_mangle_8.Sequential",
+      "source": "pytorch-3183-source-016.py",
+      "forward": "__torch__.torch.nn.modules.container.___torch_mangle_8.Sequential.forward"
+    },
+    {
+      "path": "classifier.0",
+      "type": "__torch__.torch.nn.modules.flatten.Flatten",
+      "source": "pytorch-3183-source-012.py",
+      "forward": "__torch__.torch.nn.modules.flatten.Flatten.forward"
+    },
+    {
+      "path": "classifier.1",
+      "type": "__torch__.torch.nn.modules.linear.Linear",
+      "source": "pytorch-3183-source-013.py",
+      "forward": "__torch__.torch.nn.modules.linear.Linear.forward"
+    },
+    {
+      "path": "classifier.2",
+      "type": "__torch__.torch.nn.modules.activation.ReLU",
+      "source": "pytorch-3183-source-002.py",
+      "forward": "__torch__.torch.nn.modules.activation.ReLU.forward"
+    },
+    {
+      "path": "classifier.3",
+      "type": "__torch__.torch.nn.modules.dropout.Dropout",
+      "source": "pytorch-3183-source-014.py",
+      "forward": "__torch__.torch.nn.modules.dropout.Dropout.forward"
+    },
+    {
+      "path": "classifier.4",
+      "type": "__torch__.torch.nn.modules.linear.___torch_mangle_7.Linear",
+      "source": "pytorch-3183-source-015.py",
+      "forward": "__torch__.torch.nn.modules.linear.___torch_mangle_7.Linear.forward"
+    }
+  ],
+  "function_definitions": {
+    "__torch__.torch.nn.modules.conv.Conv2d.forward": "pytorch-3183-source-000.py",
+    "__torch__.torch.nn.modules.conv.Conv2d._conv_forward": "pytorch-3183-source-000.py",
+    "__torch__.torch.nn.modules.batchnorm.BatchNorm2d.forward": "pytorch-3183-source-001.py",
+    "__torch__.torch.nn.modules.batchnorm.BatchNorm2d._check_input_dim": "pytorch-3183-source-001.py",
+    "__torch__.torch.nn.modules.activation.ReLU.forward": "pytorch-3183-source-002.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d.forward": "pytorch-3183-source-003.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d._conv_forward": "pytorch-3183-source-003.py",
+    "__torch__.torch.nn.modules.pooling.MaxPool2d.forward": "pytorch-3183-source-004.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_1.Conv2d.forward": "pytorch-3183-source-005.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_1.Conv2d._conv_forward": "pytorch-3183-source-005.py",
+    "__torch__.torch.nn.modules.batchnorm.___torch_mangle_2.BatchNorm2d.forward": "pytorch-3183-source-006.py",
+    "__torch__.torch.nn.modules.batchnorm.___torch_mangle_2.BatchNorm2d._check_input_dim": "pytorch-3183-source-006.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d.forward": "pytorch-3183-source-007.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d._conv_forward": "pytorch-3183-source-007.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d.forward": "pytorch-3183-source-008.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d._conv_forward": "pytorch-3183-source-008.py",
+    "__torch__.torch.nn.modules.batchnorm.___torch_mangle_5.BatchNorm2d.forward": "pytorch-3183-source-009.py",
+    "__torch__.torch.nn.modules.batchnorm.___torch_mangle_5.BatchNorm2d._check_input_dim": "pytorch-3183-source-009.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d.forward": "pytorch-3183-source-010.py",
+    "__torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d._conv_forward": "pytorch-3183-source-010.py",
+    "__torch__.torch.nn.modules.container.Sequential.forward": "pytorch-3183-source-011.py",
+    "__torch__.torch.nn.modules.container.Sequential.__len__": "pytorch-3183-source-011.py",
+    "__torch__.torch.nn.modules.flatten.Flatten.forward": "pytorch-3183-source-012.py",
+    "__torch__.torch.nn.modules.linear.Linear.forward": "pytorch-3183-source-013.py",
+    "__torch__.torch.nn.modules.dropout.Dropout.forward": "pytorch-3183-source-014.py",
+    "__torch__.torch.nn.modules.linear.___torch_mangle_7.Linear.forward": "pytorch-3183-source-015.py",
+    "__torch__.torch.nn.modules.container.___torch_mangle_8.Sequential.forward": "pytorch-3183-source-016.py",
+    "__torch__.torch.nn.modules.container.___torch_mangle_8.Sequential.__len__": "pytorch-3183-source-016.py",
+    "__torch__.train.CIFAR10CNN.forward": "pytorch-3183-source-017.py",
+    "__torch__.torch.nn.functional.batch_norm": "pytorch-3183-source-018.py",
+    "__torch__.torch.nn.functional.relu": "pytorch-3183-source-018.py",
+    "__torch__.torch.nn.functional._max_pool2d": "pytorch-3183-source-018.py",
+    "__torch__.torch.nn.functional.dropout": "pytorch-3183-source-018.py",
+    "__torch__.torch.nn.functional._verify_batch_size": "pytorch-3183-source-018.py"
+  },
+  "reported_functions_found": 34,
+  "unresolved_dependencies": [],
+  "runtime_operator_dependencies": [
+    "torch.__is__",
+    "torch.add",
+    "torch.add_",
+    "torch.batch_norm",
+    "torch.conv2d",
+    "torch.dim",
+    "torch.dropout",
+    "torch.dropout_",
+    "torch.eq",
+    "torch.flatten",
+    "torch.format",
+    "torch.gt",
+    "torch.le",
+    "torch.len",
+    "torch.linear",
+    "torch.lt",
+    "torch.max_pool2d",
+    "torch.mul",
+    "torch.ne",
+    "torch.relu",
+    "torch.relu_",
+    "torch.size",
+    "torch.sub"
+  ],
+  "replay_method": "Recovered source compiled as Python after annotation/cast erasure, using explicit TorchScript intrinsic adapters and the installed CPU PyTorch runtime.",
+  "scope": "Static recovered definitions and observed first-batch evaluation calls. This is not all-branch coverage or native C++ kernel/source recovery."
+}

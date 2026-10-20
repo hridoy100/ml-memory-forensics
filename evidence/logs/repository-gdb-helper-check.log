@@ -1,0 +1,129 @@
+Breakpoint 1 at 0x8128: file /home/raihan/Downloads/volatility/cifar10_cnn/cpp/main.cpp, line 91.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/aarch64-linux-gnu/libthread_db.so.1".
+[New Thread 0xffffe0c980e0 (LWP 3393)]
+[New Thread 0xffffe04880e0 (LWP 3394)]
+[New Thread 0xffffdfc780e0 (LWP 3395)]
+
+Thread 1 "cifar10_inferen" hit Breakpoint 1, main (argc=4, argv=0xfffffffffa88) at /home/raihan/Downloads/volatility/cifar10_cnn/cpp/main.cpp:91
+91	            auto logits = model.forward({images}).toTensor();
+  Num  Description       Connection           Executable        
+* 1    process 3391      1 (native)           /home/raihan/Downloads/volatility/cifar10_cnn/cpp/build-ubuntu/cifar10_inference 
+Fresh GDB helper check PID: 3391
+at::Tensor wrapper: 0xfffffffff2c8
+impl_ field: 0xfffffffff2c8
+TensorImpl ($torch_impl): 0xaaaaae039d40
+storage_ field: 0xaaaaae039d50
+StorageImpl: 0xaaaaae060710
+data_ptr_ field: 0xaaaaae060720
+allocation base ($torch_data): 0x5757ecc0000
+storage_offset_:
+$1 = 0
+numel_:
+$2 = 393216
+sizes_and_strides_:
+$3 = {
+  size_ = 4,
+  {
+    outOfLineStorage_ = 0x80,
+    inlineStorage_ = {128, 3, 32, 32, 0, 3072, 1024, 32, 1, 0}
+  }
+}
+data_type_:
+$4 = {
+  static nextTypeIndex = 62,
+  index_ = 6
+}
+device_opt_:
+$5 = std::optional = {
+  [contained value] = {
+    type_ = c10::DeviceType::CPU,
+    index_ = -1 '\377'
+  }
+}
+Object: 0xaaaaae076cb0
+ClassType: 0xaaaaadfbaa30
+slots_ field: 0xaaaaae076d00
+[0] training: REGULAR_ATTRIBUTE, Bool
+  descriptor: 0xaaaaae06de00
+  IValue slot: 0xaaaaadff71c0
+[1] _is_full_backward_hook: REGULAR_ATTRIBUTE, None
+  descriptor: 0xaaaaae06de38
+  IValue slot: 0xaaaaadff71d0
+[2] features: REGULAR_ATTRIBUTE, Object
+  descriptor: 0xaaaaae06de70
+  IValue slot: 0xaaaaadff71e0
+[3] classifier: REGULAR_ATTRIBUTE, Object
+  descriptor: 0xaaaaae06dea8
+  IValue slot: 0xaaaaadff71f0
+features IValue slot ($torch_slot): 0xaaaaadff71e0
+attribute descriptor: 0xaaaaae06de70
+tag: Object
+child Object ($torch_object): 0xaaaaadff0650
+0 IValue slot ($torch_slot): 0xaaaaadff8b60
+attribute descriptor: 0xaaaaae038df0
+tag: Object
+child Object ($torch_object): 0xaaaaae03a050
+Object: 0xaaaaae03a050
+ClassType: 0xaaaaae018740
+slots_ field: 0xaaaaae03a0a0
+[0] weight: PARAMETER, Tensor
+  descriptor: 0xaaaaae018d10
+  IValue slot: 0xaaaaadff10b0
+[1] bias: PARAMETER, Tensor
+  descriptor: 0xaaaaae018d48
+  IValue slot: 0xaaaaadff10c0
+[2] training: REGULAR_ATTRIBUTE, Bool
+  descriptor: 0xaaaaae018d80
+  IValue slot: 0xaaaaadff10d0
+[3] _is_full_backward_hook: REGULAR_ATTRIBUTE, None
+  descriptor: 0xaaaaae018db8
+  IValue slot: 0xaaaaadff10e0
+[4] transposed: REGULAR_ATTRIBUTE, Bool
+  descriptor: 0xaaaaae018df0
+  IValue slot: 0xaaaaadff10f0
+[5] _reversed_padding_repeated_twice: REGULAR_ATTRIBUTE, GenericList
+  descriptor: 0xaaaaae018e28
+  IValue slot: 0xaaaaadff1100
+weight IValue slot ($torch_slot): 0xaaaaadff10b0
+attribute descriptor: 0xaaaaae018d10
+tag: Tensor
+at::Tensor ($torch_tensor): 0xaaaaadff10b0
+at::Tensor wrapper: 0xaaaaadff10b0
+impl_ field: 0xaaaaadff10b0
+TensorImpl ($torch_impl): 0xaaaaadff7ff0
+storage_ field: 0xaaaaadff8000
+StorageImpl: 0xaaaaae01b960
+data_ptr_ field: 0xaaaaae01b970
+allocation base ($torch_data): 0x5757e044000
+storage_offset_:
+$6 = 0
+numel_:
+$7 = 864
+sizes_and_strides_:
+$8 = {
+  size_ = 4,
+  {
+    outOfLineStorage_ = 0x20,
+    inlineStorage_ = {32, 3, 3, 3, 0, 27, 9, 3, 1, 0}
+  }
+}
+data_type_:
+$9 = {
+  static nextTypeIndex = 62,
+  index_ = 6
+}
+device_opt_:
+$10 = std::optional = {
+  [contained value] = {
+    type_ = c10::DeviceType::CPU,
+    index_ = -1 '\377'
+  }
+}
+0x5757e044000:	0.119935118	0.291540712	-0.0696675777	0.142484173
+0x5757e044010:	0.0102107441	-0.0470474996	-0.182749048	0.0387827568
+0x5757e044000:	0x3df5a08b	0x3e9544d3	0xbd8eade0	0x3e11e75f
+0x5757e044010:	0x3c274af7	0xbd40b4e1	0xbe3b2291	0x3d1edaab
+GDB_HELPER_CHECK_PASS
+[Inferior 1 (process 3391) killed]
+GDB_HELPER_EXIT_STATUS=0

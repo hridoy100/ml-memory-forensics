@@ -1,0 +1,13 @@
+{
+  "framework_base_commit": "5ee05ce7b440c0d6a0d45f7f9a343b702c7b38e4",
+  "source_files": {
+    "volatility3/framework/plugins/linux/pytorch_model.py": "83017937055ca004630b194521ff2cc8f6b65388e60dfc2541701da0d3332dc6",
+    "volatility3/framework/plugins/linux/pslist.py": "2897589baca0a38ab63859b0f61b5b06460c931c76ff64eccfd8ca8ad3482b1f",
+    "volatility3/framework/plugins/linux/proc.py": "08e28aecf8eed9a585e2b2d76550e65674886c87306dee86f48f42b0a6bcb849",
+    "development/pytorch/export_layout.py": "cfd42cd1643cfde4b8f58f1476324c665690c5cdb65cc78e742636fecc7d6d1a",
+    "development/pytorch/validate_recovery.py": "14bbd607279df8f83d765fa29194d37dddbc907ca71392ffe11459f591a692dd",
+    "development/pytorch/profiles/torch-2.14.1-cpu-aarch64.json": "7b55463cac79beb94c7dd73cc48a4efbd54bc1a835e8b4f81d27aa8d7b4ec2d4",
+    "test/test_pytorch_model.py": "514473c3fed95529945bc4e556043b9f9a5a110c8bdb8a6908896bc21c2314a4"
+  },
+  "capture_checksum_record": "17444d6e2daa1089feb8e1c7c1d01e5effb4c8500f60c4455102d0af4d57a769  /home/raihan/Downloads/memory-evidence/ubuntu.lime"
+}

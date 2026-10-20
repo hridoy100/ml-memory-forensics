@@ -1,0 +1,88 @@
+{
+  "pid": 3183,
+  "process_name": "cifar10_inferen",
+  "framework_directory_ubuntu": "/home/raihan/Downloads/volatility3-aarch64-experimental",
+  "framework_version": "2.10.0",
+  "framework_commit": "5ee05ce7b440c0d6a0d45f7f9a343b702c7b38e4",
+  "compatibility_patch": "arm64-compatibility.patch",
+  "kernel_symbol_table": "/Users/smraalam/Downloads/Software/kernel-7.0.0-38-arm64.json",
+  "capture_checksum_record": "17444d6e2daa1089feb8e1c7c1d01e5effb4c8500f60c4455102d0af4d57a769  /home/raihan/Downloads/memory-evidence/ubuntu.lime",
+  "vma_count": 128,
+  "address_verification": {
+    "model_wrapper": 281474976703880,
+    "model_object": 187650040802032,
+    "input_wrapper": 281474976703656,
+    "input_tensor_impl": 187650040193664,
+    "pid": 3183,
+    "model_pointer": 187650040802032,
+    "input_pointer": 187650040193664,
+    "input_shape": [
+      128,
+      3,
+      32,
+      32
+    ],
+    "input_numel": 393216
+  },
+  "verified_vmas": {
+    "model_object": {
+      "address": "0xaaaaae062af0",
+      "start": "0xaaaaaac00000",
+      "end": "0xaaaaae200000",
+      "permissions": "rw-",
+      "mapping": "Anonymous Mapping"
+    },
+    "input_tensor_impl": {
+      "address": "0xaaaaadfce280",
+      "start": "0xaaaaaac00000",
+      "end": "0xaaaaae200000",
+      "permissions": "rw-",
+      "mapping": "Anonymous Mapping"
+    },
+    "model_wrapper": {
+      "address": "0xffffffffe588",
+      "start": "0xfffffffdf000",
+      "end": "0x1000000000000",
+      "permissions": "rw-",
+      "mapping": "[stack]"
+    },
+    "input_wrapper": {
+      "address": "0xffffffffe4a8",
+      "start": "0xfffffffdf000",
+      "end": "0x1000000000000",
+      "permissions": "rw-",
+      "mapping": "[stack]"
+    }
+  },
+  "gdb_core_limitation": "Optional core inspection cannot read input TensorImpl storage at 0xaaaaadfce290; original LiME image successfully supplies these process pages.",
+  "remaining_work": [
+    "Capture screenshots of recovery, validation, code mapping and recovered-source inference",
+    "Complete blog-style steps 1-8 write-up and version/source references",
+    "Native machine-code extraction or tracing only if explicitly required beyond recovered TorchScript model code"
+  ],
+  "model_recovery": {
+    "modules": 26,
+    "tensors": 31,
+    "tensor_bytes": 3260096,
+    "sources": 19,
+    "graphs": 34,
+    "unit_tests_passed": 10,
+    "validation_passed": true,
+    "weights_file": "recovered-model-verified/recovered_state_dict.pt",
+    "validation_file": "recovered-model-verified/validation.json",
+    "native_code_scope": "Resident TorchScript sources recovered; native C++ kernel source and runtime call coverage are not recovered."
+  },
+  "recovered_code_replay": {
+    "passed": true,
+    "images": 6000,
+    "prediction_matches": 6000,
+    "max_absolute_logit_difference": 0.0,
+    "accuracy": 0.8708333333333333,
+    "observed_layer_order_matches": true,
+    "reported_definitions_resolved": 34,
+    "distinct_first_batch_functions_observed": 31,
+    "report": "replay-confirmation-6000/inference-comparison.json",
+    "guide": "volatility3-arm64/development/pytorch/CONFIRMATION.md",
+    "scope": "Static recovered definitions and observed first-batch evaluation calls. This is not all-branch coverage or native C++ kernel/source recovery."
+  }
+}

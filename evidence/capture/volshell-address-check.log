@@ -1,0 +1,17 @@
+Volshell (Volatility 3 Framework) 2.10.0
+Readline imported successfully
+Running code from file://///home/raihan/Downloads/memory-evidence/verify_addresses.py
+
+Captured PID: 3183
+Process layer: layer_name_Process3183
+Model pointer: 0xaaaaae062af0
+Input TensorImpl pointer: 0xaaaaadfce280
+Input rank: 4 shape: [128, 3, 32, 32] numel: 393216
+Model object bytes:
+0xaaaaae062af0    0000aaaaaaaef7d0 0000000100000001    ........ ........
+0xaaaaae062b00    0000aaaaade1d7e0 0000aaaaade1d7d0    ........ ........
+0xaaaaae062b10    0000000000000001 000000040000ff00    ........ ........
+0xaaaaae062b20    0000000000000000 0000000000000100    ........ ........
+ADDRESS_CHECK_PASS
+
+VOLSHELL_EXIT_STATUS=0

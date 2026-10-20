@@ -1,0 +1,34 @@
+{
+  "consolidated_on": "2026-10-20",
+  "source_repositories": [
+    {
+      "url": "git@github.com:hridoy100/volatility.git",
+      "head": "800a2100d3e04dba7931512aeeb1746cd01cc582",
+      "branch": "master",
+      "working_tree_status": "M cifar10_cnn/GDB_INSPECTION.md",
+      "source": "cifar10_cnn source and recorded metrics/test indices"
+    },
+    {
+      "url": "https://github.com/hridoy100/volatility3-arm64.git",
+      "head": "5ee05ce7b440c0d6a0d45f7f9a343b702c7b38e4",
+      "branch": "codex/arm64-process-inspection",
+      "working_tree_status": "M .gitignore\n M README.md\n M volatility3/framework/plugins/linux/proc.py\n M volatility3/framework/plugins/linux/pslist.py\n?? development/pytorch/\n?? test/test_pytorch_confirmation.py\n?? test/test_pytorch_model.py\n?? volatility3/framework/plugins/linux/pytorch_model.py",
+      "source": "recovery plugin, ABI exporter/profile, validator/replay and tests"
+    }
+  ],
+  "consolidation_changes": [
+    "External plugin layout and test import/profile paths adjusted; extractor/validator/replay logic preserved.",
+    "GDB TypePtr helper accepts measured Ubuntu and older NVIDIA representations; inspection script includes first convolution weights.",
+    "Combined walkthrough, findings, artifact inventory and evidence checks added.",
+    "CMake build output, environments, datasets, checkpoint/tensor binaries and memory images excluded.",
+    "External module named mlmodel to avoid CLI ambiguity with the earlier installed linux.pytorch_model plugin."
+  ],
+  "core_source_hashes": {
+    "cifar10_cnn/train.py": "73a69d67f1811a799cd68bd9f3a6663d1c16e01c02009decd650f1b38da8d39c",
+    "cifar10_cnn/export_model.py": "50736dbcc5dc49abe4afa41e1c7f7a7ec2ac5e9c40fca1a7d34ae541e9381cfa",
+    "cifar10_cnn/cpp/main.cpp": "2aff6389cb5fa28a70f45c7acdb2629d27a154154bd257967ba0a732b7811bcf",
+    "forensics/confirm_recovery.py": "f91651cebddc7e802719232fe6af927e091e194dbd1a212b1e2ada93766f8d55",
+    "forensics/profiles/torch-2.14.1-cpu-aarch64.json": "7b55463cac79beb94c7dd73cc48a4efbd54bc1a835e8b4f81d27aa8d7b4ec2d4",
+    "forensics/plugins/mlmodel.py": "83017937055ca004630b194521ff2cc8f6b65388e60dfc2541701da0d3332dc6"
+  }
+}

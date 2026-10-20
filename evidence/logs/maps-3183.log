@@ -1,0 +1,512 @@
+INFO     volatility3.cli: Volatility plugins path: ['/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/plugins', '/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins']
+INFO     volatility3.cli: Volatility symbols path: ['/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/symbols', '/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/symbols']
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.yarascan based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/linux/vmayarascan.py", line 10, in <module>
+    from volatility3.plugins import yarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.linux.vmayarascan based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/linux/vmayarascan.py
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svcdiff.py", line 18, in <module>
+    from volatility3.plugins.windows import svclist, svcscan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svclist.py", line 12, in <module>
+    from volatility3.plugins.windows import svcscan, pslist
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svcscan.py", line 23, in <module>
+    from volatility3.plugins.windows import poolscanner, pslist, vadyarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/vadyarascan.py", line 11, in <module>
+    from volatility3.plugins import yarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.svcdiff based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svcdiff.py
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svclist.py", line 12, in <module>
+    from volatility3.plugins.windows import svcscan, pslist
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svcscan.py", line 23, in <module>
+    from volatility3.plugins.windows import poolscanner, pslist, vadyarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/vadyarascan.py", line 11, in <module>
+    from volatility3.plugins import yarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.svclist based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svclist.py
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/mftscan.py", line 13, in <module>
+    from volatility3.plugins import timeliner, yarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.mftscan based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/mftscan.py
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svcscan.py", line 23, in <module>
+    from volatility3.plugins.windows import poolscanner, pslist, vadyarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/vadyarascan.py", line 11, in <module>
+    from volatility3.plugins import yarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.svcscan based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/svcscan.py
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/cachedump.py", line 8, in <module>
+    from Crypto.Cipher import ARC4, AES
+ModuleNotFoundError: No module named 'Crypto'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.cachedump based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/cachedump.py
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/hashdump.py", line 10, in <module>
+    from Crypto.Cipher import AES, ARC4, DES
+ModuleNotFoundError: No module named 'Crypto'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.hashdump based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/hashdump.py
+INFO     volatility3.plugins.yarascan: Neither yara-x nor yara-python (>3.8.0) module not found, plugin (and dependent plugins) not available
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 19, in <module>
+    import yara_x
+ModuleNotFoundError: No module named 'yara_x'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/vadyarascan.py", line 11, in <module>
+    from volatility3.plugins import yarascan
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/yarascan.py", line 25, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.vadyarascan based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/vadyarascan.py
+DEBUG    volatility3.framework: Traceback (most recent call last):
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/__init__.py", line 185, in import_file
+    importlib.import_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/lsadump.py", line 8, in <module>
+    from Crypto.Cipher import ARC4, DES, AES
+ModuleNotFoundError: No module named 'Crypto'
+
+DEBUG    volatility3.framework: Failed to import module volatility3.plugins.windows.lsadump based on file: /home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/framework/plugins/windows/lsadump.py
+INFO     volatility3.cli: The following plugins could not be loaded (use -vv to see why): volatility3.plugins.linux.vmayarascan, volatility3.plugins.windows.cachedump, volatility3.plugins.windows.hashdump, volatility3.plugins.windows.lsadump, volatility3.plugins.windows.mftscan, volatility3.plugins.windows.svcdiff, volatility3.plugins.windows.svclist, volatility3.plugins.windows.svcscan, volatility3.plugins.windows.vadyarascan, volatility3.plugins.yarascan
+INFO     volatility3.framework.automagic: Detected a linux category plugin
+INFO     volatility3.framework.automagic: Running automagic: ConstructionMagic
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps
+INFO     volatility3.framework.automagic: Running automagic: SymbolCacheMagic
+INFO     volatility3.framework.automagic: Running automagic: LayerStacker
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DEBUG    volatility3.framework.automagic.linux: Identified banner: b'Linux version 7.0.0-38-generic (buildd@bos03-arm64-061) (aarch64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:28:02 UTC 2026 (Ubuntu 7.0.0-38.38-generic 7.0.14)\n\x00'
+INFO     volatility3.schemas: Dependency for validation unavailable: jsonschema
+DEBUG    volatility3.schemas: All validations will report success, even with malformed input
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!assoc_array_ptr
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!netns_ipvs
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!mtd_info
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!can_pkg_stats
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!can_rcv_lists_stats
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!can_dev_rcv_lists
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!mpls_route
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!sctp_mib
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!smc_stats_rsn
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!smc_stats
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!garp_port
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!mpls_dev
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!mrp_port
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!tipc_bearer
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!udp_tunnel_nic
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!cfg80211_conn
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!cfg80211_cached_keys
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!cfg80211_cqm_config
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!phy_package_shared
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!sfp
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!dsa_8021q_context
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!uapi_definition
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!hw_stats_device_data
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!rdma_restrack_root
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!cfg80211_internal_bss
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!ib_port
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!ib_gid_table
+DEBUG    volatility3.framework.symbols: Unresolved reference: LinuxStacker1!ib_pkey_cache
+DEBUG    volatility3.framework.automagic.linux: Linux addresses shift values determined: KASLR (physical) = -0xffff7fffc6fb0000, ASLR (virtual) = 0x3957b7450000
+DEBUG    volatility3.framework.automagic.linux.LinuxAArch64SubStacker: TTB1 was found at: 0xbbf46000
+DEBUG    volatility3.framework.automagic.linux: Detected LinuxAArch64 layer
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name.memory_layer
+DETAIL 1 volatility3.framework.configuration.requirements: IndexError - No configuration provided: plugins.Maps.kernel.layer_name.memory_layer.base_layer
+DETAIL 1 volatility3.framework.interfaces.configuration: TypeError - layer_debug requirements only accept bool type: None
+DETAIL 1 volatility3.framework.interfaces.configuration: TypeError - layer_debug requirements only accept bool type: None
+DETAIL 1 volatility3.framework.interfaces.configuration: TypeError - translation_debug requirements only accept bool type: None
+DETAIL 1 volatility3.framework.interfaces.configuration: TypeError - translation_debug requirements only accept bool type: None
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps.kernel
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DETAIL 1 volatility3.framework.automagic.construct_layers: Failed on requirement: plugins.Maps
+DEBUG    volatility3.framework.automagic.stacker: physical_layer maximum_address: 4289855647
+DEBUG    volatility3.framework.automagic.stacker: Stacked layers: ['LinuxLayer', 'LimeLayer', 'FileLayer']
+INFO     volatility3.framework.automagic: Running automagic: SymbolFinder
+INFO     volatility3.framework.automagic: Running automagic: LinuxSymbolFinder
+DETAIL 1 volatility3.framework.configuration.requirements: Symbol table requirement not yet fulfilled: plugins.Maps.kernel.symbol_table_name
+DEBUG    volatility3.framework.automagic.symbol_finder: Identified banner: b'Linux version 7.0.0-38-generic (buildd@bos03-arm64-061) (aarch64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:28:02 UTC 2026 (Ubuntu 7.0.0-38.38-generic 7.0.14)\n\x00'
+DEBUG    volatility3.framework.automagic.symbol_finder: Using symbol library: file:///home/raihan/Downloads/volatility3-aarch64-experimental/volatility3/symbols/linux/kernel-7.0.0-38-arm64.json
+INFO     volatility3.schemas: Dependency for validation unavailable: jsonschema
+DEBUG    volatility3.schemas: All validations will report success, even with malformed input
+INFO     volatility3.framework.automagic: Running automagic: KernelModule
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!assoc_array_ptr
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!netns_ipvs
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!mtd_info
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!can_pkg_stats
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!can_rcv_lists_stats
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!can_dev_rcv_lists
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!mpls_route
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!sctp_mib
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!smc_stats_rsn
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!smc_stats
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!garp_port
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!mpls_dev
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!mrp_port
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!tipc_bearer
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!udp_tunnel_nic
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!cfg80211_conn
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!cfg80211_cached_keys
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!cfg80211_cqm_config
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!phy_package_shared
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!sfp
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!dsa_8021q_context
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!uapi_definition
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!hw_stats_device_data
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!rdma_restrack_root
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!cfg80211_internal_bss
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!ib_port
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!ib_gid_table
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!ib_pkey_cache
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!maple_pnode
+DEBUG    volatility3.framework.symbols: Unresolved reference: symbol_table_name1!maple_enode
+Volatility 3 Framework 2.10.0
+
+PID	Process	Start	End	Flags	PgOff	Major	Minor	Inode	File Path	File output
+
+3183	cifar10_inferen	0x400000	0x406000	r--	0x0	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x406000	0x410000	---	0x6000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x410000	0x41f000	r-x	0x10000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x41f000	0x420000	---	0x1f000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x420000	0x424000	r--	0x20000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x424000	0x43f000	---	0x24000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x43f000	0x440000	r--	0x2f000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x440000	0x441000	rw-	0x30000	253	2	2380425	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch.so	Disabled
+3183	cifar10_inferen	0x294e4000000	0x29524000000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xaaaaaaaa0000	0xaaaaaaadf000	r-x	0x0	253	2	2386045	/home/raihan/Downloads/volatility/cifar10_cnn/cpp/build-ubuntu/cifar10_inference	Disabled
+3183	cifar10_inferen	0xaaaaaaaef000	0xaaaaaaaf0000	r--	0x3f000	253	2	2386045	/home/raihan/Downloads/volatility/cifar10_cnn/cpp/build-ubuntu/cifar10_inference	Disabled
+3183	cifar10_inferen	0xaaaaaaaf0000	0xaaaaaaaf1000	rw-	0x40000	253	2	2386045	/home/raihan/Downloads/volatility/cifar10_cnn/cpp/build-ubuntu/cifar10_inference	Disabled
+3183	cifar10_inferen	0xaaaaaaaf1000	0xaaaaaac00000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xaaaaaac00000	0xaaaaae200000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffdf47f000	0xffffe0caf000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffe1e45000	0xffffe1fa7000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffe2000000	0xffffea000000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffea098000	0xffffea0b0000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffea0b0000	0xffffea0ca000	r-x	0x0	253	2	3016500	/usr/lib/aarch64-linux-gnu/libz.so.1.3.1	Disabled
+3183	cifar10_inferen	0xffffea0ca000	0xffffea0df000	---	0x1a000	253	2	3016500	/usr/lib/aarch64-linux-gnu/libz.so.1.3.1	Disabled
+3183	cifar10_inferen	0xffffea0df000	0xffffea0e0000	r--	0x1f000	253	2	3016500	/usr/lib/aarch64-linux-gnu/libz.so.1.3.1	Disabled
+3183	cifar10_inferen	0xffffea0e0000	0xffffea0e1000	rw-	0x20000	253	2	3016500	/usr/lib/aarch64-linux-gnu/libz.so.1.3.1	Disabled
+3183	cifar10_inferen	0xffffea0f0000	0xffffea238000	r-x	0x0	253	2	2380420	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgfortran.so.5	Disabled
+3183	cifar10_inferen	0xffffea238000	0xffffea24e000	---	0x148000	253	2	2380420	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgfortran.so.5	Disabled
+3183	cifar10_inferen	0xffffea24e000	0xffffea250000	r--	0x14e000	253	2	2380420	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgfortran.so.5	Disabled
+3183	cifar10_inferen	0xffffea250000	0xffffea251000	rw-	0x150000	253	2	2380420	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgfortran.so.5	Disabled
+3183	cifar10_inferen	0xffffea251000	0xffffea260000	---	0x161000	253	2	2380420	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgfortran.so.5	Disabled
+3183	cifar10_inferen	0xffffea260000	0xffffea26b000	rw-	0x160000	253	2	2380420	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgfortran.so.5	Disabled
+3183	cifar10_inferen	0xffffea270000	0xffffea2a5000	r--	0x0	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea2a5000	0xffffea2b0000	---	0x35000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea2b0000	0xffffea322000	r-x	0x40000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea322000	0xffffea330000	---	0xb2000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea330000	0xffffea345000	r--	0xc0000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea345000	0xffffea35d000	---	0xd5000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea35d000	0xffffea360000	r--	0xdd000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea360000	0xffffea362000	rw-	0xe0000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea362000	0xffffea370000	---	0xf2000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea370000	0xffffea391000	rw-	0x120000	253	2	2380417	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute_graph.so	Disabled
+3183	cifar10_inferen	0xffffea3a0000	0xffffea637000	r--	0x0	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffea637000	0xffffea640000	---	0x297000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffea640000	0xffffeaf04000	r-x	0x2a0000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeaf04000	0xffffeaf10000	---	0xb64000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeaf10000	0xffffeb0d0000	r--	0xb70000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeb0d0000	0xffffeb0d5000	---	0xd30000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeb0d5000	0xffffeb100000	r--	0xd35000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeb100000	0xffffeb107000	rw-	0xd60000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeb107000	0xffffeb114000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffeb114000	0xffffeb120000	---	0xd74000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeb120000	0xffffeb2c7000	rw-	0x1080000	253	2	2380416	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libarm_compute.so	Disabled
+3183	cifar10_inferen	0xffffeb2d0000	0xffffeb2db000	r--	0x0	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb2db000	0xffffeb2e0000	---	0xb000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb2e0000	0xffffeb311000	r-x	0x10000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb311000	0xffffeb320000	---	0x41000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb320000	0xffffeb32d000	r--	0x50000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb32d000	0xffffeb33f000	---	0x5d000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb33f000	0xffffeb340000	r--	0x5f000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb340000	0xffffeb341000	rw-	0x60000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb341000	0xffffeb350000	---	0x71000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb350000	0xffffeb355000	rw-	0x190000	253	2	2380421	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libgomp.so.1	Disabled
+3183	cifar10_inferen	0xffffeb360000	0xffffeb468000	r--	0x0	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffeb468000	0xffffeb470000	---	0x108000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffeb470000	0xffffec6ff000	r-x	0x110000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec6ff000	0xffffec700000	---	0x139f000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec700000	0xffffec888000	r--	0x13a0000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec888000	0xffffec899000	---	0x1528000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec899000	0xffffec8a0000	r--	0x1529000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec8a0000	0xffffec8bb000	rw-	0x1530000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec8bb000	0xffffec8c7000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffec8c7000	0xffffec8d0000	---	0x1567000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec8d0000	0xffffec929000	rw-	0x1720000	253	2	2380423	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libopenblas.so.0	Disabled
+3183	cifar10_inferen	0xffffec930000	0xffffec9df000	r-x	0x0	253	2	3016483	/usr/lib/aarch64-linux-gnu/libm.so.6	Disabled
+3183	cifar10_inferen	0xffffec9df000	0xffffec9ef000	---	0xaf000	253	2	3016483	/usr/lib/aarch64-linux-gnu/libm.so.6	Disabled
+3183	cifar10_inferen	0xffffec9ef000	0xffffec9f0000	r--	0xaf000	253	2	3016483	/usr/lib/aarch64-linux-gnu/libm.so.6	Disabled
+3183	cifar10_inferen	0xffffec9f0000	0xffffec9f1000	rw-	0xb0000	253	2	3016483	/usr/lib/aarch64-linux-gnu/libm.so.6	Disabled
+3183	cifar10_inferen	0xffffeca00000	0xffffeca01000	r-x	0x0	253	2	3016494	/usr/lib/aarch64-linux-gnu/librt.so.1	Disabled
+3183	cifar10_inferen	0xffffeca01000	0xffffeca1f000	---	0x1000	253	2	3016494	/usr/lib/aarch64-linux-gnu/librt.so.1	Disabled
+3183	cifar10_inferen	0xffffeca1f000	0xffffeca20000	r--	0xf000	253	2	3016494	/usr/lib/aarch64-linux-gnu/librt.so.1	Disabled
+3183	cifar10_inferen	0xffffeca20000	0xffffeca21000	rw-	0x10000	253	2	3016494	/usr/lib/aarch64-linux-gnu/librt.so.1	Disabled
+3183	cifar10_inferen	0xffffeca30000	0xffffeca31000	r-x	0x0	253	2	3016482	/usr/lib/aarch64-linux-gnu/libdl.so.2	Disabled
+3183	cifar10_inferen	0xffffeca31000	0xffffeca4f000	---	0x1000	253	2	3016482	/usr/lib/aarch64-linux-gnu/libdl.so.2	Disabled
+3183	cifar10_inferen	0xffffeca4f000	0xffffeca50000	r--	0xf000	253	2	3016482	/usr/lib/aarch64-linux-gnu/libdl.so.2	Disabled
+3183	cifar10_inferen	0xffffeca50000	0xffffeca51000	rw-	0x10000	253	2	3016482	/usr/lib/aarch64-linux-gnu/libdl.so.2	Disabled
+3183	cifar10_inferen	0xffffeca60000	0xffffeca61000	r-x	0x0	253	2	3016492	/usr/lib/aarch64-linux-gnu/libpthread.so.0	Disabled
+3183	cifar10_inferen	0xffffeca61000	0xffffeca7f000	---	0x1000	253	2	3016492	/usr/lib/aarch64-linux-gnu/libpthread.so.0	Disabled
+3183	cifar10_inferen	0xffffeca7f000	0xffffeca80000	r--	0xf000	253	2	3016492	/usr/lib/aarch64-linux-gnu/libpthread.so.0	Disabled
+3183	cifar10_inferen	0xffffeca80000	0xffffeca81000	rw-	0x10000	253	2	3016492	/usr/lib/aarch64-linux-gnu/libpthread.so.0	Disabled
+3183	cifar10_inferen	0xffffeca90000	0xffffecc39000	r-x	0x0	253	2	3016480	/usr/lib/aarch64-linux-gnu/libc.so.6	Disabled
+3183	cifar10_inferen	0xffffecc39000	0xffffecc4d000	---	0x1a9000	253	2	3016480	/usr/lib/aarch64-linux-gnu/libc.so.6	Disabled
+3183	cifar10_inferen	0xffffecc4d000	0xffffecc50000	r--	0x1ad000	253	2	3016480	/usr/lib/aarch64-linux-gnu/libc.so.6	Disabled
+3183	cifar10_inferen	0xffffecc50000	0xffffecc52000	rw-	0x1b0000	253	2	3016480	/usr/lib/aarch64-linux-gnu/libc.so.6	Disabled
+3183	cifar10_inferen	0xffffecc52000	0xffffecc5e000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffecc60000	0xffffecc7f000	r-x	0x0	253	2	3019154	/usr/lib/aarch64-linux-gnu/libgcc_s.so.1	Disabled
+3183	cifar10_inferen	0xffffecc7f000	0xffffecc8f000	---	0x1f000	253	2	3019154	/usr/lib/aarch64-linux-gnu/libgcc_s.so.1	Disabled
+3183	cifar10_inferen	0xffffecc8f000	0xffffecc90000	r--	0x1f000	253	2	3019154	/usr/lib/aarch64-linux-gnu/libgcc_s.so.1	Disabled
+3183	cifar10_inferen	0xffffecc90000	0xffffecc91000	rw-	0x20000	253	2	3019154	/usr/lib/aarch64-linux-gnu/libgcc_s.so.1	Disabled
+3183	cifar10_inferen	0xffffecca0000	0xffffecf17000	r-x	0x0	253	2	3019570	/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.35	Disabled
+3183	cifar10_inferen	0xffffecf17000	0xffffecf21000	---	0x277000	253	2	3019570	/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.35	Disabled
+3183	cifar10_inferen	0xffffecf21000	0xffffecf30000	r--	0x281000	253	2	3019570	/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.35	Disabled
+3183	cifar10_inferen	0xffffecf30000	0xffffecf33000	rw-	0x290000	253	2	3019570	/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.35	Disabled
+3183	cifar10_inferen	0xffffecf33000	0xffffecf38000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xffffecf50000	0xffffede02000	r--	0x0	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xffffede02000	0xffffede10000	---	0xeb2000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xffffede10000	0xfffff5b19000	r-x	0xec0000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xfffff5b19000	0xfffff5b20000	---	0x8bc9000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xfffff5b20000	0xfffff79ff000	r--	0x8bd0000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xfffff79ff000	0xfffff7a07000	---	0xaaaf000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xfffff7a07000	0xfffff7ca0000	r--	0xaab7000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xfffff7ca0000	0xfffff7d6f000	rw-	0xad50000	253	2	2380426	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libtorch_cpu.so	Disabled
+3183	cifar10_inferen	0xfffff7d6f000	0xfffff7e33000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffff7e37000	0xfffff7e40000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffff7e40000	0xfffff7e71000	r--	0x0	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7e71000	0xfffff7e80000	---	0x31000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7e80000	0xfffff7f45000	r-x	0x40000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7f45000	0xfffff7f50000	---	0x105000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7f50000	0xfffff7f8d000	r--	0x110000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7f8d000	0xfffff7f9b000	---	0x14d000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7f9b000	0xfffff7fa0000	r--	0x15b000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7fa0000	0xfffff7faa000	rw-	0x160000	253	2	2380419	/home/raihan/Downloads/volatility/cifar10_cnn/.venv/lib/python3.14/site-packages/torch/lib/libc10.so	Disabled
+3183	cifar10_inferen	0xfffff7faa000	0xfffff7fb3000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffff7fb6000	0xfffff7fbe000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffff7fbe000	0xfffff7fe8000	r-x	0x0	253	2	3016477	/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1	Disabled
+3183	cifar10_inferen	0xfffff7fea000	0xfffff7ff6000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffff7ff6000	0xfffff7ffa000	r--	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffff7ffa000	0xfffff7ffc000	r-x	0x0	0	0	0	[vdso]	Disabled
+3183	cifar10_inferen	0xfffff7ffc000	0xfffff7ffe000	r--	0x2e000	253	2	3016477	/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1	Disabled
+3183	cifar10_inferen	0xfffff7ffe000	0xfffff7fff000	rw-	0x30000	253	2	3016477	/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1	Disabled
+3183	cifar10_inferen	0xfffff7fff000	0xfffff8000000	rw-	0x0	0	0	0	Anonymous Mapping	Disabled
+3183	cifar10_inferen	0xfffffffdf000	0x1000000000000	rw-	0x0	0	0	0	[stack]	Disabled
+
+MAPS_EXIT_STATUS=0
