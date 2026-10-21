@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reproducible memory-forensics experiment recovering a CIFAR-10 CNN's weights, hierarchy, TorchScript implementation, and selected native code from Linux RAM.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Recovering a CNN from Linux Memory · S M Raihanul Alam</title>
+  <link rel="canonical" href="https://hridoy100.github.io/ml-memory-forensics/">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to article</a>
+  <header class="site-header">
+    <a class="site-name" href="#top">ML memory forensics</a>
+    <nav aria-label="Main navigation">
+      <a href="#results">Results</a>
+      <a href="#reproduce">Reproduce</a>
+      <a href="https://github.com/hridoy100/ml-memory-forensics">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">A controlled experiment in ML memory forensics</p>
+      <h1 id="title">Recovering a CNN<br>from Linux Memory</h1>
+      <p class="subtitle">From a running TorchScript process to recovered weights,<br class="desktop-break"> model code, and matching inference results.</p>
+      <p class="byline"><a href="https://github.com/hridoy100">S M Raihanul Alam</a><span aria-hidden="true"> · </span><time datetime="2026-10-21">October 21, 2026</time></p>
+      <div class="hero-links">
+        <a class="button" href="https://github.com/hridoy100/ml-memory-forensics">Source code <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="#reproduce">Running instructions</a>
+        <a class="button secondary" href="#results">View results</a>
+      </div>
+      <dl class="headline-results" aria-label="Recorded recovery results">
+        <div><dt>31</dt><dd>tensors recovered</dd></div>
+        <div><dt>19</dt><dd>source files matched</dd></div>
+        <div><dt>6,000 / 6,000</dt><dd>predictions agree</dd></div>
+        <div><dt>0</dt><dd>maximum logit difference</dd></div>
+      </dl>
+      <p class="metric-note">Agreement is between the reconstructed and original models. Test accuracy was 87.0833%.</p>
+    </section>
+
+    <div class="article-layout">
+      <aside class="contents" aria-label="Article contents">
+        <p>In this experiment</p>
+        <ol>
+          <li><a href="#training">Train the CNN</a></li>
+          <li><a href="#export">Export to TorchScript</a></li>
+          <li><a href="#cpp">Build C++ inference</a></li>
+          <li><a href="#gdb">Stop at forward</a></li>
+          <li><a href="#objects">Inspect the objects</a></li>
+          <li><a href="#capture">Capture Linux RAM</a></li>
+          <li><a href="#volshell">Verify the addresses</a></li>
+          <li><a href="#recovery">Recover and replay</a></li>
+        </ol>
+        <a href="#native">Native-code extension</a>
+        <a href="#results">Results and limits</a>
+        <a href="#reproduce">Reproduction</a>
+      </aside>
+
+      <article id="article">
+        <section id="overview">
+          <h2>Can a model be reconstructed from RAM?</h2>
+          <p>A running neural network holds more than its weights in memory. It also needs a hierarchy of objects, layer settings, tensor metadata, and executable model logic. This project tests whether those pieces can be recovered from a Linux memory image and used to reproduce the model's predictions.</p>
+          <p>I used a custom CIFAR-10 CNN as a known reference. Training ran on Argon; the final capture used CPU inference in an Ubuntu ARM64 VM. GDB identified the live objects, LiME acquired RAM, and a custom Volatility 3 plugin followed the model structures offline. A separate validator compared the recovery with the reference. The reconstructed model then matched every prediction and output logit on the 6,000-image test set.</p>
+          <figure class="workflow">
+            <ol aria-label="Experimental workflow">
+              <li><strong>Train</strong><span>Custom CNN</span></li>
+              <li><strong>Export</strong><span>TorchScript</span></li>
+              <li><strong>Inspect</strong><span>C++ + GDB</span></li>
+              <li><strong>Capture</strong><span>LiME</span></li>
+              <li><strong>Recover</strong><span>Volatility 3</span></li>
+              <li><strong>Validate</strong><span>Bytes + replay</span></li>
+            </ol>
+            <figcaption>Experimental workflow. The extractor reads the memory image; the original model is used separately for validation.</figcaption>
+          </figure>
+          <p class="note">The model-state and TorchScript results come from the original capture of PID 3183. Later native-code experiments use a separate warm capture. The distinction matters when interpreting coverage.</p>
+        </section>
+
+        <section id="training">
+          <p class="step-label">Step 1</p>
+          <h2>Train a custom CIFAR-10 CNN</h2>
+          <p>The network is defined directly with <code>torch.nn</code>. It uses six 3×3 convolutions, three batch-normalization layers, ReLU, and three pooling stages. A two-layer classifier maps the flattened 128×4×4 features through 256 units to ten class logits. No prebuilt network is used.</p>
+          <p>I pooled CIFAR-10's original training and test sets, then made a disjoint, stratified split with seed 42. Random crop and horizontal flip apply only to training images.</p>
+          <div class="table-wrap"><table>
+            <caption>CIFAR-10 partition used in this experiment</caption>
+            <thead><tr><th scope="col">Partition</th><th scope="col">Images</th><th scope="col">Per class</th></tr></thead>
+            <tbody><tr><td>Training</td><td>48,000</td><td>4,800</td></tr><tr><td>Validation</td><td>6,000</td><td>600</td></tr><tr><td>Testing</td><td>6,000</td><td>600</td></tr></tbody>
+          </table></div>
+          <div class="code-block"><div class="code-heading"><span>From cifar10_cnn</span><button class="copy-button" type="button" hidden>Copy</button></div><pre><code>python -u train.py --epochs 25 --output-dir outputs</code></pre></div>
+          <p>The recorded run used Python 3.10.8 and PyTorch 2.14.1+cu126. After 25 epochs, test accuracy was 5,225/6,000, or 87.0833%. This custom split differs from the official 10,000-image CIFAR-10 test benchmark.</p>
+          <p>The retained release check places PyTorch 2.14.1 as the latest stable release by the October 17 training-artifact commit. That Git timestamp is not an exact training-job start or finish time.</p>
+          <details class="figure-details"><summary>Checkpoint and version checks</summary>
+            <figure><a href="images/05-training-record.jpg" target="_blank" rel="noopener"><img src="images/05-training-record.jpg" alt="Browser report of the saved epoch-25 checkpoint and training metrics" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>October 20 check of the preserved checkpoint and metrics. Training was not rerun for this report.</figcaption></figure>
+            <figure><a href="images/04-pytorch-release.jpg" target="_blank" rel="noopener"><img src="images/04-pytorch-release.jpg" alt="Official PyTorch release page captured for the historical version check" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>Official release page captured October 20. The historical comparison is tied to the dated artifact record.</figcaption></figure>
+          </details>
+          <p class="source-link"><a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/training/metrics.json">Training metrics</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/evidence-notes.md">Historical version record</a></p>
+        </section>
+
+        <section id="export">
+          <p class="step-label">Step 2</p>
+          <h2>Export the checkpoint to TorchScript</h2>
+          <p>The training checkpoint stores state and split metadata. A separate export loads the weights on CPU, switches the model to evaluation mode, scripts it with <code>torch.jit.script</code>, and saves an archive that LibTorch can load.</p>
+          <div class="code-block"><div class="code-heading"><span>Export and prepare held-out images</span><button class="copy-button" type="button" hidden>Copy</button></div><pre><code>python export_model.py \
+  --checkpoint outputs/best_model.pt \
+  --output outputs/cifar10_torchscript.pt
+python prepare_test_images.py --checkpoint outputs/best_model.pt</code></pre></div>
+          <p>The test binary contains the exact 6,000 held-out images selected by the checkpoint. Each record has one label byte and 3,072 planar RGB bytes. The exporter reloads the saved archive and checks its outputs against the checkpoint-built model.</p>
+          <details class="figure-details"><summary>TorchScript export check</summary>
+            <figure><a href="images/06-export.jpg" target="_blank" rel="noopener"><img src="images/06-export.jpg" alt="Saved report showing successful TorchScript export and reloaded-output comparison" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>A fresh export check on October 20; the original reference archive was preserved.</figcaption></figure>
+          </details>
+        </section>
+
+        <section id="cpp">
+          <p class="step-label">Step 3</p>
+          <h2>Build C++ inference with debug information</h2>
+          <p>The C++ program loads the scripted archive with <code>torch::jit::load</code>, normalizes pixels using <code>(pixel / 255.0 - 0.5) / 0.5</code>, and evaluates batches of 128. CPU inference keeps the tensor allocations in system RAM.</p>
+          <div class="code-block"><div class="code-heading"><span>Ubuntu Debug build</span><button class="copy-button" type="button" hidden>Copy</button></div><pre><code>cmake -S cpp -B cpp/build-ubuntu -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_PREFIX_PATH="$(python -c 'import torch; print(torch.utils.cmake_prefix_path)')"
+cmake --build cpp/build-ubuntu --parallel 1
+
+./cpp/build-ubuntu/cifar10_inference \
+  outputs/cifar10_torchscript.pt data/cifar10_test.bin outputs/cpp_predictions.csv</code></pre></div>
+          <p>The CMake configuration retains full application debug information with <code>-g3</code>, <code>-O0</code>, frame pointers, and header-type retention flags. Complete C++ types were important: the prebuilt runtime did not supply all the debug types needed for object inspection. The final target was rebuilt natively for ARM64.</p>
+          <details class="figure-details"><summary>Debug build and inference report</summary>
+            <figure><a href="images/07-debug-build.jpg" target="_blank" rel="noopener"><img src="images/07-debug-build.jpg" alt="Report showing Debug compiler flags, debug sections, and C++ inference results" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>Debug compilation, emitted debug sections, and inference on all 6,000 test images.</figcaption></figure>
+          </details>
+        </section>
+
+        <section id="gdb">
+          <p class="step-label">Step 4</p>
+          <h2>Stop before the forward pass</h2>
+          <p>The breakpoint is on the application's forward call at line 91 of the preserved <code>main.cpp</code>. At that point the model and normalized input batch are loaded, and the process can remain stopped while another terminal acquires memory.</p>
+          <div class="code-block"><div class="code-heading"><span>GDB</span><button class="copy-button" type="button" hidden>Copy</button></div><pre><code>gdb ./cpp/build-ubuntu/cifar10_inference
+
+set args outputs/cifar10_torchscript.pt data/cifar10_test.bin outputs/cpp_predictions_gdb.csv
+break main.cpp:91
+run
+info inferiors
+python print("Inference PID:", gdb.selected_inferior().pid)</code></pre></div>
+          <p>The supplied <code>cpp/inspect_model.gdb</code> automates the arguments, breakpoint, logging, and object checks. Each execution gets its own PID and addresses; the values below identify the original capture.</p>
+        </section>
+
+        <section id="objects">
+          <p class="step-label">Step 5</p>
+          <h2>Follow the model objects and tensor storage</h2>
+          <p>The captured process was PID <strong>3183</strong>. GDB showed the stack wrappers and their heap targets:</p>
+          <div class="table-wrap"><table>
+            <caption>Virtual addresses in the original capture</caption>
+            <thead><tr><th scope="col">Object</th><th scope="col">Address</th></tr></thead>
+            <tbody><tr><td>Model wrapper</td><td><code>0xffffffffe588</code></td></tr><tr><td>Model Object</td><td><code>0xaaaaae062af0</code></td></tr><tr><td>Input wrapper</td><td><code>0xffffffffe4a8</code></td></tr><tr><td>Input TensorImpl</td><td><code>0xaaaaadfce280</code></td></tr></tbody>
+          </table></div>
+          <figure><a href="images/01-gdb-pid-and-addresses.png" target="_blank" rel="noopener"><img src="images/01-gdb-pid-and-addresses.png" alt="Original GDB session showing PID 3183, model and input pointers, and type-layout inspection" loading="lazy" decoding="async" width="3412" height="2036"></a><figcaption>Original GDB session: PID, wrapper/target addresses, and C++ type inspection. Select any screenshot to view it at full size.</figcaption></figure>
+          <p>The model Object pairs ClassType descriptions with IValue slots. Object-valued slots lead to child modules; tensor-valued slots lead to TensorImpl, StorageImpl, and the allocation holding the values. ClassType also holds layer constants and methods.</p>
+          <div class="object-chain" aria-label="Tensor storage chain"><code>Tensor wrapper</code><span aria-hidden="true">→</span><code>TensorImpl</code><span aria-hidden="true">→</span><code>StorageImpl</code><span aria-hidden="true">→</span><code>CPU allocation</code></div>
+          <p>The target package reported PyTorch 2.14.1+cpu and revision <code class="breakable">5c4886908584029761b579af026dcfb627c84070</code>. Field offsets were measured from retained DWARF types and matching headers. The kernel symbol table and PyTorch ABI profile have different roles: one describes Linux, the other the application's C++ structures.</p>
+          <p class="source-link"><a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/gdb-instructions.md">Object and weight inspection commands</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/forensics/profiles/torch-2.14.1-cpu-aarch64.json">Measured ABI profile</a></p>
+        </section>
+
+        <section id="capture">
+          <p class="step-label">Step 6</p>
+          <h2>Capture RAM and find the process offline</h2>
+          <p>LiME was built for the running Ubuntu kernel. Volatility used the matching kernel symbol table and an experimental ARM64 branch, with two plugin requirements patched to allow AArch64. PsList found PID 3183 and Maps listed 128 VMAs.</p>
+          <div class="code-block"><div class="code-heading"><span>Analyze the preserved LiME image</span><button class="copy-button" type="button" hidden>Copy</button></div><pre><code>framework_dir="$HOME/Downloads/volatility3-aarch64-experimental"
+"$framework_dir/.venv/bin/python" "$framework_dir/vol.py" -q \
+  -f "$HOME/Downloads/memory-evidence/ubuntu.lime" linux.pslist.PsList --pid 3183
+"$framework_dir/.venv/bin/python" "$framework_dir/vol.py" -q \
+  -f "$HOME/Downloads/memory-evidence/ubuntu.lime" linux.proc.Maps --pid 3183</code></pre></div>
+          <figure><a href="images/02-volatility-pid.png" target="_blank" rel="noopener"><img src="images/02-volatility-pid.png" alt="Volatility PsList identifies PID 3183, cifar10_inferen, with parent PID 3174" loading="lazy" decoding="async" width="3412" height="2032"></a><figcaption>PsList identifies the inference process inside the original LiME image.</figcaption></figure>
+          <p class="note">The original module insertion reported “Invalid parameters” but left a LiME-format image. Its header and hash were recorded, and the target pages were analyzed successfully. This supports the target recovery; it does not certify a complete or atomic capture of every system page. The later warm acquisition returned status zero.</p>
+          <p class="source-link"><a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/capture/pslist-3183.tsv">PID table</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/capture/maps-3183.tsv">Complete VMA table</a></p>
+        </section>
+
+        <section id="volshell">
+          <p class="step-label">Step 7</p>
+          <h2>Verify GDB's addresses with Volshell</h2>
+          <p>Volshell switched to the captured process layer and translated its virtual addresses. The model and input pointers matched the GDB values. The input TensorImpl reported rank four, shape <code>[128, 3, 32, 32]</code>, and 393,216 elements.</p>
+          <figure><a href="images/03-vmas-and-volshell.png" target="_blank" rel="noopener"><img src="images/03-vmas-and-volshell.png" alt="Tail of the PID 3183 VMA listing and Volshell verification ending in ADDRESS_CHECK_PASS" loading="lazy" decoding="async" width="3416" height="2034"></a><figcaption>The tail of the VMA listing and the original Volshell address/shape check. The full table contains 128 mappings.</figcaption></figure>
+          <p>A GDB virtual address is not an offset into the LiME file. The process layer translates it through the captured page tables. The verifier reads actual pages without padding missing data and ends with <code>ADDRESS_CHECK_PASS</code>.</p>
+          <p class="source-link"><a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/forensics/verify_addresses.py">Address verification script</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/capture/volshell-address-check.log">Recorded Volshell output</a></p>
+        </section>
+
+        <section id="recovery">
+          <p class="step-label">Step 8</p>
+          <h2>Recover the weights, hierarchy, and implementation</h2>
+          <p>The <code>mlmodel.PytorchModel</code> plugin starts from the captured PID and root Object pointer. It walks named attributes and child modules, checks tensor shape, dtype, strides, storage offset, and allocation bounds, then saves the recovered values. It does not load the training checkpoint or original model definition.</p>
+          <p>GraphFunction methods and graph SourceRanges lead to resident Source objects. The plugin joins their string-view pieces and saves the generated TorchScript code with hashes and provenance. It also records graph topology and source relationships.</p>
+          <div class="table-wrap"><table>
+            <caption>Recovery from the original PID-3183 image</caption>
+            <thead><tr><th scope="col">Artifact</th><th scope="col">Recovered and checked</th></tr></thead>
+            <tbody>
+              <tr><td>Weights and buffers</td><td>22 parameters + 9 batch-normalization buffers; all 31 match in name, shape, dtype, and bytes</td></tr>
+              <tr><td>Model hierarchy</td><td>26 module objects; names, types, and registration order match</td></tr>
+              <tr><td>Function graphs</td><td>34 materialized graphs with topology/source records</td></tr>
+              <tr><td>Implementation</td><td>All 19 archived generated TorchScript source files match byte for byte</td></tr>
+            </tbody>
+          </table></div>
+          <p>The replay helper instantiates the captured hierarchy and tensors and compiles the recovered function bodies as Python after annotation/cast erasure. Explicit adapters connect the used intrinsics to Python and the installed CPU runtime. The reference archive is loaded afterward for comparison.</p>
+          <p>On all 6,000 test images, predictions and output logits matched exactly. Both implementations classified 5,225 images correctly. This tests reconstruction on the held-out set, not every possible input.</p>
+          <details class="figure-details"><summary>Extraction, byte validation, and full replay reports</summary>
+            <figure><a href="images/08-extraction.jpg" target="_blank" rel="noopener"><img src="images/08-extraction.jpg" alt="Report of 26 modules, 31 tensors, and 19 sources extracted with zero errors" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>Repeated extraction from the original image, October 20.</figcaption></figure>
+            <figure><a href="images/09-validation.jpg" target="_blank" rel="noopener"><img src="images/09-validation.jpg" alt="Report of matching tensors, source files, and module hierarchy" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>Independent comparison with the preserved reference.</figcaption></figure>
+            <figure><a href="images/10-replay.jpg" target="_blank" rel="noopener"><img src="images/10-replay.jpg" alt="Full replay report showing 6000 matching predictions and zero maximum logit difference" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>Full 6,000-image replay. These are browser views of saved check logs, not original capture-session terminal screenshots.</figcaption></figure>
+          </details>
+          <h3>What code coverage means here</h3>
+          <p>All 34 reported generated-code functions have recovered definitions. The first batch of the <em>Python replay</em> made 49 calls to 31 distinct recovered functions. The two Sequential <code>__len__</code> definitions and training-only <code>_verify_batch_size</code> helper were recovered but not exercised.</p>
+          <p>The static inventory lists 23 runtime dependencies; 12 were called through the replay adapter. Resolving a call to installed PyTorch does not mean that operation's native implementation was recovered. This replay trace is separate from the original C++ process and from the native trace below.</p>
+          <p class="source-link"><a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/replay/code-coverage.json">Recovered function inventory</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/replay/inference-comparison.json">Inference comparison</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/findings.md">Coverage audit</a></p>
+        </section>
+
+        <section id="native">
+          <p class="step-label">Extension</p>
+          <h2>Recover selected native function bodies</h2>
+          <p>Generated TorchScript source describes the model, but its operators still rely on native runtime code. The original image could not read the selected convolution code range. A separate LiME capture of PID 4540, taken after one completed batch, recovered that function's full 584-byte body.</p>
+          <p>A later live trace in C++ PID 2782 observed 40 entry hits across ten of twelve candidate symbols. Their bodies were then extracted from the warm PID-4540 image. ELF build identity and file offsets connected the runs despite different process addresses.</p>
+          <div class="table-wrap"><table>
+            <caption>Selected at::native bodies recovered from the warm image</caption>
+            <thead><tr><th scope="col">Function</th><th scope="col">Entry hits</th><th scope="col">Body bytes</th></tr></thead>
+            <tbody>
+              <tr><td><code>batch_norm</code></td><td>3</td><td>1,088</td></tr>
+              <tr><td><code>max_pool2d</code></td><td>3</td><td>164</td></tr>
+              <tr><td><code>convolution</code></td><td>6</td><td>584</td></tr>
+              <tr><td><code>_convolution</code> (four trailing bools)</td><td>6</td><td>8,436</td></tr>
+              <tr><td><code>conv2d_symint</code></td><td>6</td><td>1,444</td></tr>
+              <tr><td><code>batch_norm_cpu</code></td><td>3</td><td>2,624</td></tr>
+              <tr><td><code>_batch_norm_impl_index</code></td><td>3</td><td>4,580</td></tr>
+              <tr><td><code>relu</code></td><td>7</td><td>340</td></tr>
+              <tr><td><code>linear</code></td><td>2</td><td>2,068</td></tr>
+              <tr><td><code>flatten</code></td><td>1</td><td>2,012</td></tr>
+            </tbody>
+            <tfoot><tr><th scope="row">Total</th><td>40</td><td>23,340</td></tr></tfoot>
+          </table></div>
+          <p>All ten ELF-symbol-sized ranges matched the reference library byte for byte. The plugin reads only captured process memory, rejects missing pages, and never fills gaps from the reference file. These are nested function calls, not 40 model layers.</p>
+          <p>Other functions in the saved stacks—including the graph executor, interpreter, dispatcher, and generated wrappers—were observed but not recovered as complete bodies in this extraction. Internal/indirect callees and backend libraries do not have exhaustive coverage. Body bytes can also include padding or blocks that did not execute.</p>
+          <details class="figure-details"><summary>Earlier native-convolution instruction sample</summary>
+            <figure><a href="images/11-native-forward.jpg" target="_blank" rel="noopener"><img src="images/11-native-forward.jpg" alt="Report of a live native convolution backtrace and selected ARM64 instructions" loading="lazy" decoding="async" width="1695" height="885"></a><figcaption>Earlier live PID-3220 GDB sample. The displayed instructions alone are not a full function recovery.</figcaption></figure>
+          </details>
+          <p class="source-link"><a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/evidence/native-trace-2026-10-20/validation/validation.json">Native byte comparison</a> · <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/native-code-recovery.md">Native recovery commands and scope</a></p>
+        </section>
+
+        <section id="results">
+          <h2>Results and interpretation</h2>
+          <p>The recovered state, hierarchy, and generated implementation were sufficient to reproduce this model's evaluation outputs on the held-out set. The reference served as a validation target, not as a source for the extractor's weights or code.</p>
+          <div class="table-wrap"><table>
+            <caption>What the experiment demonstrates</caption>
+            <thead><tr><th scope="col">Requirement</th><th scope="col">Evidence</th></tr></thead>
+            <tbody>
+              <tr><td>Custom model, export, and Debug C++ inference</td><td>Training metrics, scripted archive checks, compiler flags, and inference logs</td></tr>
+              <tr><td>PID, object addresses, VMAs, and offline layout checks</td><td>GDB, PsList, Maps, and Volshell records for PID 3183</td></tr>
+              <tr><td>Model state and generated-code recovery</td><td>31 matching tensors, 26 modules, 19 matching source files, 34 graphs</td></tr>
+              <tr><td>Behavior after reconstruction</td><td>6,000 matching predictions; maximum absolute logit difference 0</td></tr>
+              <tr><td>Selected native machine code</td><td>10 matching symbol-bounded bodies from the separate warm image</td></tr>
+            </tbody>
+          </table></div>
+          <h3>Limits</h3>
+          <p>Recovery is guided by a known PID and root Object address and uses a build-specific ABI profile. The demonstrated tensors are contiguous CPU allocations. Replay uses a compatibility layer rather than a newly reconstructed standalone TorchScript archive. GPU VRAM, automatic model discovery, original native C++ source, and exhaustive native call/branch coverage are outside the demonstrated result.</p>
+          <p>The graphs preserve topology/source relationships but are not a complete IR serializer. Matching outputs establish agreement on these inputs. The broader reading of “any code called during forward” remains partially demonstrated because every native callee has not been inventoried and recovered.</p>
+        </section>
+
+        <section id="reproduce">
+          <h2>Reproduce the checks</h2>
+          <p>The repository contains the model and C++ code, GDB helpers, both Volatility plugins, the measured ABI profile, tests, and small evidence files. Private model binaries, RAM images, kernel symbols, and recovered tensor/binary files are excluded from Git.</p>
+          <div class="code-block"><div class="code-heading"><span>Check the tracked evidence</span><button class="copy-button" type="button" hidden>Copy</button></div><pre><code>git clone git@github.com:hridoy100/ml-memory-forensics.git
+cd ml-memory-forensics
+python3 scripts/verify_evidence.py</code></pre></div>
+          <p>This verifies saved evidence hashes and report consistency; it does not repeat extraction or inference. The <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/running-instructions.md">running instructions</a> give the analysis commands and artifact paths. The <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/project-walkthrough.md">full walkthrough</a> keeps the acquisition and inspection steps together.</p>
+          <p>The final environment used Ubuntu ARM64, kernel <code>7.0.0-38-generic</code>, PyTorch <code>2.14.1+cpu</code>, and an experimental Volatility 3 ARM64 revision. The <a href="https://github.com/hridoy100/ml-memory-forensics/blob/main/docs/evidence-notes.md">environment and evidence notes</a> record exact revisions, release-date qualifications, and screenshot provenance.</p>
+        </section>
+
+        <section id="references">
+          <h2>References</h2>
+          <ul class="references">
+            <li><a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html">PyTorch: A 60 Minute Blitz</a> and <a href="https://docs.pytorch.org/tutorials/advanced/cpp_export.html">Loading a TorchScript Model in C++</a>.</li>
+            <li><a href="https://github.com/504ensicsLabs/LiME">LiME</a> and the <a href="https://github.com/Abyss-W4tcher/volatility3/tree/aarch64-support">experimental ARM64 Volatility 3 branch</a>.</li>
+            <li><a href="https://www.usenix.org/conference/usenixsecurity24/presentation/oygenblik">AI Psychiatry</a>, USENIX Security 2024; related work on recovering and rehosting deployed models from memory.</li>
+            <li><a href="https://www.ndss-symposium.org/wp-content/uploads/2026-s1628-paper.pdf">ZEN</a>, NDSS 2026; related work on recovering programmatic model implementations. This controlled TorchScript experiment does not reproduce its full discovery, attribution, or patching system.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>S M Raihanul Alam · <a href="https://github.com/hridoy100/ml-memory-forensics">ML memory forensics</a></p>
+    <p>Experiments recorded October 17–20, 2026. Source and full logs are in the project repository; repository access may be required.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>

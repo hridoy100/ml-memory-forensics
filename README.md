@@ -8,6 +8,9 @@ and loaded by a C++ inference program. GDB identifies the live objects. LiME
 captures RAM, and two Volatility 3 plugins recover the model and native code.
 Separate checks compare the recovered artifacts with the original model.
 
+Read the [project blog](https://hridoy100.github.io/ml-memory-forensics/) for the
+illustrated walkthrough, results, and reproduction links.
+
 ## Results
 
 | Check | Result |
@@ -71,3 +74,19 @@ The final capture used Ubuntu ARM64, kernel `7.0.0-38-generic`, and PyTorch
 [Source provenance](manifests/source-repositories.json) records the original
 repositories and imported files. See [NOTICE.md](NOTICE.md) for software credits
 and licenses.
+
+## Project page
+
+The blog source is in `site/`. GitHub Actions publishes that directory and the
+screenshots in `docs/images/` to GitHub Pages on pushes to `main`. The deployment
+contains only the blog and images; model files and RAM images remain excluded.
+
+To preview locally, stage the same files in a temporary directory:
+
+```bash
+preview_dir="$(mktemp -d)"
+cp -R site/. "$preview_dir/"
+mkdir "$preview_dir/images"
+cp docs/images/*.png docs/images/*.jpg "$preview_dir/images/"
+python3 -m http.server 8768 --bind 127.0.0.1 --directory "$preview_dir"
+```
