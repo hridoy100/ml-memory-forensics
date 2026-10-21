@@ -140,6 +140,12 @@ The captured Ubuntu process was PID **3183**. GDB reported:
 
 ![GDB PID and model/input addresses](images/01-gdb-pid-and-addresses.png)
 
+This original-session image shows PID 3183, the model/input wrapper and target
+addresses, and type-layout inspection. The
+[GDB helper verification log](../evidence/logs/repository-gdb-helper-check.log)
+contains a later forward-breakpoint, ClassType/slot, and weight-storage check
+in live PID 3391; its addresses are not those of the original capture.
+
 The Object's ClassType describes named attributes, parameter/buffer kinds, layer
 constants, and methods. Object IValue slots hold the corresponding values.
 Object-valued slots lead to child modules; tensor-valued slots lead to TensorImpl,
@@ -211,6 +217,8 @@ framework_dir="$HOME/Downloads/volatility3-aarch64-experimental"
 
 The [PID table](../evidence/capture/pslist-3183.tsv) and
 [VMA table](../evidence/capture/maps-3183.tsv) preserve the complete results.
+The PsList screenshot shows PID 3183; the screenshot in step 7 shows the tail of its VMA listing. The
+128-mapping count comes from the complete table, not just the visible tail.
 
 ## 7. Check the recorded addresses with Volshell
 
@@ -260,6 +268,21 @@ and registration order. There are 26 module objects and 34 function graphs.
 
 ![Recovered state and source comparison](images/09-validation.jpg)
 
+### Recovery summary
+
+| Artifact | Result from the original PID-3183 image |
+| --- | --- |
+| Weights and buffers | 22 parameters and 9 batch-normalization buffers; all 31 tensors match in name, shape, dtype, and bytes |
+| Model hierarchy | 26 module objects with matching names, types, and registration order |
+| Function graphs | 34 materialized graphs with topology/source records; not a complete IR serializer |
+| Implementation code | All 19 archived generated TorchScript `.py` files recovered byte for byte |
+| Inference validation | Reconstructed model matches all 6,000 predictions and logits; both models score 5,225/6,000 |
+
+The October 20 extraction, validation, and replay checks reuse the original
+image. Their screenshots are browser views of saved check logs, not terminal
+screenshots from the acquisition session. The later warm image is used only
+for the separate native-code results below.
+
 I then used [confirm_recovery.py](../forensics/confirm_recovery.py) to instantiate
 the captured hierarchy and assign its recovered settings and tensor values. The
 captured function bodies were compiled as Python after annotation/cast erasure,
@@ -280,28 +303,35 @@ INFERENCE_COMPARISON_PASS
 ![Full test-set comparison](images/10-replay.jpg)
 
 Matching predictions means agreement between implementations. Both were correct
-on 5,225 images, or 87.0833%. Thirty-one distinct recovered functions ran in the
-first evaluation batch; the remaining definitions were two `__len__` methods and
-the training-only `_verify_batch_size` helper.
+on 5,225 images, or 87.0833%. The first batch of the recovered-source Python
+replay made 49 calls to 31 distinct recovered functions; the remaining definitions
+were two `__len__` methods and the training-only `_verify_batch_size` helper.
 
 The [code map](../evidence/replay/code-coverage.json),
 [predictions](../evidence/replay/predictions.csv), and original
 [replay log](../evidence/logs/replay-confirmation-6000.log) are tracked here.
 The ten decoder tests and five replay tests cover bounds, missing pages, storage
-offsets, unsupported layouts, source integrity, and missing definitions.
+offsets, unsupported layouts, source integrity, and missing definitions. Every
+observed generated-code function has a recovered definition. Calls through the
+installed PyTorch runtime or Python intrinsic adapters are dependencies, not
+additional recovered implementations. The [coverage audit](findings.md#forward-pass-implementation-coverage)
+separates those cases and identifies the unexercised definitions.
 
 ## Native-code recovery
 
-A live GDB sample followed the forward pass through the graph executor,
-interpreter, dispatcher, and native convolution implementation:
+A later live GDB sample in PID 3220 followed the forward pass through the graph
+executor, interpreter, dispatcher, and native convolution implementation:
 
 ![Native convolution backtrace and instructions](images/11-native-forward.jpg)
 
 The original capture could not read the selected native code range. A second
 LiME capture, taken after one completed batch, recovered the full 584-byte
-convolution function. A later entry trace observed ten of twelve candidate
-functions during one forward call. All ten bodies were extracted from the warm
-image and compared with the reference library: 23,340 bytes, all matching.
+convolution function from captured PID 4540. A separate live entry trace in
+PID 2782 observed ten of twelve candidate functions during one forward call.
+All ten symbol-bounded bodies were extracted from the warm PID-4540 image and
+compared with the reference library: 23,340 bytes, all matching. Their library
+build identity was checked; they are not bytes recovered from the original
+PID-3183 image.
 
 The [native-code guide](native-code-recovery.md) gives the commands and reports.
 This extends recovery to selected native function bodies; internal callees,
